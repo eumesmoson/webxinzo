@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LUBARES_INTERESE>
+
+<LUGAR>
+<NOME>CONCELLO</NOME>
+<DIRECCION>Rúa Curros Enríquez Nº 15</DIRECCION>
+<TELEFONO>988 55 01 11</TELEFONO>
+<WEB URL="http://www.xinzodelimia.es">xinzodelimia.es</WEB>
+<EMAIL>concello@xinzodelimia-ayto.com</EMAIL>
+<COORDENADAS>42.063534,-7.724816</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>SERVIZOS SOCIAIS</NOME>
+<DIRECCION>Avenida de Ourense Nº 19 (Estación de autobuses)</DIRECCION>
+<TELEFONO>988 550258</TELEFONO>
+<FAX>988 550258</FAX>
+<COORDENADAS>42.064506,-7.727117</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>CENTRO DE SAUDE</NOME>
+<DIRECCION>Rúa da Ladeira Nº 6</DIRECCION>
+<TELEFONO>988 462456</TELEFONO>
+<WEB URL="http://www.sergas.es/">sergas.es</WEB>
+<COORDENADAS>42.060760,-7.724601</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>CENTRO DIA MAIORES</NOME>
+<DIRECCION>Rúa Ladeira Nº 4</DIRECCION>
+<TELEFONO>988 462582</TELEFONO>
+<MOBIL>646 436835</MOBIL>
+<WEB URL="https://benestar.xunta.es:444/XiacWeb/centros/publico/aRedirectCentro.do?{actionForm.id_cent}=240334">benestar.xunta.es</WEB>
+<COORDENADAS>42.060944,-7.724833</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>RESIDENCIA SANTA MARIÑA</NOME>
+<DIRECCION>Rúa Ladeira Nº 16</DIRECCION>
+<TELEFONO>988 460162</TELEFONO>
+<FAX>988 460162</FAX>
+<WEB URL="http://www.fundacionsanrosendo.es/residencia-santa-marina/">fundacionsanrosendo.es</WEB>
+<EMAIL>fundacion@fundacionsanrosendo.com</EMAIL>
+<COORDENADAS>42.060204, -7.723190</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>FARMACIA/OPTICA PRIETO</NOME>
+<DIRECCION>Rúa Dous de Maio Nº 2</DIRECCION>
+<TELEFONO>988 462388</TELEFONO>
+<COORDENADAS>42.062540,-7.724943</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>FARMACIA GOMEZ PENIN</NOME>
+<DIRECCION>Avda. de Madrid Nº 2</DIRECCION>
+<TELEFONO>988 462368</TELEFONO>
+<COORDENADAS>42.062850,-7.725635</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>FARMACIA Mª SOLEDAD RODRIGUEZ GARRIDO</NOME>
+<DIRECCION>Avda. de Madrid Nº 11</DIRECCION>
+<TELEFONO>988 462368</TELEFONO>
+<COORDENADAS>42.062788,-7.725265</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>FARMACIA DO POMBAL</NOME>
+<DIRECCION>Avda. de Ourense Nº 50</DIRECCION>
+<TELEFONO>988 680969</TELEFONO>
+<WEB URL="https://es-es.facebook.com/farmaciadopombal/about/?entry_point=page_nav_about_item&amp;tab=overview">facebook</WEB>
+<WEB URL="http://farmapombal.blogspot.com.es/">blog</WEB>
+<COORDENADAS>42.065617,-7.727158</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>FARMACIA MARCO GUZMAN AREVALO</NOME>
+<DIRECCION>Rúa Ladeira Nº 53</DIRECCION>
+<TELEFONO>988 550381</TELEFONO>
+<WEB URL="http://www.farmaciamarcoguzman.com/">farmaciamarcoguzman.com</WEB>
+<COORDENADAS>42.059765,-7.722185</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>OFICINA DE EMPREGO</NOME>
+<DIRECCION>Avenida de Madrid Nº 42, Baixo</DIRECCION>
+<TELEFONO>988 460375</TELEFONO>
+<WEB URL="http://emprego.xunta.es/cmspro/contido">emprego.xunta.es/cmspro/contido</WEB>
+<EMAIL>TERESA.PUGA.IGLESIAS@XUNTA.ES</EMAIL>
+<COORDENADAS>42.061150,-7.721919</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>SEGURIDADE SOCIAL</NOME>
+<DIRECCION>Rúa da Ladeira Nº 8</DIRECCION>
+<TELEFONO>988 462951</TELEFONO>
+<FAX>988 462955</FAX>
+<WEB URL="http://www.empleo.gob.es/es/index.htm">empleo.gob.es</WEB>
+<COORDENADAS>42.060625,-7.724349</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>XULGADOS</NOME>
+<DIRECCION>Rúa da Ladeira Nº 4</DIRECCION>
+<TELEFONO>988 462364</TELEFONO>
+<FAX>988 462330</FAX>
+<WEB URL="http://www.poderjudicial.es/cgpj/gl/Poder-Xudicial/Tribunais-Superiores-de-Xustiza/TSX-Galicia/Organos-xudiciais/Directorio-de-organos-xudiciais/Juzgado-de-Primera-Instancia-e-Instruccion-Unico---Xinzo-de-Limia?provincia=32">
+poderjudicial.es
+</WEB>	
+<WEB URL="http://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorMunicipioDesdeListado&amp;municipio=32032&amp;lang=es_es&amp;tipo=&amp;origen=">mjusticia.gob.es</WEB>
+<COORDENADAS>42.060814, -7.725084</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>PARQUE BOMBEIROS</NOME>
+<DIRECCION>Avda Ourense Nº 190</DIRECCION>
+<TELEFONO>112</TELEFONO>
+<WEB URL="http://www.veicar.com/parques-bomberos-gestionados/orense/xinzo">veicar.com</WEB>
+<EMAIL>bomberoslimia@veicar.com</EMAIL>
+<COORDENADAS>42.078373,-7.734391</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>GARDA CIVIL</NOME>
+<DIRECCION>Rúa Ladeira Nº8</DIRECCION>
+<EMAIL>sugerencias@guardiacivil.org</EMAIL>
+<TELEFONO>988 462361</TELEFONO>
+<TELEFONO>062</TELEFONO>
+<WEB URL="http://www.guardiacivil.es/es/institucional/directorio/ourense/puesto_de_xinzo_de_limia.html">guardiacivil.es</WEB>
+<COORDENADAS>42.060226,-7.724083</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>BIBLIOTECA</NOME>
+<DIRECCION>Rúa Curros Enríquez Nº 17</DIRECCION>
+<TELEFONO>988 550111</TELEFONO>
+<FAX>988 461442</FAX>
+<WEB URL="http://www.opacmeiga.rbgalicia.org/Biblioteca.aspx?CodigoBiblioteca=OBM058">opacmeiga.rbgalicia.org</WEB>
+<EMAIL>xinzo@rbgalicia.org</EMAIL>
+<COORDENADAS>42.063980, -7.724620</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>ESCOLA INFANTIL</NOME>
+<DIRECCION>Rúa Rosalia de Castro S/N</DIRECCION>
+<TELEFONO>988 461049</TELEFONO>
+<WEB URL="https://benestar.xunta.es:444/XiacWeb/centros/publico/aRedirectCentro.do?{actionForm.id_cent}=233286">benestar.xunta.es</WEB>
+<EMAIL>escolainfantil.xinzodelimia@igualdadebenestar.org</EMAIL>
+<COORDENADAS>42.059063,-7.721533</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>CEIP Rosalia de Castro</NOME>
+<DIRECCION>Rúa Rosalía de Castro Nº 38</DIRECCION>
+<TELEFONO>988 460480</TELEFONO>
+<FAX>988 462955</FAX>
+<WEB URL="http://www.edu.xunta.gal/centros/ceiprosaliaxinzo/">edu.xunta.es/centros/ceiprosaliaxinzo/</WEB>
+<EMAIL>ceip.rosalia.xinzo@edu.xunta.es</EMAIL>
+<COORDENADAS>42.059601,-7.721651</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>CEIP Carlos Casares</NOME>
+<DIRECCION>Rúa Marcelo Macias Nº 59</DIRECCION>
+<TELEFONO>988 460507</TELEFONO>
+<FAX>988 460507</FAX>
+<WEB URL="http://www.edu.xunta.gal/centros/ceipcarloscasaresxinzo/node/31">edu.xunta.gal/centros/ceipcarloscasares/</WEB>
+<EMAIL>ceip.sergio.mascarenhas@edu.xunta.es</EMAIL>
+<COORDENADAS>42.066413,-7.720825</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>IES Cidade de Antioquia</NOME>
+<DIRECCION>Avda Ourense Nº 186</DIRECCION>
+<TELEFONO>988 460519</TELEFONO>
+<FAX>988 550677</FAX>
+<WEB URL="http://www.edu.xunta.gal/centros/iescidadeantioquia/">edu.xunta.gal/centros/iescidadeantioquia</WEB>
+<EMAIL>iescidadeantioquia@iescidadeantioquia.com</EMAIL>
+<COORDENADAS>42.076761,-7.733377</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>IES Lagoa de Antela</NOME>
+<DIRECCION>Avda Ourense Nº 184</DIRECCION>
+<TELEFONO>988 462454</TELEFONO>
+<FAX>988 462337</FAX>
+<WEB URL="http://www.edu.xunta.gal/centros/ieslagoaantela/">edu.xunta.gal/centros/ieslagoaantela</WEB>
+<EMAIL>ies.lagoa.antela@edu.xunta.es</EMAIL>
+<COORDENADAS>42.076076,-7.732932</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>ITV</NOME>
+<DIRECCION>Parque empresarial parc. 47</DIRECCION>
+<TELEFONO>900 504389</TELEFONO>
+<WEB URL="http://www.sycitv.com/gl/estacions-syc/xinzo/">sycitv.com</WEB>
+<EMAIL>correoweb@sycitv.com</EMAIL>
+<COORDENADAS>42.077505, -7.723212</COORDENADAS>
+</LUGAR>
+
+<LUBAR>
+<NOME>OFICINA DE CORREOS</NOME>
+<DIRECCION>Rúa Cruceiro Nº 10</DIRECCION>
+<TELEFONO>988 460380</TELEFONO>
+<FAX>988 462153</FAX>
+<WEB URL="http://www.correos.es/ss/Satellite/site/aplicacion-1349169610397-herramientas_y_apps/detalle_app-sidioma=gl_ES">correos.es</WEB>
+<COORDENADAS>42.064324,-7.724545</COORDENADAS>
+</LUBAR>
+
+<LUGAR>
+<NOME>REXISTRO PROPIEDADE</NOME>
+<DIRECCION>Rúa Otero Pedrayo Nº 3 1º</DIRECCION>
+<TELEFONO>988 460209</TELEFONO>
+<FAX>988 460131</FAX>
+<COORDENADAS>42.062845,-7.724300</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>NOTARIA</NOME>
+<DIRECCION>Rúa Iglesia Nº 1 1º Dta.</DIRECCION>
+<TELEFONO>988 460254</TELEFONO>
+<FAX>988 462785</FAX>
+<WEB URL="http://www.galicia.notariado.org/?do=guiadelcolegio.showNotario&amp;option=notarios&amp;id=9704114">galicia.notariado.org</WEB>
+<EAIL>mmarinorama@correonotarial.org</EAIL>
+<EMAIL>m.rama@notariado.org</EMAIL>
+<COORDENADAS>42.063719,-7.726444</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>MUSEO GALEGO DO ENTROIDO</NOME>
+<DIRECCION>Rúa Dous de Maio </DIRECCION>
+<WEB URL="https://es-la.facebook.com/museogalegoentroido/about/?entry_point=page_nav_about_item&amp;tab=overview">facebook</WEB>
+<COORDENADAS>42.061008, -7.725907</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>ALBERGE DE PEREGRINOS</NOME>
+<DIRECCION>Rúa Serra de San Mamede Nº 4</DIRECCION>
+<COORDENADAS>42.063842, -7.728872</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>PARROQUIA DE SANTA MARIÑA</NOME>
+<DIRECCION>Rúa Santa Mariña Nº 14</DIRECCION>
+<TELEFONO>988 460222</TELEFONO>
+<WEB URL="http://www.santamarinadexinzo.com/parroquia/datos.html">santamarinadexinzo.com</WEB>
+<EMAIL>santamarinaxinzo@telefonica.net</EMAIL>
+<COORDENADAS>42.063726, -7.727531</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>CANCEIRA</NOME>
+<DIRECCION>As Lamas</DIRECCION>
+<MOBIL>620 639450</MOBIL>
+<WEB URL="http://mediorural.depourense.es/index.php/34-about/equipo/104-centro-xinzo-de-limia">mediorural.depourense.es</WEB>
+<COORDENADAS>42.036444, -7.769251</COORDENADAS>
+</LUGAR>
+
+</LUBARES_INTERESE>

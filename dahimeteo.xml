@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Estacion ID="19027" Nome="Xinzo">
+	<Codigos_Validacion>
+		<Codigo ID="0" Descricion="Dato sen validar"/>
+		<Codigo ID="1" Descricion="Dato válido orixinal"/>
+		<Codigo ID="2" Descricion="Dato sospeitoso"/>
+		<Codigo ID="3" Descricion="Dato erróneo"/>
+		<Codigo ID="4" Descricion="Dato acumulado                                    "/>
+		<Codigo ID="5" Descricion="Dato válido interpolado"/>
+		<Codigo ID="9" Descricion="Dato non rexistrado"/>
+	</Codigos_Validacion>
+	<Valores Data="01/09/2008">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="15" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="27,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="39,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="53,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/10/2008">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="10,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="24,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-3,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="50,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="190" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="5" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/11/2008">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="5,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="19" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-5,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="97,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="359,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="14" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/12/2008">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="4,9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="17,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-6,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="83,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="408,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="12" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/01/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="4,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="13,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-10,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="200" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="399,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="11" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/02/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="5,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="21,1" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-4,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="96,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="373,2" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="19" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/03/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="9,1" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="24,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-2,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="28,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="294,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="11" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/04/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="8,3" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="24,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-3" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="50,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="262,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="5" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/05/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="13,5" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="29,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="71,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="88,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/06/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="17,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="31,2" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="5,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="54,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="1" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/07/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="30,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="52,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="9,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/08/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="19" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="34,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="2,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="3,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/09/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="34" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="3,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="0,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="44" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/10/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="14,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="25,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-0,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="110,2" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="55,2" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/11/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="9,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="19,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-0,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="191" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="123" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/12/2009">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="5,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="16,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-6,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="361,5" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="369,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="13" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/01/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="4,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="13" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-5,8" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="160,2" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="12" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/02/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="5,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="15,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-5,8" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="201" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="12" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/03/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="19,3" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="9" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/04/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="11,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="27,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/05/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="12,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="29,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="2" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/06/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="31,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/07/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="19,9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="36,5" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="5,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/08/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="19,9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="35,1" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="3,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/09/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="33,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/10/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="11,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="22,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-2,8" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="2" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/11/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="6,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="22,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-5,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="8" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/12/2010">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="4,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="17,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-7,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="13" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/01/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="14,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-4,3" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="147" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="7" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/02/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="20,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="100,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="7" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/03/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="9,1" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="22,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-2,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="27,5" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="5" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/04/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="13,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="27,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/05/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="14,9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="29" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="20,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/06/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="35,5" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="3,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="5,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/07/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="17,1" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="32,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="5,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="0,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/08/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="18,5" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="35,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="3,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="28,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/09/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="18" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="32,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="9,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/10/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="14,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="31,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="96" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/11/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="10" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="18,3" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,3" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="114,3" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/12/2011">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="-9999" Codigo_validacion="9"/>
+	</Valores>
+	<Valores Data="01/01/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="4,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="16,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="-9999" Codigo_validacion="9"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="18" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/02/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="3,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="20,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-9,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="4,9" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="490" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="24" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/03/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="9,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="24" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-5,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="11,3" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="275,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="14" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/04/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="22,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-2,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="98,3" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="336,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="5" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/05/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="13,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="31,5" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="83,5" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="69,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/06/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="36,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="30,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="31,2" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/07/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="18" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="36,5" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="4,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="18,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/08/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="18" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="35,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="15,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="11,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/09/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="32,5" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="3,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="40,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="24,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/10/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="11,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="27" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-2,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="72" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="141,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="3" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/11/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="17,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-3,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="71,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="321,2" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="6" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/12/2012">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="6,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="14,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-4,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="139,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="332,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="8" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/01/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="6,1" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="17,3" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-3,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="171,9" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="433,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="5" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/02/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="5" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="14,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-5,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="52,5" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="459,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="8" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/03/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="16,1" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-3,8" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="168,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="286,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="6" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/04/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="9,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="25" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-0,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="51,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="232,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="2" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/05/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="10,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="23,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="39,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="238,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/06/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="15,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="32,5" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="3,3" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="11,3" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="30,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/07/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="21" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="38,3" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="6,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="16,5" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="2" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/08/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="19,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="37,2" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="5,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="0" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="12,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/09/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="17,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="34,2" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="82,7" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="10,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/10/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="13,3" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="26" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-1,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="142,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="75" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="2" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/11/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="6,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="18" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-6,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="34" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="340" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="13" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/12/2013">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="5" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="15" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-7,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="149,2" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="463,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="15" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/01/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="16,3" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="164,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="367,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/02/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="5,9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="15,1" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-2,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="177" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="437,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/03/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="8,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="23,3" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-1,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="52,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="328,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="2" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/04/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="12" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="25,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="48" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="84,3" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/05/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="12,9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="27,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="29,7" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="94" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/06/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,3" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="31,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="21,3" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="28,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/07/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="18,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="33,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,8" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="22,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="4,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/08/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="18" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="34,1" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,3" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="12,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="16,2" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/09/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="35,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="72,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="23,2" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/10/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="14,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="28,3" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="114,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="43,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/11/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="18" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-0,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="159,9" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="180,2" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/12/2014">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="5,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="13,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-6,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="28,2" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="480" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="13" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/01/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="4,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="17,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-4,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="90,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="547,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="17" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/02/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="4,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="13" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-5,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="49,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="464,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="13" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/03/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="8,1" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="23,1" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-4,3" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="3,9" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="334,4" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="16" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/04/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="11,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="24,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-0,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="88,5" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="113,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/05/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="14,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="29,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-0,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="33,7" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="83,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/06/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="18,5" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="36,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="7,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="23,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/07/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="20,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="37,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="7,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="3" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="0" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/08/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="18,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="35,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="2,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="5,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="12,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/09/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="15,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="31,1" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="1,4" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="46,8" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="70" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/10/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="12,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="23,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-0,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="86,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="82" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/11/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="9,7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="21,8" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-2,9" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="28,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="213,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="5" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/12/2015">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="8,5" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="17,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-3,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="49,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="212,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="3" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/01/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="15" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-4,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="223,1" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="321,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="5" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/02/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="6,3" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="16,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-3,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="155,4" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="376,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="12" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/03/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="7" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="19,4" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-3" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="97,3" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="412,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="6" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/04/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="9,2" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="21,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-2,7" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="98" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="242,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/05/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="12,6" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="26,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="-0,5" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="114,9" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="44,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="1" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/06/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="16,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="31,6" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="26,6" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="9,7" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/07/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="20,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="36" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="5,1" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="2" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="3,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/08/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="20,4" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="37,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="4,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="7" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="5,5" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+	<Valores Data="01/09/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="21,8" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="35,9" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="8,2" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="0" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="0" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
+</Estacion>

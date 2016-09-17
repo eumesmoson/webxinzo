@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PRESUPOSTO>
+<INGRESOS>
+<concepto>Impostos directos</concepto>
+<importe>
+<exercicio ano="2013">3574973.22</exercicio>
+<exercicio ano="2014">3574973.22</exercicio>
+</importe>
+<concepto>Impostos indirectos</concepto>
+<importe>
+<exercicio ano="2013">100000.00</exercicio>
+<exercicio ano="2014">100000.00</exercicio>
+</importe>
+<concepto>Taxas e outros ingresos</concepto>
+<importe>
+<exercicio ano="2013">1211864.66</exercicio>
+<exercicio ano="2014">1111864.66</exercicio></importe>
+<concepto>Transferencias correntes</concepto>
+<importe>
+<exercicio ano="2013">2471094.22</exercicio>
+<exercicio ano="2014">2471094.22</exercicio>
+</importe>
+<concepto>Ingresos patrimoniais</concepto>
+<importe>
+<exercicio ano="2013">35005.71</exercicio>
+<exercicio ano="2014">35005.71</exercicio>
+</importe>
+<concepto>Alleamento inversions reais</concepto>
+<importe>
+<exercicio ano="2013">187176.64</exercicio>
+<exercicio ano="2014">0</exercicio>
+</importe>
+<concepto>Transferencias de capital</concepto>
+<importe>
+<exercicio ano="2013">133094.55</exercicio>
+<exercicio ano="2014">0</exercicio>
+</importe>
+<concepto>Activos financeiros</concepto>
+<importe>
+<exercicio ano="2013">6000.00</exercicio>
+<exercicio ano="2014">6000.00</exercicio>
+</importe>
+<concepto>Pasivos financeiros</concepto>
+<importe>
+<exercicio ano="2013">0</exercicio>
+<exercicio ano="2014">0</exercicio>
+</importe>
+<concepto>Total Ingresos Presupostados</concepto>
+<importe>
+<exercicio ano="2013">7719209.00</exercicio>
+<exercicio ano="2014">7298937.81</exercicio>
+</importe>
+</INGRESOS>
+<GASTOS>
+<concepto>Gastos de persoal</concepto>
+<importe>
+<exercicio ano="2013">4017563.18</exercicio>
+<exercicio ano="2014">3881790.56</exercicio>
+</importe>
+<concepto>Gastos ben/ser correntes</concepto>
+<importe>
+<exercicio ano="2013">1899900.57</exercicio>
+<exercicio ano="2014">1878862.42</exercicio>
+</importe>
+<concepto>Gastos financeiros</concepto>
+<importe>
+<exercicio ano="2013">359915.60</exercicio>
+<exercicio ano="2014">359915.60</exercicio>
+</importe>
+<concepto>Transferencias correntes</concepto>
+<importe>
+<exercicio ano="2013">57030.00</exercicio>
+<exercicio ano="2014">10000.00</exercicio>
+</importe>
+<concepto>Fondo continxencias e outros imprevistos</concepto>
+<importe>
+<exercicio ano="2013">0</exercicio>
+<exercicio ano="2014">0</exercicio>
+</importe>
+<concepto>Investimentos reais</concepto>
+<importe>
+<exercicio ano="2013">417227.65</exercicio>
+<exercicio ano="2014">64331.24</exercicio></importe>
+<concepto>Transferencias de capital</concepto>
+<importe>
+<exercicio ano="2013">2500.00</exercicio>
+<exercicio ano="2014">0</exercicio>
+</importe>
+<concepto>Activos financeiros</concepto>
+<importe>
+<exercicio ano="2013">6000.00</exercicio>
+<exercicio ano="2014">6000.00</exercicio>
+</importe>
+<concepto>Pasivos financeiros</concepto>
+<importe>
+<exercicio ano="2013">594863.00</exercicio>
+<exercicio ano="2014">594863.00</exercicio>
+</importe>
+<concepto>Total Gastos Presupostados</concepto>
+<importe>
+<exercicio ano="2013">7355000.00</exercicio>
+<exercicio ano="2014">6795762.82</exercicio>
+</importe>
+</GASTOS>
+</PRESUPOSTO>
+
+
+                                                  

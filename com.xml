@@ -1,0 +1,127 @@
+<PreciosEESSTerrestres xmlns="http://schemas.datacontract.org/2004/07/ServiciosCarburantes" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Fecha>16/09/2016 20:36:16</Fecha>
+	<ListaEESSPrecio>
+		<EESSPrecio>
+			<C.P.>32630</C.P.>
+			<Dirección>VÍA PISTA ENLACE AUTOVIA RIAS BAIXAS, S/N</Dirección>
+			<Horario>L-D: 24H</Horario>
+			<Latitud>42,077917</Latitud>
+			<Localidad>XINZO DE LIMIA</Localidad>
+			<Longitud_x0020__x0028_WGS84_x0029_>-7,714583</Longitud_x0020__x0028_WGS84_x0029_>
+			<Margen>D</Margen>
+			<Municipio>Xinzo de Limia</Municipio>
+			<Precio_x0020_Biodiesel i:nil="true"/>
+			<Precio_x0020_Bioetanol i:nil="true"/>
+			<Precio_x0020_Gas_x0020_Natural_x0020_Comprimido i:nil="true"/>
+			<Precio_x0020_Gas_x0020_Natural_x0020_Licuado i:nil="true"/>
+			<Precio_x0020_Gases_x0020_licuados_x0020_del_x0020_petróleo i:nil="true"/>
+			<Precio_x0020_Gasoleo_x0020_A>1,955</Precio_x0020_Gasoleo_x0020_A>
+			<Precio_x0020_Gasoleo_x0020_B>0,734</Precio_x0020_Gasoleo_x0020_B>
+			<Precio_x0020_Gasolina_x0020_95_x0020_Protección>1,209</Precio_x0020_Gasolina_x0020_95_x0020_Protección>
+			<Precio_x0020_Gasolina_x0020__x0020_98 i:nil="true"/>
+			<Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A i:nil="true"/>
+			<Provincia>OURENSE</Provincia>
+			<Remisión>dm</Remisión>
+			<Rótulo>E.S. ANTELA</Rótulo>
+			<Tipo_x0020_Venta>P</Tipo_x0020_Venta>
+			<_x0025__x0020_BioEtanol>0,0</_x0025__x0020_BioEtanol>
+			<_x0025__x0020_Éster_x0020_metílico>0,0</_x0025__x0020_Éster_x0020_metílico>
+			<IDEESS>10617</IDEESS>
+			<IDMunicipio>4961</IDMunicipio>
+			<IDProvincia>32</IDProvincia>
+			<IDCCAA>12</IDCCAA>
+		</EESSPrecio>
+		<EESSPrecio>
+			<C.P.>32630</C.P.>
+			<Dirección>AVENIDA DE MADRID, 108</Dirección>
+			<Horario>L-D: 07:00-23:00</Horario>
+			<Latitud>42,059278</Latitud>
+			<Localidad>XINZO DE LIMIA</Localidad>
+			<Longitud_x0020__x0028_WGS84_x0029_>-7,714833</Longitud_x0020__x0028_WGS84_x0029_>
+			<Margen>I</Margen>
+			<Municipio>Xinzo de Limia</Municipio>
+			<Precio_x0020_Biodiesel i:nil="true"/>
+			<Precio_x0020_Bioetanol i:nil="true"/>
+			<Precio_x0020_Gas_x0020_Natural_x0020_Comprimido i:nil="true"/>
+			<Precio_x0020_Gas_x0020_Natural_x0020_Licuado i:nil="true"/>
+			<Precio_x0020_Gases_x0020_licuados_x0020_del_x0020_petróleo i:nil="true"/>
+			<Precio_x0020_Gasoleo_x0020_A>1,089</Precio_x0020_Gasoleo_x0020_A>
+			<Precio_x0020_Gasoleo_x0020_B>0,729</Precio_x0020_Gasoleo_x0020_B>
+			<Precio_x0020_Gasolina_x0020_95_x0020_Protección>1,209</Precio_x0020_Gasolina_x0020_95_x0020_Protección>
+			<Precio_x0020_Gasolina_x0020__x0020_98>1,299</Precio_x0020_Gasolina_x0020__x0020_98>
+			<Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A>1,159</Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A>
+			<Provincia>OURENSE</Provincia>
+			<Remisión>dm</Remisión>
+			<Rótulo>CEPSA</Rótulo>
+			<Tipo_x0020_Venta>P</Tipo_x0020_Venta>
+			<_x0025__x0020_BioEtanol>0,0</_x0025__x0020_BioEtanol>
+			<_x0025__x0020_Éster_x0020_metílico>0,0</_x0025__x0020_Éster_x0020_metílico>
+			<IDEESS>769</IDEESS>
+			<IDMunicipio>4961</IDMunicipio>
+			<IDProvincia>32</IDProvincia>
+			<IDCCAA>12</IDCCAA>
+		</EESSPrecio>
+		<EESSPrecio>
+			<C.P.>32630</C.P.>
+			<Dirección>CL A DEVESA, S.N.</Dirección>
+			<Horario>L-D: 07:00-23:00</Horario>
+			<Latitud>42,075556</Latitud>
+			<Localidad>XINZO DE LIMIA</Localidad>
+			<Longitud_x0020__x0028_WGS84_x0029_>-7,727083</Longitud_x0020__x0028_WGS84_x0029_>
+			<Margen>I</Margen>
+			<Municipio>Xinzo de Limia</Municipio>
+			<Precio_x0020_Biodiesel i:nil="true"/>
+			<Precio_x0020_Bioetanol i:nil="true"/>
+			<Precio_x0020_Gas_x0020_Natural_x0020_Comprimido i:nil="true"/>
+			<Precio_x0020_Gas_x0020_Natural_x0020_Licuado i:nil="true"/>
+			<Precio_x0020_Gases_x0020_licuados_x0020_del_x0020_petróleo i:nil="true"/>
+			<Precio_x0020_Gasoleo_x0020_A>1,089</Precio_x0020_Gasoleo_x0020_A>
+			<Precio_x0020_Gasoleo_x0020_B>0,729</Precio_x0020_Gasoleo_x0020_B>
+			<Precio_x0020_Gasolina_x0020_95_x0020_Protección>1,199</Precio_x0020_Gasolina_x0020_95_x0020_Protección>
+			<Precio_x0020_Gasolina_x0020__x0020_98>1,329</Precio_x0020_Gasolina_x0020__x0020_98>
+			<Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A>1,149</Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A>
+			<Provincia>OURENSE</Provincia>
+			<Remisión>dm</Remisión>
+			<Rótulo>REPSOL</Rótulo>
+			<Tipo_x0020_Venta>P</Tipo_x0020_Venta>
+			<_x0025__x0020_BioEtanol>0,0</_x0025__x0020_BioEtanol>
+			<_x0025__x0020_Éster_x0020_metílico>0,0</_x0025__x0020_Éster_x0020_metílico>
+			<IDEESS>707</IDEESS>
+			<IDMunicipio>4961</IDMunicipio>
+			<IDProvincia>32</IDProvincia>
+			<IDCCAA>12</IDCCAA>
+		</EESSPrecio>
+		<EESSPrecio>
+			<C.P.>32630</C.P.>
+			<Dirección>CARRETERA CRTA. N-525, KM.199.4 KM. 199,4</Dirección>
+			<Horario>L-D: 07:00-23:00</Horario>
+			<Latitud>42,072667</Latitud>
+			<Localidad>XINZO DE LIMIA</Localidad>
+			<Longitud_x0020__x0028_WGS84_x0029_>-7,732000</Longitud_x0020__x0028_WGS84_x0029_>
+			<Margen>I</Margen>
+			<Municipio>Xinzo de Limia</Municipio>
+			<Precio_x0020_Biodiesel i:nil="true"/>
+			<Precio_x0020_Bioetanol i:nil="true"/>
+			<Precio_x0020_Gas_x0020_Natural_x0020_Comprimido i:nil="true"/>
+			<Precio_x0020_Gas_x0020_Natural_x0020_Licuado i:nil="true"/>
+			<Precio_x0020_Gases_x0020_licuados_x0020_del_x0020_petróleo i:nil="true"/>
+			<Precio_x0020_Gasoleo_x0020_A>1,089</Precio_x0020_Gasoleo_x0020_A>
+			<Precio_x0020_Gasoleo_x0020_B>0,727</Precio_x0020_Gasoleo_x0020_B>
+			<Precio_x0020_Gasolina_x0020_95_x0020_Protección>1,209</Precio_x0020_Gasolina_x0020_95_x0020_Protección>
+			<Precio_x0020_Gasolina_x0020__x0020_98>1,349</Precio_x0020_Gasolina_x0020__x0020_98>
+			<Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A>1,139</Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A>
+			<Provincia>OURENSE</Provincia>
+			<Remisión>OM</Remisión>
+			<Rótulo>REPSOL</Rótulo>
+			<Tipo_x0020_Venta>P</Tipo_x0020_Venta>
+			<_x0025__x0020_BioEtanol>0,0</_x0025__x0020_BioEtanol>
+			<_x0025__x0020_Éster_x0020_metílico>0,0</_x0025__x0020_Éster_x0020_metílico>
+			<IDEESS>833</IDEESS>
+			<IDMunicipio>4961</IDMunicipio>
+			<IDProvincia>32</IDProvincia>
+			<IDCCAA>12</IDCCAA>
+		</EESSPrecio>
+	</ListaEESSPrecio>
+	<Nota>Archivo de todos los productos en todas las estaciones de servicio. La actualización de precios se realiza cada media hora, con los precios en vigor en ese momento.</Nota>
+	<ResultadoConsulta>OK</ResultadoConsulta>
+</PreciosEESSTerrestres>

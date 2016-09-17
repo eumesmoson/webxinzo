@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/bootstrap-datepicker3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+	<title>Document</title>
+</head>
+<body>
+<div id="cal"></div>
+<button>hola</button>
+ <script type="text/javascript">
+$('#cal').datepicker({
+    format: "dd/mm/yyyy",
+    language: "gl",
+    daysOfWeekHighlighted: "0,6",
+    autoclose: true,
+    todayHighlight: true,
+    toggleActive: true
+ });
+$('button').click(function(){
+	$('#cal').datepicker("setDate", "10-02-2016");
+
+});
+ </script>
+</body>
+</html>
