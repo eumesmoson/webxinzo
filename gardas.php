@@ -28,8 +28,8 @@ $datos=$html->find('div[class=datos_guardia]');
 
 for($i=0;$i<count($datost);$i++)
 {
-echo "<div class='table-responsive' id='datosgardas'><table class='table' id='tabguar".$i."'>
-<thead ><tr class='colorm'><th class='centro' colspan='2' id='gar".$i."'> ".$data. "&nbsp;&nbsp;".$datost[$i]->plaintext."</th></tr></thead></table></div>";
+echo "<table class='table' id='tabguar".$i."'>
+<thead ><tr class='colorm'><th class='centro' colspan='2' id='gar".$i."'> ".$data. "&nbsp;&nbsp;".$datost[$i]->plaintext."</th></tr></thead></table>";
 //for($j=0;$j<count($datos[$i]->find('p'));$j++){
 
 foreach($datos[$i]->find('p') as $texto) { 

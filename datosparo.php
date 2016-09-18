@@ -1,4 +1,5 @@
 <?php 
+require_once('configuracion.php');
 $mes=$_POST["mes"];
 $ano=$_POST["ano"];
 $iano=$ano;
@@ -57,26 +58,27 @@ if($ano==2011){$imes="10";}
 
 
 header('Content-type: text/html; charset=UTF-8');
-$urlp="http://www.ige.eu/igebdt/igeapi/datos/742/0:".$ano.$mes.",9915:32032";
-$urle="http://www.ige.eu/igebdt/igeapi/datos/744/4:".$ano.$mes.",9915:32032";
+$urlp="http://www.ige.eu/igebdt/igeapi/datos/742/0:".$ano.$mes.",9915:".$codIGE;
+$urle="http://www.ige.eu/igebdt/igeapi/datos/744/4:".$ano.$mes.",9915:".$codIGE;
 
 if($ano>2011){
-$urle3="http://www.ige.eu/igebdt/igeapi/datos/4556/0:".$iano.$imes.",9915:32032";//afiliacion idades ss
+$urle3="http://www.ige.eu/igebdt/igeapi/datos/4556/0:".$iano.$imes.",9915:".$codIGE;//afiliacion idades ss
 $ito=13;
 }
 else if($ano==2011){
-$urle3="http://www.ige.eu/igebdt/igeapi/datos/4557/0:".$iano.$imes.",4:0,9915:32032";//afiliacion idades ss
+$urle3="http://www.ige.eu/igebdt/igeapi/datos/4557/0:".$iano.$imes.",4:0,9915:".$codIGE;//afiliacion idades ss
 $ito=13;
 }
 else{
-$urle3="http://www.ige.eu/igebdt/igeapi/datos/3422/0:".$iano.$imes.",9915:32032";
+$urle3="http://www.ige.eu/igebdt/igeapi/datos/3422/0:".$iano.$imes.",9915:".$codIGE;
 $ito=14;
 }
-$urle5="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:".$iano.$imes.",9915:32032";
-$datosp=explode(',',preg_replace('/"|32032/',' ', file_get_contents($urlp)));
-$datose=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle)));
-$datose5=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle5)));
-$datose3=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle3)));
+$urle5="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:".$iano.$imes.",9915:".$codIGE;
+$filtro='/"|'.$codIGE.'/';
+$datosp=explode(',',preg_replace($filtro,' ', file_get_contents($urlp)));
+$datose=explode(',',preg_replace($filtro,' ',file_get_contents($urle)));
+$datose5=explode(',',preg_replace($filtro,' ',file_get_contents($urle5)));
+$datose3=explode(',',preg_replace($filtro,' ',file_get_contents($urle3)));
 
 $meses=array("Xaneiro","Febreiro","Marzo","Abril","Maio","Xuño","Xullo",
 "Agosto","Septembro","Outubro","Novembro","Decembro");

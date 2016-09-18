@@ -32,13 +32,13 @@ catch (Exception $e) {
     echo 'Produciuse un erro :('.$e->getMessage();
 }
 //var_dump($datos);
-echo "<table class='table' border='2' id='tabgt'>
-<thead ><tr class='colorm'><th class='centro' colspan='2' id='gar'>Prezos actualizados: ".$gasofa->Fecha."</th></tr></thead></table></center>";
+echo "<div class='table-responsive' id='datosgasfecha'><table class='table' border='2' id='tabgt'>
+<thead ><tr class='colorm'><th class='centro' colspan='2' id='gar'>Prezos actualizados: ".$gasofa->Fecha."</th></tr></thead></table></div>";
 $pgA=0;$clasA="";
 $pgB=0;
 for($i=0;$i<count($gasofa->ListaEESSPrecio->EESSPrecio);$i++)
 {
-echo"<div class='table-responsive' id='datosgas'><table class='table' border='0' id='tabgd'>
+echo"<div class='table-responsive' id='datosgas".$i."'><table class='table' border='0' id='tabgd'>
 <thead ><tr class='colorm'><th class='centro' colspan='2' id='gar".$i."'>".$gasofa->ListaEESSPrecio->EESSPrecio[$i]->Rótulo."</th></tr></thead>
 <tr><td><img src='imaxes/homep.png' alt='dirección'></td><td id='dirg".$i."' style='text-align:center'>".$gasofa->ListaEESSPrecio->EESSPrecio[$i]->Dirección."</td></tr>
 <tr><td><img src='imaxes/reloxo.png' alt='horario'></td><td id='horg".$i."' style='text-align:center'><b>".$gasofa->ListaEESSPrecio->EESSPrecio[$i]->Horario."</b></td></tr>";

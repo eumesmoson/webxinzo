@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="gl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Xinzo de Limia</title>
+<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
@@ -40,7 +40,7 @@
 <div class="row colorxf margenarriba" id="mostrar">
 <div class="col-md-8 col-lg-9 col-sm-8" id="xeraltexto">
 <hr>
-<h1 class="efectotexto">Xinzo de Limia</h1>
+<h1 class="efectotexto"><?php echo $nomeMunicipio;?></h1>
 <hr>
 <p class="parrafos">
 O concello de Xinzo de Limia esta situado no sur da provincia de Ourense ten 

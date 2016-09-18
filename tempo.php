@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="gl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Xinzo de Limia</title>
+<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -49,8 +49,8 @@ $dia=intval(date("d"));
 $valor=($dia-1)."/".$mes."/".$ano."&data2=".$dia."/".$mes."/".$ano;
 //header('Content-type: text/html; charset=UTF-8');
 $url=htmlentities("http://www2.meteogalicia.es/galego/observacion/estacions/contidos/
-  DatosHistoricosXML_diario.asp?est=19027&param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,%2010124,10001,10117,10129,9990&data1=".$valor."&idprov=2&red=102109");
-$ul=utf8_encode("http://www2.meteogalicia.es/galego/observacion/estacions/contidos/DatosHistoricosXML_diario.asp?est=19027&");
+  DatosHistoricosXML_diario.asp?est=19027&param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,%2010124,10001,10117,10129,9990&data1=".$valor."&idprov=2&red=".$redMetereo);
+$ul=utf8_encode("http://www2.meteogalicia.es/galego/observacion/estacions/contidos/DatosHistoricosXML_diario.asp?est=".$estMetereo."&");
 $up=utf8_encode("param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,%2010124,10001,10117,10129,9990&");
 $uf=utf8_encode("data1=".$valor."&idprov=2&red=102109");
 $ut=$ul.$up.$uf;
@@ -58,9 +58,9 @@ $ut=$ul.$up.$uf;
 $meses=array("Xaneiro","Febreiro","Marzo","Abril","Maio","Xuño","Xullo","Agosto","Septembro","Outubro","Novembro","Decembro");
 $dias = array( 'Domingo', 'Luns', 'Martes','Mercores', 'Xoves', 'Vernes', 'Sábado');
 
-$urld="http://www2.meteogalicia.gal/galego/observacion/estacions/contidos/DatosHistoricosXML_diario.asp?est=19027&param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,10124,10001,10117,10129,9990&data1=6/9/2016&data2=7/9/2016&idprov=2&red=102109";
+$urld="http://www2.meteogalicia.gal/galego/observacion/estacions/contidos/DatosHistoricosXML_diario.asp?est=".$estMetereo."&param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,10124,10001,10117,10129,9990&data1=6/9/2016&data2=7/9/2016&idprov=2&red=".$redMetereo;
 
-echo ("<div id='titulop'><h5 class='texto centro efectotexto'>Medición en Xinzo de Limia o ".($dia-1)." de ".$meses[$mes-1]." do ".$ano."  </h5><hr></div>");?>
+echo ("<div id='titulop'><h5 class='texto centro efectotexto'>Medición en ".$nomeMunicipio." o ".($dia-1)." de ".$meses[$mes-1]." do ".$ano."  </h5><hr></div>");?>
 <div id="contidotaboas" class="tab-content" >
 <div class="table-responsive">
 <div id="taboa">
@@ -164,15 +164,14 @@ echo("<tr class='textott' >
 </ul>
 <div class="tab-content" >
 <div id="esta" class="tab-pane fade in active">
-
-<iframe class="wigtempo"  id="framesta" style='height:620px'src='http://servizos.meteogalicia.gal/widget/html/widget_estacions.html?codigo=19027&language=gl&formato=normal&temperatura=true&viento=true&choiva=true&sol=true&refacho=true&tempmin=true&tempmax=true&tendencia=true&fondo=FFFFFF'>
-</iframe>
+<?php echo "<iframe class='wigtempo' id='framesta' style='height:620px' 
+src='http://servizos.meteogalicia.gal/widget/html/widget_estacions.html?codigo=".$estMetereo."&language=gl&formato=normal&temperatura=true&viento=true&choiva=true&sol=true&refacho=true&tempmin=true&tempmax=true&tendencia=true&fondo=FFFFFF'>
+</iframe>";?>
 
 </div>
 <div id="pred" class="tab-pane">
-
-<iframe class="wigtempo" id="framepre" style='height:808px' src='http://servizos.meteogalicia.gal/widget/html/widget_concellos.html?codigo=32032&language=gl&formato=normal&dia=0&temperatura=true&viento=true&choiva=true&fondo=FFFFF'>
-</iframe>
+<?php echo "<iframe class='wigtempo' id='framepre' style='height:808px' 
+ src='http://servizos.meteogalicia.gal/widget/html/widget_concellos.html?codigo=".$codIGE."&language=gl&formato=normal&dia=0&temperatura=true&viento=true&choiva=true&fondo=FFFFF'></iframe>";?>
 
 </div>
 

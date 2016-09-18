@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="gl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Xinzo de Limia</title>
+<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="estilos/estilo.css">
@@ -42,8 +42,9 @@
 <div id="datosmostrar" class="over">
 <?php 
 //header('Content-type: text/html; charset=UTF-8');
-$url="http://www.ige.eu/igebdt/igeapi/datos/100/0:2015,9915:32032";
-$datos=explode(',',preg_replace('/[A-Z]|[a-z]|"|32032/',' ', file_get_contents($url)));
+$url="http://www.ige.eu/igebdt/igeapi/datos/100/0:2015,9915:".$codIGE;
+$filtro='/[A-Z]|[a-z]|"|'.$codIGE.'/';
+$datos=explode(',',preg_replace($filtro,' ', file_get_contents($url)));
 
 for($i=0;$i<count($datos);$i++)
 {
@@ -57,7 +58,7 @@ array_splice($datos, $i,1);
 echo $i."  ".$datos[$i]."<br>";
 }*/
 
-echo ("<h5 class='texto centro efectotexto'>Xinzo de Limia ".$datos[7]." </h5><hr>");
+echo ("<h5 class='texto centro efectotexto'>".$nomeMunicipio." ".$datos[7]."</h5><hr>");
 echo("<div class='table-responsive'>          
   <table class='table'>
     <thead >
@@ -183,7 +184,8 @@ echo ("</select><button type='submit' class='btn btn-primary btn-sm' style='marg
 </div>
 </div>
 <div>
-<iframe class="conwipoboa"  frameborder="1" scrolling="no" src="http://www.ige.eu/web/servlet/widgdat?i=29;12;13;14;15;16;17;21;20;18;19;22;23&l=gl&e=32032">
+<?php $urlwid="http://www.ige.eu/web/servlet/widgdat?i=29;12;13;14;15;16;17;21;20;18;19;22;23&l=gl&e=".$codIGE;?>
+<iframe class="conwipoboa"  frameborder="1" scrolling="no" src=<?php echo "'".$urlwid."'"; ?>>
 </iframe>
 <p style="text-align:center">
 <a style="text-decoration: none; border: 0;" target="_blank" href="http://www.ige.eu"><img border="0" src="http://www.ige.eu/web/imgs/operacion.gif"/></a>
@@ -239,7 +241,7 @@ $("#"+a).css({"background": "linear-gradient(#3974C0 0%, #555555 100%)"});
 }
 
 <?php
-$url="http://www.ige.eu/igebdt/igeapi/datos/1558/9915:32032";
+$url="http://www.ige.eu/igebdt/igeapi/datos/1558/9915:".$codIGE;
 $datos=explode(',',preg_replace('/"|[a-zA-Z]/',' ',file_get_contents($url)));
 
 $anos="";

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="gl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Xinzo de Limia</title>
+<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="estilos/estilo.css">
@@ -71,31 +71,31 @@ else if($mes>=3 && $mes<6) {if($dia<25){$iano=$ano-1;$imes="12";}else{$imes="03"
 else if($mes>=6 && $mes<9) {if($dia<25){$imes="03";}else{$imes="06";}$mes="0".(intval($mes)-1);}
 else if($mes>=6 && $mes<12){if($dia<25){$imes="06";}else{$imes="09";}$mes="0".(intval($mes)-1);}
 
-$urlp="http://www.ige.eu/igebdt/igeapi/datos/742/0:".$ano.$auxmes.",9915:32032";
-$urlp1="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:".$ano.$auxmes.",9915:32032";//paro mes datos afil
-$urle="http://www.ige.eu/igebdt/igeapi/datos/744/4:".$ano.$auxmes.",9915:32032";
-$urle1="http://www.ige.eu/igebdt/igeapi/datos/7133/0:".$iano.$imes.",9915:32032";
-$urle2="http://www.ige.eu/igebdt/igeapi/datos/8000/0:2012,9915:32032";//pib 2012
-$urle3="http://www.ige.eu/igebdt/igeapi/datos/4556/0:".$iano.$imes.",9915:32032";
-$urle31="http://www.ige.eu/igebdt/igeapi/datos/4557/0:".$iano.$imes.",9915:32032";
-$urle4="http://www.ige.eu/igebdt/igeapi/datos/939/0:2013,9913:32032";//presupostos concello
-$urle5="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:".$iano.$imes.",9915:32032";//datos para taxa paro
-$urle6="http://www.ige.eu/igebdt/igeapi/datos/1843/1:2014,9931:32032";
-$urle7="http://www.ige.eu/igebdt/igeapi/datos/3074/0:0:1:188:205,2:2014,9931:32032";
-$urle8="http://www.ige.eu/igebdt/igeapi/datos/777/0:2014,9931:32032";
-
-$datosp=explode(',',preg_replace('/"|32032/',' ', file_get_contents($urlp)));
-$datosp1=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urlp1)));
-$datose=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle)));
-$datose1=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle1)));
-$datose2=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle2)));
-$datose3=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle3)));
-$datose31=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle31)));
-$datose4=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle4)));
-$datose5=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle5)));
+$urlp="http://www.ige.eu/igebdt/igeapi/datos/742/0:".$ano.$auxmes.",9915:".$codIGE;
+$urlp1="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:".$ano.$auxmes.",9915".$codIGE;//paro mes datos afil
+$urle="http://www.ige.eu/igebdt/igeapi/datos/744/4:".$ano.$auxmes.",9915:".$codIGE;
+$urle1="http://www.ige.eu/igebdt/igeapi/datos/7133/0:".$iano.$imes.",9915:".$codIGE;
+$urle2="http://www.ige.eu/igebdt/igeapi/datos/8000/0:2012,9915:".$codIGE;//pib 2012
+$urle3="http://www.ige.eu/igebdt/igeapi/datos/4556/0:".$iano.$imes.",9915:".$codIGE;
+$urle31="http://www.ige.eu/igebdt/igeapi/datos/4557/0:".$iano.$imes.",9915:".$codIGE;
+$urle4="http://www.ige.eu/igebdt/igeapi/datos/939/0:2013,9913:".$codIGE;//presupostos concello
+$urle5="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:".$iano.$imes.",9915:".$codIGE;//datos para taxa paro
+$urle6="http://www.ige.eu/igebdt/igeapi/datos/1843/1:2014,9931:".$codIGE;
+$urle7="http://www.ige.eu/igebdt/igeapi/datos/3074/0:0:1:188:205,2:2014,9931:".$codIGE;
+$urle8="http://www.ige.eu/igebdt/igeapi/datos/777/0:2014,9931:".$codIGE;
+$filtro='/"|'.$codIGE.'/';
+$datosp=explode(',',preg_replace($filtro,' ', file_get_contents($urlp)));
+$datosp1=explode(',',preg_replace($filtro,' ',file_get_contents($urlp1)));
+$datose=explode(',',preg_replace($filtro,' ',file_get_contents($urle)));
+$datose1=explode(',',preg_replace($filtro,' ',file_get_contents($urle1)));
+$datose2=explode(',',preg_replace($filtro,' ',file_get_contents($urle2)));
+$datose3=explode(',',preg_replace($filtro,' ',file_get_contents($urle3)));
+$datose31=explode(',',preg_replace($filtro,' ',file_get_contents($urle31)));
+$datose4=explode(',',preg_replace($filtro,' ',file_get_contents($urle4)));
+$datose5=explode(',',preg_replace($filtro,' ',file_get_contents($urle5)));
 $datose6=explode(',',preg_replace('/"/',' ',file_get_contents($urle6)));
 $datose7=explode(',',preg_replace('/"/',' ',file_get_contents($urle7)));
-$datose8=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle8)));
+$datose8=explode(',',preg_replace($filtro,' ',file_get_contents($urle8)));
 /*
 for($i=0;$i<count($datose31);$i++)
 {
@@ -447,7 +447,7 @@ echo ("</select><label>para ver os datos.</label>
    <table class='table'>
    <thead>
    <tr class='textotate'>
-   <th class='texto centro oscuro'  colspan='3' id='lenda6'> Débeda viva Xinzo de Limia ano: ".$xml->datos[count($xml)-1]->ano."</th>
+   <th class='texto centro oscuro'  colspan='3' id='lenda6'> Débeda viva ".$nomeMunicipio." ano: ".$xml->datos[count($xml)-1]->ano."</th>
    </tr>
    <tr><th colspan='3'></th></tr>
    </thead>
@@ -531,7 +531,7 @@ echo ("</select><label>para ver os datos.</label>
     echo("<div class='table-responsive'>     
     <table class='table'><thead>
     <tr class='textotate'>
-    <th class='texto centro oscuro' colspan='5' id='lenda8'>Presupostos Xinzo de Limia ano 2014</th>
+    <th class='texto centro oscuro' colspan='5' id='lenda8'>Presupostos ".$nomeMunicipio." ano 2014</th>
     <th><a href='#' class='mariz'><img src='imaxes/pie_chart.png' alt='gráfica' title='gráfica' onclick=grafafideb()></a></th>
     </tr><tr><th colspan='6'></th></tr>
     <tr class='textotate'><th class='texto centro oscuro' colspan='3'>Ingresos</th>
@@ -667,8 +667,9 @@ echo("<div class='table-responsive'>
 
 </div>
 </div>
+<?php $urlwid="http://www.ige.eu/web/servlet/widgdat?i=24;25;30;31;32;33;26;27;28&l=gl&e=".$codIGE;?>
 <div class="col-md-4 col-lg-3 col-sm-4" id="igeeco"> 
-<iframe class="conwipoboa"  frameborder="1" scrolling="no" src="http://www.ige.eu/web/servlet/widgdat?i=24;25;30;31;32;33;26;27;28&l=gl&e=32032">
+<iframe class="conwipoboa"  frameborder="1" scrolling="no" src=<?php echo "'".$urlwid."'"; ?>>
 </iframe>
 <p style="text-align:center">
 <a style="text-decoration: none; border: 0" target="_blank" href="http://www.ige.eu"><img border="0" src="http://www.ige.eu/web/imgs/operacion.gif"/></a>
@@ -917,7 +918,7 @@ var c=[
       ];
 var ch=[
         ['x', '2008-12-31', '2009-12-31', '2010-12-31', '2011-12-31', '2012-12-31', '2013-12-31', '2014-12-31', '2015-12-31'],
-        ['IMPORTE DEBEDA POR HABITANTE', Math.round(2299000/10033), Math.round(4162000/10161), Math.round(4141000/10245),Math.round(3964000/10329),
+        ['IMPORTE DEBEDA POR HABITANTE', Math.round(2299000/10033), Math.round(4162000/10161), Math.round(4141000/10245),Math.round(3964000/1032329),
         Math.round(7354000/10358), Math.round(7855000/10307),Math.round(6343000/10200),Math.round(5851000/10043)]
        ];
 //alert(c[0][1]);
@@ -980,7 +981,7 @@ function grafLineas(x){
         
 }});
 <?php
-$url="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:200505:200506:200507:200508:200509:200510:200511:200512:200601:200602:200603:200604:200605:200606:200607:200608:200609:200610:200611:200612:200701:200702:200703:200704:200705:200706:200707:200708:200709:200710:200711:200712:200801:200802:200803:200804:200805:200806:200807:200808:200809:200810:200811:200812:200901:200902:200903:200904:200905:200906:200907:200908:200909:200910:200911:200912:201001:201002:201003:201004:201005:201006:201007:201008:201009:201010:201011:201012:201101:201102:201103:201104:201105:201106:201107:201108:201109:201110:201111:201112:201201:201202:201203:201204:201205:201206:201207:201208:201209:201210:201211:201212:201301:201302:201303:201304:201305:201306:201307:201308:201309:201310:201311:201312:201401:201402:201403:201404:201405:201406:201407:201408:201409:201410:201411:201412:201501:201502:201503:201504:201505:201506:201507:201508:201509:201510:201511:201512:201601:201602:201603:201604:201605:201606:201607:201608,9915:32032";
+$url="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:200505:200506:200507:200508:200509:200510:200511:200512:200601:200602:200603:200604:200605:200606:200607:200608:200609:200610:200611:200612:200701:200702:200703:200704:200705:200706:200707:200708:200709:200710:200711:200712:200801:200802:200803:200804:200805:200806:200807:200808:200809:200810:200811:200812:200901:200902:200903:200904:200905:200906:200907:200908:200909:200910:200911:200912:201001:201002:201003:201004:201005:201006:201007:201008:201009:201010:201011:201012:201101:201102:201103:201104:201105:201106:201107:201108:201109:201110:201111:201112:201201:201202:201203:201204:201205:201206:201207:201208:201209:201210:201211:201212:201301:201302:201303:201304:201305:201306:201307:201308:201309:201310:201311:201312:201401:201402:201403:201404:201405:201406:201407:201408:201409:201410:201411:201412:201501:201502:201503:201504:201505:201506:201507:201508:201509:201510:201511:201512:201601:201602:201603:201604:201605:201606:201607:201608,9915:".$codIGE;
 $datos=explode(',',preg_replace('/"|[a-zA-Z]/',' ',file_get_contents($url)));
 
 

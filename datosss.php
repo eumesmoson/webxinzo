@@ -1,4 +1,6 @@
 <?php 
+require_once('configuracion.php');
+
 $mes=$_POST["mes"];
 $ano=$_POST["ano"];
 $iano=$ano;
@@ -58,18 +60,19 @@ header('Content-type: text/html; charset=UTF-8');
 
 if($ano<=2010)
 {
-$urle1="http://www.ige.eu/igebdt/igeapi/datos/3421/0:".$iano.$imes.",9915:32032";
-$urle3="http://www.ige.eu/igebdt/igeapi/datos/3422/0:".$iano.$imes.",9915:32032";
-$urle31="http://www.ige.eu/igebdt/igeapi/datos/3423/0:".$iano.$imes.",9915:32032";
+$urle1="http://www.ige.eu/igebdt/igeapi/datos/3421/0:".$iano.$imes.",9915:".$codIGE;
+$urle3="http://www.ige.eu/igebdt/igeapi/datos/3422/0:".$iano.$imes.",9915:".$codIGE;
+$urle31="http://www.ige.eu/igebdt/igeapi/datos/3423/0:".$iano.$imes.",9915:".$codIGE;
 }
 else{
-$urle1="http://www.ige.eu/igebdt/igeapi/datos/7133/0:".$iano.$imes.",9915:32032";
-$urle3="http://www.ige.eu/igebdt/igeapi/datos/4556/0:".$iano.$imes.",9915:32032";
-$urle31="http://www.ige.eu/igebdt/igeapi/datos/4557/0:".$iano.$imes.",9915:32032";
+$urle1="http://www.ige.eu/igebdt/igeapi/datos/7133/0:".$iano.$imes.",9915:".$codIGE;
+$urle3="http://www.ige.eu/igebdt/igeapi/datos/4556/0:".$iano.$imes.",9915:".$codIGE;
+$urle31="http://www.ige.eu/igebdt/igeapi/datos/4557/0:".$iano.$imes.",9915:".$codIGE;
 }
-$datose1=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle1)));
-$datose3=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle3)));
-$datose31=explode(',',preg_replace('/"|32032/',' ',file_get_contents($urle31)));
+$filtro='/"|'.$codIGE.'/';
+$datose1=explode(',',preg_replace($filtro,' ',file_get_contents($urle1)));
+$datose3=explode(',',preg_replace($filtro,' ',file_get_contents($urle3)));
+$datose31=explode(',',preg_replace($filtro,' ',file_get_contents($urle31)));
 
 
 $meses=array("Xaneiro","Febreiro","Marzo","Abril","Maio","Xuño","Xullo",

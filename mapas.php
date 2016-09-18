@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="gl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Xinzo de Limia</title>
+<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -127,7 +127,7 @@ onclick="enviamos(document.getElementById('datepicker').value,322,'datbus')"><im
 onclick="enviamos2('datbus')"><img src="imaxes/gasn.png" style="margin-top:-5px;margin-left:-13px" alt="icono gasolineira" ><span class="verben">PREZOS DA GASOLINA</span>
 </button></div>
 <hr>
-<div id="datbus" class="over" style="height:450px"></div>
+<div id="datbus" class="table-responsive over" style="height:450px"></div>
 </div>
 </div>
 </div>
@@ -193,12 +193,12 @@ map = new GMaps({
   div: '#map',
   zoom:25,
   mapTypeId:google.maps.MapTypeId.HYBRID,
-  lat: 42.063010,
-  lng: -7.726178
+  lat:  <?php echo $lat;?>,
+  lng: <?php echo $lon;?>
   });
 var marker=map.addMarker({
-  lat: 42.063010,
-  lng: -7.726178,
+  lat: <?php echo $lat;?> ,
+  lng: <?php echo $lon;?>,
   title: 'Praza Maior',
   icon:'imaxes/flechaaover1.png',
   animation: google.maps.Animation.BOUNCE,

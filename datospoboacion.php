@@ -1,11 +1,12 @@
 <?php 
-
+require_once('configuracion.php');
 $ano=$_POST["ano"];
 $tipo=$_POST["tipo"];
 
-$url="http://www.ige.eu/igebdt/igeapi/datos/100/0:".$ano.",9915:32032";
-$datos=explode(',',preg_replace('/[A-Z]|[a-z]|"|32032/',' ', file_get_contents($url)));
-
+$url="http://www.ige.eu/igebdt/igeapi/datos/100/0:".$ano.",9915:".$codIGE;
+$filtro='/[A-Z]|[a-z]|"|'.$codIGE.'/';
+$datos=explode(',',preg_replace($filtro,' ', file_get_contents($url)));
+$urlwid="http://www.ige.eu/web/servlet/widgdat?i=29;12;13;14;15;16;17;21;20;18;19;22;23&l=gl&e=".$codIGE;
 for($i=0;$i<count($datos);$i++)
 {
 if (empty($datos[$i]))
@@ -13,6 +14,10 @@ if (empty($datos[$i]))
 array_splice($datos, $i,1);
 }
 }
+
+
+
+
 //return count($datos);
 /*for($i=0;$i<count($)datos);$i++)
 {
@@ -21,7 +26,7 @@ array_splice($datos, $i,1);
 
 if($tipo=="datosmostrar"){
 header('Content-type: text/html; charset=UTF-8');
-echo ("<h5 class='texto centro efectotexto'>Xinzo de Limia ".$datos[7]." </h5><hr>");
+echo ("<h5 class='texto centro efectotexto'>".$nomeMunicipio." ".$datos[7]." </h5><hr>");
 echo("<div class='table-responsive'>          
   <table class='table'>
     <thead >
@@ -145,7 +150,7 @@ echo ("<hr><div id='grafica_poboacion' class='contgraf' >
 <div id='dos1' onmouseover=colora(this.id,1),colora('m1',1),colora('pm1',1)    onmouseout=colora(this.id,2),colora('m1',3),colora('pm1',3)    class='dereita' style='width:".(round($datos[294],0)/3)."px'  title='".(round($datos[294],0))."'></div>
 <div id='dos0' onmouseover=colora(this.id,1),colora('m0',1),colora('pm0',1)    onmouseout=colora(this.id,2),colora('m0',3),colora('pm0',3)    class='dereita' style='width:".(round($datos[287],0)/3)."px'  title='".(round($datos[287],0))."'></div>
 </div></div></div>
-<iframe class='conwipoboa' frameborder='1' scrolling='no' src='http://www.ige.eu/web/servlet/widgdat?i=29;12;13;14;15;16;17;21;20;18;19;22;23&l=gl&e=32032'></iframe>
+<iframe class='conwipoboa' frameborder='1' scrolling='no' src='".$urlwid."'></iframe>
 <a style='text-decoration: none; border: 0;'
 target='_blank' href='http://www.ige.eu'><img border='0'src='http://www.ige.eu/web/imgs/operacion.gif'/></a><a href='http://www.ige.eu'>Instituto Galego de Estatística</a></div>");
 //echo "hola ".$tipo.$datos[247];
@@ -154,7 +159,6 @@ else
 {
 echo "Error :(";
 }
-
 
 
 
