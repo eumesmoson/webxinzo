@@ -13,6 +13,7 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="scripts/Donut3D.js"></script>
 <script src="scripts/c3.js"></script>
+<script src="scripts/scripts.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -1105,6 +1106,7 @@ if($(window).width()<=450){
     $("#listaecon li:eq(3) > a").html("Pre");
     $("#listaecon li:eq(4) > a").html("Emp");
     descolocaTaboas();
+    normal();
     }
 if($(window).width()>450 && $(window).width()<760){
     $("#menu").removeClass("navbar-default");
@@ -1117,6 +1119,7 @@ if($(window).width()>450 && $(window).width()<760){
     $("#listaecon li:eq(3) > a").html("Presupostos");
     $("#listaecon li:eq(4) > a").html("Empresas");
     descolocaTaboas();
+    normal();
 
 }
 if($(window).width()>760){
@@ -1132,7 +1135,10 @@ if($(window).width()>760){
     $("#listaecon li:eq(4) > a").html("Empresas");
     $("#contdatos").removeClass("margen");
     descolocaTaboas();
+    normal();
    }
+if($(window).width() < 950 && $(window).width() >760) {acortar();}
+if($(window).width() > 950) {normal();}
 if($(window).width()>1600){colocaTaboas()}
 //$("#mostrar").height($(window).height()*0.95);   
 }

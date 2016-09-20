@@ -1,9 +1,14 @@
+<?php
+require_once('configuracion.php');
+$latr=$_GET["lat"];
+$lonr=$_GET["lon"]; 
+?>
 <!DOCTYPE html>
 <html lang="gl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
+<title><?php  echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -18,6 +23,7 @@
 <script src="scripts/c3.js"></script>
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script src="scripts/gmaps.js"></script>
+<script src="scripts/scripts.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -46,18 +52,6 @@
 <div class="col-md-8 col-lg-9 col-sm-8" id="mapas">
 <div id="map" style="border:1px yellow inset;width:102%;height:740px;z-index:1;margin:5px;margin-left:-10px;padding:0px;border-radius:10px;"></div>
 </div>
-
-<div id="dereita" class="col-md-4 col-lg-3 col-sm-4"  >  
-<div id="contidodereita" >
-<ul class="nav nav-tabs" id="listwigtempo" style="margin-top:5px">
-    <li><a data-toggle="tab" class="colorm" href="#interese" onclick="">LUGARES INTERESE</a></li>
-    <li><a data-toggle="tab" class="colorm" href="#buscar" onclick="">BUSCAR</a></li>
-   
-</ul>
-<div class="tab-content" >
-<div id="interese" class="tab-pane fade in active" >
-<div id="datoslugar" class="over" style="height:650px">
-<hr>
 <?php
 
 try {
@@ -66,8 +60,22 @@ $lugares=simplexml_load_file("lugares.xml");
 catch (Exception $e) {
     echo 'Produciuse un erro :('.$e->getMessage();
 }
-//var_dump($lugares);
+//var_dump($lugares);?>
 
+<div id="dereita" class="col-md-4 col-lg-3 col-sm-4"  >  
+<div id="contidodereita" >
+<ul class="nav nav-tabs" id="listwigtempo" style="margin-top:5px">
+    <li><a data-toggle="tab" class="colorm" href="#interese" onclick="">LUGARES INTERESE<span class="contador"><?php echo count($lugares)-1;?></span></a></li>
+    <li><a data-toggle="tab" class="colorm" href="#buscar" onclick="">BUSCAR</a></li>
+   
+</ul>
+
+
+<div class="tab-content" >
+<div id="interese" class="tab-pane fade in active" >
+<div id="datoslugar"  class="over" style="height:650px;">
+<hr>
+<?php
 echo("<div class='table-responsive' id='dato' >");
 for($i=0;$i<count($lugares)-1;$i++){
 echo("<table class='table' id='tab".$i."'><thead >");
@@ -117,7 +125,7 @@ echo "</div>"
     </form>
 </div>
 <hr>
-<div class="margent" >
+<div class="enlacesinfo" >
 <input type='text' id='datepicker' size='10' placeholder='Elixa data para consulta' class="form-control centro" style="width:226px;margin-bottom:3px" readonly>
 
 <button class="btn btn-default" style="width:226px" 
@@ -134,6 +142,13 @@ onclick="enviamos2('datbus')"><img src="imaxes/gasn.png" style="margin-top:-5px;
 </div>
 </article>  
 </div>
+<?php 
+$latitude="";
+$lonxitud="";
+if(is_null($latr)){$latitude=$lat;} else{$latitude=$latr;}
+if(is_null($lonr)){$lonxitude=$lon;} else{$lonxitude=$lonr;}
+
+?>
 <script type="text/javascript">
 $("#tabmapas").removeClass("colorx");
 $("#tabmapas").css({background:'#FFFF00',BorderTopRightRadius: 10,BorderTopLeftRadius: 10,marginBottom:-10,border:'3px white groove'});
@@ -146,9 +161,9 @@ var diase=fecha.getDay();
 var diames=fecha.getDate();
 var mesano=new Array('Decembro', 'Xaneiro', 'Febreiro', 'Marzo', 'Abril', 'Maio', 'Xuño','Xullo','Agosto', 'Septembro','Outubro','Novembro');
 var diasem=new Array('Domingo','Luns','Martes','Mércores','Xoves','Venres','Sábado');
-var map;
-var tipomapa;
 var markers = [];
+var tipomapa="";
+
 
 function engadirMarcador(lat,t,m){
 setMapOnAll(null);
@@ -182,23 +197,25 @@ function setMapOnAll(map) {
     markers[i].setMap(map);
   }
 }
-function borrarMarcadores(){
+function borrarMarcadores(){setMapOnAll(null);}
 
-setMapOnAll(null);
-
-}
 function cargaMapa()
 {     
 map = new GMaps({
   div: '#map',
   zoom:25,
-  mapTypeId:google.maps.MapTypeId.HYBRID,
-  lat:  <?php echo $lat;?>,
-  lng: <?php echo $lon;?>
+  //mapTypeId:google.maps.MapTypeId.ROADMAP,
+  lat:  <?php echo $latitude;?>,
+  lng: <?php echo $lonxitude;?>,
+  mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.DEFAULT,
+        position: google.maps.ControlPosition.BOTTOM_CENTER
+    },
+  zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL}
   });
 var marker=map.addMarker({
-  lat: <?php echo $lat;?> ,
-  lng: <?php echo $lon;?>,
+  lat: <?php echo $latitude;?> ,
+  lng: <?php echo $lonxitude;?>,
   title: 'Praza Maior',
   icon:'imaxes/flechaaover1.png',
   animation: google.maps.Animation.BOUNCE,
@@ -208,7 +225,7 @@ var marker=map.addMarker({
 });
 markers.push(marker);
 } 
-function geolocalizar(){
+/*function geolocalizar(){
         GMaps.geolocate({
           success: function(position){
             lat = position.coords.latitude;  // guarda coords en lat y lng
@@ -216,11 +233,11 @@ function geolocalizar(){
             verMapa(lat,lng);
           },
           error: function(error) { alert('Error: '+error.message);verMapa(40.417441,-3.703047); },
-          not_supported: function(){verMapa(40.417441,-3.703047);//si no autoriza o no soporta muestra coor
+          not_supported: function(){//verMapa(40.417441,-3.703047);//si no autoriza o no soporta muestra coor
           
           },
         });
-      }
+      }*/
 
 function getFecha()
   {
@@ -250,15 +267,10 @@ function actfecha(){
  $.datepicker.setDefaults($.datepicker.regional['gl']);
  $("#datepicker").datepicker().datepicker("setDate", new Date());
 }
-function buscar(){
-
-
-}
+function buscar(){}
 function borrar(){
   $("#indice0").empty();
   $("#indice1").empty();
- 
-
 }
 
 function clonar(){
@@ -309,7 +321,7 @@ $.ajax({
           alert("Erro :( -> "+ textStatus +" "+ errorThrown);
         });
 borrar();
-$(document).ajaxComplete(); 
+$(document).ajaxComplete(function(){prezos();}); 
 }
 
 
@@ -319,22 +331,25 @@ if($(window).width()<360){
   $("#menu").removeClass("navbar-default");
   $("#menu").addClass("navbar-fixed-top");
   $("#mostrar").addClass("altura");
+  $("#map").css("margin-top","20px");
   $("#map").height(200);
-  $("#datoslugar").height(150);
+  $("#datoslugar").height(200);
   $("#datoslugar").css("overflow", "auto");
   $("#datbus").height(150);
   $("#datbus").css("overflow", "auto");
-
+  normal();
 }
-if($(window).width()<760){
+if($(window).width()<=760){
   $("#menu").removeClass("navbar-default");
   $("#menu").addClass("navbar-fixed-top");
   $("#mostrar").addClass("altura");
-  $("#map").height(300);
-  $("#datoslugar").height(220);
+  $("#map").css("margin-top","20px");
+  $("#map").height(250);
+  $("#datoslugar").height(280);
   $("#datoslugar").css("overflow", "auto");
-  $("#datbus").height(220);
+  $("#datbus").css("height","auto");
   $("#datbus").css("overflow", "auto");
+  normal();
 }
 if($(window).width()>760)
 {$("#menu").removeClass("navbar-fixed-top");
@@ -342,17 +357,56 @@ $("#menu").addClass("navbar-default");
 $("#mostrar").removeClass("altura");
 $("#mostrar").height($(window).height()*0.93);
 $("#map").height($("#mostrar").height()-15);
+$("#map").css("margin-top","5px");
+$("#datoslugar").height(650);
+$("#datoslugar").addClass("over");
 }
+if($(window).width() < 950 && $(window).width() >760) {acortar();}
+if($(window).width() > 950) {normal();}
 
 }
 $(window).resize(function() {
 adapan();
 });
-adapan();
 cargaMapa();
+adapan();
 actfecha();
 
-//alert($("#mostrar").height()-10);
+function prezos(){
+pgA=[];
+pgB=[];
+pg95=[];
+pg98=[];
+pgAn=[];
+for (i=0;i<4;i++)
+{
+if($("#pga"+i+" > b").text()!==''){pgA.push(parseFloat($("#pga"+i+" > b").text().replace(",",".")));}else{pgA.push(100);}
+if($("#pgb"+i+" > b").text()!==''){pgB.push(parseFloat($("#pgb"+i+" > b").text().replace(",",".")));}else{pgB.push(100);}
+if($("#pg95-"+i+" > b").text()!==''){pg95.push(parseFloat($("#pg95-"+i+" > b").text().replace(",",".")));}else{pg95.push(100);}
+if($("#pg98-"+i+" > b").text()!==''){pg98.push(parseFloat($("#pg98-"+i+" > b").text().replace(",",".")));}else{pg98.push(100);}
+if($("#pgan"+i+" > b").text()!==''){pgAn.push(parseFloat($("#pgan"+i+" > b").text().replace(",",".")));}else{pgAn.push(100);}
+}
+ma=pgA.indexOf(Math.min.apply(null,pgA));
+mb=pgB.indexOf(Math.min.apply(null,pgB));
+m95=pg95.indexOf(Math.min.apply(null,pg95));
+m98=pg98.indexOf(Math.min.apply(null,pg98));
+man=pgAn.indexOf(Math.min.apply(null,pgAn));
+//alert(man+" "+$("#pgan"+man).text());
+$("#pga"+ma).addClass("btn-success");
+$("#pgb"+mb).addClass("btn-success");
+$("#pg95-"+m95).addClass("btn-success");
+$("#pg98-"+m98).addClass("btn-success");
+$("#pgan"+man).addClass("btn-success");
+
+pgA=[];
+pgB=[];
+pg95=[];
+pg98=[];
+pgAn=[];
+//alert($("#pga0 > b").text());
+//alert(pgA[1]);
+}
+
 </script>
 </body>
 </html>

@@ -60,9 +60,6 @@ echo"<tr><td><img src='imaxes/gas.png' alt='gasolinera'></td><td id='pg95-".$i."
 if($gasofa->ListaEESSPrecio->EESSPrecio[$i]->Precio_x0020_Gasolina_x0020__x0020_98!=''){
 echo"<tr><td><img src='imaxes/gas.png' alt='gasolinera'></td><td id='pg98-".$i."' style='text-align:right'>GASOLINA 98: <b>".$gasofa->ListaEESSPrecio->EESSPrecio[$i]->Precio_x0020_Gasolina_x0020__x0020_98."</b> €</td></tr>";
 }
-if($gasofa->ListaEESSPrecio->EESSPrecio[$i]->Precio_x0020_Gasolina_x0020__x0020_98!=''){
-echo"<tr><td><img src='imaxes/gas.png' alt='gasolinera'></td><td id='pg98-".$i."' style='text-align:right'>GASOLINA 98: <b>".$gasofa->ListaEESSPrecio->EESSPrecio[$i]->Precio_x0020_Gasolina_x0020__x0020_98."</b> €</td></tr>";
-}
 if($gasofa->ListaEESSPrecio->EESSPrecio[$i]->Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A!=''){
 echo"<tr><td><img src='imaxes/gas.png' alt='gasolinera'></td><td id='pgan".$i."' style='text-align:right'>NOVO GASOLEO A: <b>".$gasofa->ListaEESSPrecio->EESSPrecio[$i]->Precio_x0020_Nuevo_x0020_Gasoleo_x0020_A."</b> €</td></tr>";
 }

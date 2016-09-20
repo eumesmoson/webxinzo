@@ -33,11 +33,11 @@ echo "<table class='table' id='tabguar".$i."'>
 //for($j=0;$j<count($datos[$i]->find('p'));$j++){
 
 foreach($datos[$i]->find('p') as $texto) { 
-	if($texto->plaintext=="PABLO GARCIA VIVANCO"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='5'></div>";}
-    else if($texto->plaintext=="ANTONIO GOMEZ PENIN"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='6'></div>";}
-	else if($texto->plaintext=="MARIA SOLEDAD RODRIGUEZ GARRIDO"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='7'></div>";}
-	else if($texto->plaintext=="ANA FERNANDEZ ORCAJADA"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='8'></div>";}
-	else if($texto->plaintext=="MARCO FRANCISCO GUZMAN AREVALO"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='9'></div>";}
+	if($texto->plaintext=="PABLO GARCIA VIVANCO"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='12'></div>";}
+    else if($texto->plaintext=="ANTONIO GOMEZ PENIN"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='13'></div>";}
+	else if($texto->plaintext=="MARIA SOLEDAD RODRIGUEZ GARRIDO"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='14'></div>";}
+	else if($texto->plaintext=="ANA FERNANDEZ ORCAJADA"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='15'></div>";}
+	else if($texto->plaintext=="MARCO FRANCISCO GUZMAN AREVALO"){echo "<div id='indice".$i."'><input type='hidden' name='nome".$i."' id='nome".$i."' value='16'></div>";}
 }
 
 }

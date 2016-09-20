@@ -13,6 +13,7 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="scripts/bootstrap-datepicker-1.5.1-dist/js/bootstrap-datepicker.min.js"></script>
 <script src="scripts/bootstrap-datepicker-1.5.1-dist/locales/bootstrap-datepicker.gl.min.js"></script>
+<script src="scripts/scripts.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -50,9 +51,9 @@ Forman parte do concello as seguintes parroquias:
 <p>
 <ol class="listas">
 <li><a href="#" data-toggle="popover" data-trigger="focus" id="sanpedro" data-placement="top"
-onclick="enlaces(this.id,'San Pedro'),verfestas('29-7'),colapsa('pboado')">Boado</a></li>
+onclick="enlaces(this.id,'Boado',42.067086,-7.683081,'San Pedro','29-7'),colapsa('pboado')">Boado</a></li>
 <ul id="pboado" class="collapse"><li class="nolista"><a href="#" id="portoalto" 
-onclick="enlaces(this.id,'Portoalto'),verfestas('29-7')">Porto Alto</a></li></ul>
+onclick="enlaces(this.id,'Porto Alto',42.061225,-7.690190,'San Pedro','29-7')">Porto Alto</a></li></ul>
 <li><a href="#" data-toggle="popover" data-trigger="focus" id="cimariveira">Cima de Ribeira</a></li>
 <li>Damil (Virxe do Carme)</li>
 <li>Faramontaos (San Salvador)</li>
@@ -83,24 +84,24 @@ onclick="enlaces(this.id,'Portoalto'),verfestas('29-7')">Porto Alto</a></li></ul
 $arrayMeses = array('Xaneiro', 'Febreiro', 'Marzo', 'Abril', 'Maio', 'Xuño','Xullo', 'Agosto', 'Septembro', 'Outubro', 'Novembro', 'Decembro');
 $arrayDias = array( 'Domingo', 'Luns', 'Martes','Mercores', 'Xoves', 'Vernes', 'Sábado');
 //echo "<hr><p class='text-center'><span class='textop   efectotexto '>".$arrayDias[date('w')].", ".date('j')." de ".$arrayMeses[date('m')-1]." de ".date('Y')."</span></p><hr>";
-?>
-<div id="contidodereita" >
-<hr>
-<ul class="nav nav-tabs" id="listwigtempo" style="margin-top:5px">
-    <li><a data-toggle="tab" class="colorx" href="#concello" onclick="">ANUNCIOS CONCELLO</a></li>
-    <li><a data-toggle="tab" class="colorx" href="#dendealimia" onclick="">NOVAS</a></li>
-   
-</ul>
-<div class="tab-content" >
-<div id="concello" class="tab-pane fade in active over" style="height:400px">
-
-<?php
 
 include "simple_html_dom.php";
 
 $html=file_get_html("http://www.xinzodelimia.es/seccion/anuncios");
 
 $datos=$html->find('div[class="data"]');
+?>
+<div id="contidodereita" >
+<hr>
+<ul class="nav nav-tabs" id="listwigtempo" style="margin-top:5px">
+    <li><a data-toggle="tab" class="colorx" href="#concello" >ANUNCIOS CONCELLO<span class="contador" style="border-color:white;"><?php echo count($datos)-1;?></span></a></li>
+    <li><a data-toggle="tab" class="colorx" href="#novas">NOVAS</a></li>
+   
+</ul>
+<div class="tab-content" >
+<div id="concello" class="tab-pane fade in active over" style="height:400px">
+
+<?php
 echo "<hr>";
 for($i=0;$i<count($datos);$i++)
 {
@@ -111,10 +112,14 @@ echo $datos[$i]."<hr>";
 
 
 </div>
-<div id="dendealimia" class="tab-pane">
-
-
-
+<div id="novas" class="tab-pane">
+<div style="margin:10px auto;width:280px;border:1px white solid;border-radius:10px;">
+<div class="bloque"><a href="http://www.dendealimia.com/" target="_blank"><button class="colorx bclx" type="button">DENDE A LIMIA</button></a></div>
+<div class="bloque"><a href="http://www.laregion.es/blog/section/a-limia" target="_blank"><button class="colorx bclx" type="button">LA REGION</button></a></div>
+<div class="bloque"><a href="http://www.ourensedixital.com/_limia/" target="_blank"><button class="colorx bclx" type="button">LIMIA DIXITAL</button></a></div>
+<div class="bloque"><a href="http://www.lavozdegalicia.es/ourense/xinzo-de-limia/index.htm" target="_blank"><button class="colorx bclx" type="button">LA VOZ DE GALICIA</button></a></div>
+<div class="bloque"><a href="http://www.farodevigo.es/galicia/ourense/xinzo/" target="_blank"><button class="colorx bclx" type="button">FARO DE VIGO</button></a></div>
+</div>
 </div>
 
 
@@ -167,8 +172,8 @@ echo $datos[$i]."<hr>";
 </p>
 <p>Os datos que se presentan nesta web proceden de sitios oficiais de administracións públicas, colexios profesionais, etc.</p>
 <table>
-<tr><td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl">
-<img alt="Licenza de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl"></a></td></tr>
+<tr><td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl" target="_blank">
+<img alt="Licenza de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl" target="_blank"></a></td></tr>
 </table>
 </div>
 <div class="modal-footer">
@@ -186,15 +191,15 @@ echo $datos[$i]."<hr>";
 </div>
 <div class="modal-body">
 <div class="form-group">
-<form action="#" method="post">
+<form action="mail.php" method="post">
 <label for="usr">Correo:</label>
-<input type="text" class="form-control" id="correo" placeholder="o teu correo" 
+<input type="text" class="form-control" id="correo" name="correo" placeholder="o teu correo" 
 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" data-error="erroneo" required>
 <label for="usr">Asunto:</label>
-<input type="text" class="form-control" id="asunto" placeholder="Asunto">
+<input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto">
 <label for="comment">Mensaxe:</label>
 <div style="overflow:auto">
-<textarea class="form-control" rows="5" id="texto" placeholder="Mensaxe" required></textarea>
+<textarea class="form-control" rows="5" id="mensaje" name="mensaje" placeholder="Mensaxe" required></textarea>
 </div>
 <hr>
 <div class="alindereita">
@@ -230,10 +235,19 @@ $('#calendario').datepicker({
     todayHighlight: true,
     toggleActive: true
  });
-function enlaces(capa,titulo){
-$('#'+capa).popover({title: "<strong>"+titulo+"</strong>", 
-    	content: "<strong><a href='#'>Ver no Mapa</a></strong>",html: true,}); 
+
+function enlaces(capa,nome,lat,lon,p,f){
+$('#'+capa).popover({title: "<strong>"+nome+"</strong>", 
+    	content: "<strong><a href='mapas.php?lat="+lat+"&lon="+lon+"'>Ver no Mapa</a></strong><br>Patron/a: <a href='#' onmouseover=verfestas('"+f+"') onmouseout=hoxe()>"+p+"</a><br> ",html: true});
+$('#'+capa).popover('show');
+
 }
+function hoxe(){
+  $('#calendario').datepicker('setDate', new Date());
+}
+/*$('[data-toggle="popover"]').on('hidden.bs.popover', function(){
+        $( "#calendario" ).datepicker({maxDate: "+0d"}).datepicker("setDate", new Date());
+    });
 /*$('#cimariveira').popover({title: "<a href='#'>San Miguel</a></strong>", 
         content: "<strong><a href='#'>Ver no Mapa</a></strong>",html: true,}); */
 
@@ -245,13 +259,15 @@ $("#"+nome).collapse('toggle');
 }
 //alert($(window).height()-40);
 
-function adapan(){
 
+function adapan(){
+if($(window).width()<950){acortar();}
 
 if($(window).width()<760){
   $("#menu").removeClass("navbar-default");
   $("#menu").addClass("navbar-fixed-top");
   $("#mostrar").addClass("altura");
+  normal();
   
 }
 else if($(window).width()>760){$("#menu").removeClass("navbar-fixed-top");$("#menu").addClass("navbar-default");$("#mostrar").removeClass("altura");$("#mostrar").height($(window).height()*0.93);}
@@ -260,8 +276,8 @@ else if($(window).width()>760){$("#menu").removeClass("navbar-fixed-top");$("#me
 $(window).resize(function() {
 adapan();
 });
-
 adapan();
+
 
 /*    $('#calendario').datepicker("setDate", "29-1-"+(new Date).getFullYear());
 });

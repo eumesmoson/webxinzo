@@ -15,6 +15,7 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="scripts/c3.js"></script>
+<script src="scripts/scripts.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -454,17 +455,20 @@ if($(window).width()<760){
   $("#menu").removeClass("navbar-default");
   $("#menu").addClass("navbar-fixed-top");
   $("#mostrar").addClass("altura");
-
   descolocaTaboas();
+  normal();
 }
-if($(window).width()>760)
+if($(window).width()>=760)
 {$("#menu").removeClass("navbar-fixed-top");
 $("#menu").addClass("navbar-default");
 $("#mostrar").removeClass("altura");
 $("#mostrar").height($(window).height()*0.93);
 $("#contidotaboas").height($(window).height()*0.80);
 descolocaTaboas();
+normal();
 }
+if($(window).width() < 950 && $(window).width() >760) {acortar();}
+if($(window).width() > 950) {normal();}
 if($(window).width()>1250){colocaTaboas()}
 }
 $(window).resize(function() {

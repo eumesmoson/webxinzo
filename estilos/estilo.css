@@ -11,6 +11,7 @@ background:linear-gradient(#99BF4E 50%, #555555 100%);
 border-top-left-radius:10px;
 border-top-right-radius: 10px;
 }
+.bclx{border-radius: 10px;height:30px;width:250px;border-color:white;}
 .colorxf
 {
 background:linear-gradient(#99BF4E 50%, #EDF3DF 90%);
@@ -164,7 +165,7 @@ border-style:inset;
 .barroc:hover{overflow:auto;}
 .margenarriba{margin-top: -18px;padding-top: 0px;}
 .ancho{width:25%;}
-.enlacesinfo{margin:auto;}
+.enlacesinfo{margin:auto;width:240px;}
 .arr{margin: 0px;margin-top:-10px;padding: 0px;}
 .iconarr img{width: 50%;height: 50%;}
 .fondoheader{background-color: transparent;border:0px;}
@@ -485,12 +486,14 @@ transform: rotate3d(100,100,100, 360deg);
 .centrarcap{margin: auto ;}
 .botontempo{background:linear-gradient(#9537CF 0%, #555555 100%);border-radius:6px;width:130px;}
 .botontempo:hover{background:linear-gradient(#9537CF 0%, #ffffff 100%);}
-.over{overflow: hidden;}
-.over:hover{overflow: auto;}
+.over{overflow:hidden;}
+.over:hover{overflow:auto;}
 .wigtempo{width:100%;margin:auto;}
 .date{display: none;}
 .margent{margin:auto;width:300px;}
 .botont{margin:auto;width: 226px;}
 .oculto{display: none}
 .visible{display:inline-block;}
-
+.contador{border:1px #2E496C solid;border-radius:8px;margin-left:4px;padding:2px 3px 2px 2px;text-align: center;font-weight: bold;}
+.bloque{display:block;margin:7px;padding:7px;}
+.popover-title {text-align:left;font-size: 16px;font-weight:bold;background:linear-gradient(#99BF4E 50%, #EDF3DF 90%);}

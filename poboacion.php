@@ -12,6 +12,7 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="scripts/c3.js"></script>
+<script src="scripts/scripts.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -193,7 +194,7 @@ echo ("</select><button type='submit' class='btn btn-primary btn-sm' style='marg
 </p>
 </div>
 </div>
-</article>	
+</article>  
 </div>
 <script type="text/javascript">
 //alert($(window).height()-40);
@@ -318,7 +319,8 @@ if($(window).width()<=760)
   $("#chart").removeClass("oculto");
   $("#botongraf").css("visibility","hidden");
   //alert($(window).width());
-  return;
+  normal();
+  
 }
 
 if($(window).width()>760)
@@ -326,12 +328,14 @@ if($(window).width()>760)
   $("#menu").removeClass("navbar-fixed-top");
   $("#menu").addClass("navbar-default");
   $("#mostrar").removeClass("altura");
-  $("#mostrar").height($(window).height()*0.93);}
+  $("#mostrar").height($(window).height()*0.93);
   $("#taboa").height($(window).height()*0.87); 
   $("#chart").addClass("oculto");
   //$("#chart").css("display","none");
   $("#botongraf").css("visibility","visible");
-  return;
+  }
+if($(window).width() < 950 && $(window).width() >760) {acortar();}
+if($(window).width() > 950) {normal();}
 }
 $(window).resize(function() {
 adapan();
