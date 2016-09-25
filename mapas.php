@@ -2,6 +2,7 @@
 require_once('configuracion.php');
 $latr=$_GET["lat"];
 $lonr=$_GET["lon"]; 
+$nom=$_GET["nom"];
 ?>
 <!DOCTYPE html>
 <html lang="gl">
@@ -40,7 +41,8 @@ $lonr=$_GET["lon"];
 <li class="colore" id="tabecono"><a href="economia.php" class="efectotexto"><span  class="btn-lg texto">Economía</span></a></li>
 <li class="colort" id="tabtempo"><a href="tempo.php" class="efectotexto"><span  class="btn-lg texto">O Tempo</span></a></li>
 <li class="colorm" id="tabmapas"><a href="#" class="efectotexto"><span  class="btn-lg texto">Mapas</span></a></li>
-<li class="colori" id="tabimaxe"><a href="#" class="efectotexto"><span  class="btn-lg texto">Imaxes</span></a></li>
+<li class="colori" id="tabimaxe"><a href="imaxes.php" class="efectotexto"><span  class="btn-lg texto">Imaxes</span></a></li>
+<li class="colormed" id="tabnatur"><a href="medio.php" class="efectotexto"><span  class="btn-lg texto">Medio</span></a></li>
 </ul>
 </div>
 </div>
@@ -145,8 +147,10 @@ onclick="enviamos2('datbus')"><img src="imaxes/gasn.png" style="margin-top:-5px;
 <?php 
 $latitude="";
 $lonxitud="";
+$nome="";
 if(is_null($latr)){$latitude=$lat;} else{$latitude=$latr;}
 if(is_null($lonr)){$lonxitude=$lon;} else{$lonxitude=$lonr;}
+if(is_null($nom)){$nome="Praza do Pobo";} else{$nome=$nom;}
 
 ?>
 <script type="text/javascript">
@@ -203,7 +207,7 @@ function cargaMapa()
 {     
 map = new GMaps({
   div: '#map',
-  zoom:25,
+  zoom:18,
   //mapTypeId:google.maps.MapTypeId.ROADMAP,
   lat:  <?php echo $latitude;?>,
   lng: <?php echo $lonxitude;?>,
@@ -220,7 +224,7 @@ var marker=map.addMarker({
   icon:'imaxes/flechaaover1.png',
   animation: google.maps.Animation.BOUNCE,
   infoWindow: {
-  content: 'Praza do centro do pobo<hr><img src=imaxes/escudob.png>'
+  content: <?php echo "'".$nome."',";?>
 }
 });
 markers.push(marker);
@@ -361,8 +365,8 @@ $("#map").css("margin-top","5px");
 $("#datoslugar").height(650);
 $("#datoslugar").addClass("over");
 }
-if($(window).width() < 950 && $(window).width() >760) {acortar();}
-if($(window).width() > 950) {normal();}
+if($(window).width() < 1100 && $(window).width() >760) {acortar();}
+if($(window).width() > 1100) {normal();}
 
 }
 $(window).resize(function() {
@@ -391,13 +395,24 @@ mb=pgB.indexOf(Math.min.apply(null,pgB));
 m95=pg95.indexOf(Math.min.apply(null,pg95));
 m98=pg98.indexOf(Math.min.apply(null,pg98));
 man=pgAn.indexOf(Math.min.apply(null,pgAn));
-//alert(man+" "+$("#pgan"+man).text());
+Ma=pgA.indexOf(Math.max.apply(null,pgA));
+Mb=pgB.indexOf(Math.max.apply(null,pgB));
+M95=pg95.indexOf(Math.max.apply(null,pg95));
+M98=pg98.indexOf(Math.max.apply(null,pg98));
+Man=pgAn.indexOf(Math.max.apply(null,pgAn));
+//alert(man+" "+$("#pgan"+man).text());//alert(ma+" "+mb+" "+m95+" "+m98+" "+man);
+
 $("#pga"+ma).addClass("btn-success");
 $("#pgb"+mb).addClass("btn-success");
 $("#pg95-"+m95).addClass("btn-success");
 $("#pg98-"+m98).addClass("btn-success");
 $("#pgan"+man).addClass("btn-success");
 
+//$("#pga"+Ma).addClass("btn-danger");
+//$("#pgb"+Mb).addClass("btn-danger");
+//$("#pg95-"+M95).addClass("btn-danger");
+//$("#pg98-"+M98).addClass("btn-danger");
+//$("#pgan"+Man).addClass("btn-danger")
 pgA=[];
 pgB=[];
 pg95=[];

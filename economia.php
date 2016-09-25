@@ -30,7 +30,8 @@
 <li class="colore" id="tabecono"><a href="#" class="efectotexto"><span  class="btn-lg texto">Economía</span></a></li>
 <li class="colort" id="tabtempo"><a href="tempo.php" class="efectotexto"><span  class="btn-lg texto">O Tempo</span></a></li>
 <li class="colorm" id="tabmapas"><a href="mapas.php" class="efectotexto"><span  class="btn-lg texto">Mapas</span></a></li>
-<li class="colori" id="tabimaxe"><a href="#" class="efectotexto"><span  class="btn-lg texto">Imaxes</span></a></li>
+<li class="colori" id="tabimaxe"><a href="imaxes.php" class="efectotexto"><span  class="btn-lg texto">Imaxes</span></a></li>
+<li class="colormed" id="tabnatur"><a href="medio.php" class="efectotexto"><span  class="btn-lg texto">Medio</span></a></li>
 </ul>
 </div>
 </div>
@@ -67,10 +68,16 @@ if(intval($dia)<6){$auxmes="0".(intval($mes)-2);} else{$auxmes="0".(intval($mes)
 
 
 //if($mes==1) {$iano=$ano-1;$imes=12;}
-if     ($mes>0  && $mes<3) {if($dia<25){$imes="09";}else{$imes="12";}$iano=$ano-1;}
-else if($mes>=3 && $mes<6) {if($dia<25){$iano=$ano-1;$imes="12";}else{$imes="03";};}
-else if($mes>=6 && $mes<9) {if($dia<25){$imes="03";}else{$imes="06";}$mes="0".(intval($mes)-1);}
-else if($mes>=6 && $mes<12){if($dia<25){$imes="06";}else{$imes="09";}$mes="0".(intval($mes)-1);}
+if     ($mes>0  && $mes<3) {if($dia<30){$iano=$ano-1;$imes="09";}else{$imes="12";$iano=$ano-1;}}
+else if($mes>=3 && $mes<6) {if($dia<25){$iano=$ano-1;$imes="12";}else{$imes="03";}}
+else if($mes>=6 && $mes<9) {if($dia<30){$imes="06";}else{$imes="09";}}
+else if($mes>=9 && $mes<12){if($dia<30){$imes="06";}else{$imes="09";}}
+
+
+
+
+
+
 
 $urlp="http://www.ige.eu/igebdt/igeapi/datos/742/0:".$ano.$auxmes.",9915:".$codIGE;
 $urlp1="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:".$ano.$auxmes.",9915".$codIGE;//paro mes datos afil

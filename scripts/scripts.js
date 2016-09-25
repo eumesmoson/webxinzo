@@ -1,10 +1,11 @@
 function acortar(){
-$("#tabindex > a > span").text("Xer");
-$("#tabpoboa > a > span").text("Pob");
-$("#tabecono > a > span").text("Eco");
-$("#tabtempo > a > span").text("Tem");
-$("#tabmapas > a > span").text("Map");
-$("#tabimaxe > a > span").text("Ima");
+$("#tabindex > a > span").text("Xe");
+$("#tabpoboa > a > span").text("Po");
+$("#tabecono > a > span").text("Ec");
+$("#tabtempo > a > span").text("Te");
+$("#tabmapas > a > span").text("Ma");
+$("#tabimaxe > a > span").text("Im");
+$("#tabnatur > a > span").text("Me");
 }
 function normal(){
 $("#tabindex > a > span").text("Xeral");
@@ -13,4 +14,5 @@ $("#tabecono > a > span").text("Economía");
 $("#tabtempo > a > span").text("Tempo");
 $("#tabmapas > a > span").text("Mapas");
 $("#tabimaxe > a > span").text("Imaxes");
+$("#tabnatur > a > span").text("Medio");
 }

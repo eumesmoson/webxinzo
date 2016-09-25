@@ -1,20 +1,22 @@
- .colorx
+.colorx
 {
 border:groove 1px slategray;
 color:white;
 margin-left: 1px;
-background:-moz-linear-gradient(#99BF4E 50%, #555555 100%);
-background:-webkit-linear-gradient(#99BF4E 50%, #555555 100%);
-background:-ms-linear-gradient(#99BF4E 50%, #555555 100%);
-background:-o-linear-gradient(#99BF4E 50%, #555555 100%);
-background:linear-gradient(#99BF4E 50%, #555555 100%);
+background:-moz-linear-gradient(#DEE3D3 50%, #555555 100%);
+background:-webkit-linear-gradient(#DEE3D3 50%, #555555 100%);
+background:-ms-linear-gradient(#DEE3D3 50%, #555555 100%);
+background:-o-linear-gradient(#DEE3D3 50%, #555555 100%);
+background:linear-gradient(#DEE3D3 50%,#555555  100%);
 border-top-left-radius:10px;
 border-top-right-radius: 10px;
 }
 .bclx{border-radius: 10px;height:30px;width:250px;border-color:white;}
+.tabxeral{background:linear-gradient(#000000 0%, #555555 100%);color:white;}
+.tabxeral:hover{background:linear-gradient(#ffffff 0%, #000000 100%);color:white;}
 .colorxf
 {
-background:linear-gradient(#99BF4E 50%, #EDF3DF 90%);
+background:linear-gradient(#9D9F97 50%, #EDF3DF 90%);
 border-radius:10px;
 border:groove 1px slategray;
 }
@@ -42,15 +44,40 @@ background:linear-gradient(#FFFF00 50%, #FDFDAA 90%);
 border-radius:10px;
 border:groove 1px slategray;
 }
+.colorif
+{
+background:linear-gradient(#D8214E 30%, #ffffff 90%);
+border-radius:10px;
+border:groove 1px slategray;
+}
+.colormedf
+{
+background:linear-gradient(#99BF4E 50%, #EDF3DF 90%);
+border-radius:10px;
+border:groove 1px slategray;
+}
 .colorx:hover{
 color:white;
-background:-moz-linear-gradient(#99BF4E 50%, #ffffff 100%);
-background:-webkit-linear-gradient(#99BF4E 50%, #ffffff 100%);
-background:-ms-linear-gradient(#99BF4E 50%, #ffffff 100%);
-background:-o-linear-gradient(#99BF4E 50%, #ffffff 100%);
-background:linear-gradient(#99BF4E 50%, #ffffff 100%);
+background:-moz-linear-gradient(#000000 50%, #DEE3D3 100%);
+background:-webkit-linear-gradient(#000000 50%, #DEE3D3 100%);
+background:-ms-linear-gradient(#000000 50%, #DEE3D3 100%);
+background:-o-linear-gradient(#000000 50%, #DEE3D3 100%);
+background:linear-gradient(#000000 50%, #DEE3D3 100%);
 border-style:inset;
  }
+.colormed
+{
+border:groove 1px slategray;
+color:white;
+margin-left: 1px;
+background:-moz-linear-gradient(#99BF4E 50%, #555555 100%);
+background:-webkit-linear-gradient(#99BF4E 50%, #555555 100%);
+background:-ms-linear-gradient(#99BF4E 50%, #555555 100%);
+background:-o-linear-gradient(#99BF4E 50%, #555555 100%);
+background:linear-gradient(#99BF4E 50%, #555555 100%);
+border-top-left-radius:10px;
+border-top-right-radius: 10px;
+} 
 .colorp
 {
 border:groove 1px slategray;
@@ -159,6 +186,8 @@ background:-o-linear-gradient(#D8214E 50%, #ffffff  100%);
 background:linear-gradient(#D8214E 50%, #ffffff  100%);
 border-style:inset;
  }
+.colorider{background:linear-gradient(#D8214E 50%, #555555  100%);border-radius: 10px;height:45px;border:1px white solid;text-align: center;font-weight: bold;font-size:18px;color:white;padding-top:10px;margin:10px auto;}
+.colorider:hover{background:linear-gradient(#D8214E 50%, #ffffff  100%);cursor:pointer;border-width:2px;}
  #contidotaboas{overflow:hidden;}
  #contidotaboas:hover{overflow:auto;}
 .barroc{overflow:hidden;background-color: gray;border: 2px purple solid}
@@ -496,4 +525,104 @@ transform: rotate3d(100,100,100, 360deg);
 .visible{display:inline-block;}
 .contador{border:1px #2E496C solid;border-radius:8px;margin-left:4px;padding:2px 3px 2px 2px;text-align: center;font-weight: bold;}
 .bloque{display:block;margin:7px;padding:7px;}
-.popover-title {text-align:left;font-size: 16px;font-weight:bold;background:linear-gradient(#99BF4E 50%, #EDF3DF 90%);}
+.popover-title {text-align:left;font-size: 16px;font-weight:bold;background:linear-gradient(#ffffff 0%, #000000 100%);color:white;}
+.popover-content {text-align:left;font-size:14px;margin-top:-23px;}
+.imgprev{width:100px;height:100px;border:1px white solid;border-radius:10px;box-shadow: 0px 10px 5px -2px rgba(0,0,0,0.37);float:left;margin-top:-120px;margin-left:auto;display:inline-block;}
+.imgprev:hover{border-width:3px;}
+.imgpeque{width:100px;height:100px;border:1px white solid;border-radius:10px;box-shadow: 0px 10px 5px -2px rgba(0,0,0,0.37);margin:3px 4px;}
+.imgpeque:hover{border-width:3px;box-shadow: 0px 10px 10px -2px rgba(255,255,255,0.37)}
+.imaxesder{border:1px white solid;border-radius:10px;width:auto;height:auto;margin:auto;display: none;padding-top:10px;padding-bottom: 10px;}
+.tales {width: 100%;}
+.carousel-inner{width:100%;max-height: 800px !important;text-align:center;background-color:transparent;margin:auto;}
+.carousel .item > img { display: inline-block;}
+
+.carousel-indicators > li{margin-left:50px;width:100px;}
+.carousel-indicators > .active{margin-left:50px;width:100px;background-color: white;font-weight: bold;}
+.carousel-caption {text-shadow:1px 2px 1px #424C4F;color:#F2F2F2;font-weight:bold;margin-bottom:400px;}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index:99; /* Sit on top */
+    /*padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal1-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    /*max-width: 700px;*/
+}
+
+/* Caption of Modal Image */
+#caption1 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal1-content, #caption1 {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closeg {
+    z-index:1;
+    position: absolute;
+    top: 5px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeg:hover,
+.closeg:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal1-content {
+        width: 100%;
+    }
+}

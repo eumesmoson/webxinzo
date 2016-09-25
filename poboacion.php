@@ -29,7 +29,8 @@
 <li class="colore" id="tabecono"><a href="economia.php" class="efectotexto"><span  class="btn-lg texto">Economía</span></a></li>
 <li class="colort" id="tabtempo"><a href="tempo.php" class="efectotexto"><span  class="btn-lg texto">O Tempo</span></a></li>
 <li class="colorm" id="tabmapas"><a href="mapas.php" class="efectotexto"><span  class="btn-lg texto">Mapas</span></a></li>
-<li class="colori" id="tabimaxe"><a href="#" class="efectotexto"><span  class="btn-lg texto">Imaxes</span></a></li>
+<li class="colori" id="tabimaxe"><a href="imaxes.php" class="efectotexto"><span  class="btn-lg texto">Imaxes</span></a></li>
+<li class="colormed" id="tabnatur"><a href="medio.php" class="efectotexto"><span  class="btn-lg texto">Medio</span></a></li>
 </ul>
 </div>
 </div>
@@ -218,7 +219,7 @@ $.ajax({
         type:  'POST',
         url:   'datospoboacion.php',
         data:  { "ano":a,"tipo":tipo }
-         }).done(function( msg ) {
+         }).done(function(msg) {
          $("#"+capa).html(msg);
          }).fail(function (jqXHR, textStatus, errorThrown){
           alert("Erro :( -> "+ textStatus +" "+ errorThrown);
@@ -260,8 +261,8 @@ $xente="";
 
  
  //echo ("<hr>".$json."<hr>"); 
-$anos="['x',".trim($anos, ',')."]";
-$xente="['HABITANTES',".substr($xente,0,-1)."]";
+$anos="['x','1842-12-31','1877-12-31','1887-12-31','1897-12-31','1900-12-31','1910-12-31','1920-12-31','1930-12-31','1940-12-31','1950-12-31','1960-12-31','1970-12-31',".trim($anos, ',')."]";
+$xente="['HABITANTES',4070,5417,5522,5594,5717,6476,7081,9105,9466,10358,10031,10925,".substr($xente,0,-1)."]";
 
 ?>
 //alert(coltem[0].length);
@@ -334,8 +335,8 @@ if($(window).width()>760)
   //$("#chart").css("display","none");
   $("#botongraf").css("visibility","visible");
   }
-if($(window).width() < 950 && $(window).width() >760) {acortar();}
-if($(window).width() > 950) {normal();}
+if($(window).width() < 1100 && $(window).width() >760) {acortar();}
+if($(window).width() > 1100) {normal();}
 }
 $(window).resize(function() {
 adapan();

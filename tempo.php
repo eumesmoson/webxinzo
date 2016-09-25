@@ -32,7 +32,8 @@
 <li class="colore" id="tabecono"><a href="economia.php" class="efectotexto"><span  class="btn-lg texto">Economía</span></a></li>
 <li class="colort" id="tabtempo"><a href="#" class="efectotexto"><span  class="btn-lg texto">O Tempo</span></a></li>
 <li class="colorm" id="tabmapas"><a href="mapas.php" class="efectotexto"><span  class="btn-lg texto">Mapas</span></a></li>
-<li class="colori" id="tabimaxe"><a href="#" class="efectotexto"><span  class="btn-lg texto">Imaxes</span></a></li>
+<li class="colori" id="tabimaxe"><a href="economia.php" class="efectotexto"><span  class="btn-lg texto">Imaxes</span></a></li>
+<li class="colormed" id="tabnatur"><a href="medio.php" class="efectotexto"><span  class="btn-lg texto">Medio</span></a></li>
 </ul>
 </div>
 </div>
@@ -277,7 +278,7 @@ $.datepicker.regional['gl'] = {
  yearSuffix: ''
  };
 function actfecha(){
- $.datepicker.setDefaults($.datepicker.regional['gl']);
+$.datepicker.setDefaults($.datepicker.regional['gl']);
 $( "#datepicker" ).datepicker({maxDate: "+0d"}).datepicker("setDate", new Date());
 }
 function recfecha(){
@@ -467,8 +468,8 @@ $("#contidotaboas").height($(window).height()*0.80);
 descolocaTaboas();
 normal();
 }
-if($(window).width() < 950 && $(window).width() >760) {acortar();}
-if($(window).width() > 950) {normal();}
+if($(window).width() < 1100 && $(window).width() >760) {acortar();}
+if($(window).width() > 1100) {normal();}
 if($(window).width()>1250){colocaTaboas()}
 }
 $(window).resize(function() {

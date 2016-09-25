@@ -32,6 +32,7 @@ catch (Exception $e) {
     echo 'Produciuse un erro :('.$e->getMessage();
 }
 //var_dump($datos);
+//if(strlen($gasofa)<100){}
 echo "<div class='table-responsive' id='datosgasfecha'><table class='table' border='2' id='tabgt'>
 <thead ><tr class='colorm'><th class='centro' colspan='2' id='gar'>Prezos actualizados: ".$gasofa->Fecha."</th></tr></thead></table></div>";
 $pgA=0;$clasA="";
