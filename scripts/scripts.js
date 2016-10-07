@@ -16,3 +16,4 @@ $("#tabmapas > a > span").text("Mapas");
 $("#tabimaxe > a > span").text("Imaxes");
 $("#tabnatur > a > span").text("Medio");
 }
+//alert("cargueime :)");

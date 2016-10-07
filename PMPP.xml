@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DATOS_PERIODO_MEDIO_PAGO_PROVEEDORES>
+<datos ano="2015" num_datos="2">
+<mes nome="Septembro" dias="57.99"   ROPP="55.99"   ROP="101.12"/>
+<mes nome="Decembro"  dias="82.3"    ROPP="87.86"   ROP="48.14"/>
+</datos>
+<datos ano="2016" num_datos="1">
+<mes nome="Marzo"     dias="125.4"   ROPP="127.05"  ROP="-29.02"/>
+<mes nome="Xuño"      dias="179.11"  ROPP="158.72"  ROP="242.74"/>
+</datos>
+</DATOS_PERIODO_MEDIO_PAGO_PROVEEDORES>

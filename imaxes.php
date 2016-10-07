@@ -51,21 +51,21 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox" >
     <div class="item active">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Casa_do_concello%2C_Xinzo_de_Limia%2C_Ourense_12.JPG" alt="Casa do concello" title="By Elisardojm (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" id="img0" onclick="grande(this.id)"  >
+      <img src="" alt="Casa do concello" title="By Elisardojm (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" id="img0" onclick="grande(this.id)"  >
       <div class="carousel-caption">
         <h3>Casa do concello</h3>
       </div>
     </div>
 
     <div class="item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Casa_da_cultura_e_xuventude%2C_Xinzo_de_Limia%2C_Ourense_03.JPG" alt="Casa da cultura e xuventude" title="By Elisardojm (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" id="img1" onclick="grande(this.id)">
+      <img src="" alt="Casa da cultura e xuventude" title="By Elisardojm (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" id="img1" onclick="grande(this.id)">
       <div class="carousel-caption">
         <h3>Casa da cultura e xuventude</h3>
       </div>
     </div>
 
     <div class="item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Igrexa_de_Santa_Mari%C3%B1a_de_Xinzo_de_Limia.jpg" alt="Igrexa de Santa Mariña" title="By José Antonio Gil Martínez [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons" id="img2" onclick="grande(this.id)">
+      <img src="" alt="Igrexa de Santa Mariña" title="By José Antonio Gil Martínez [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons" id="img2" onclick="grande(this.id)">
       <div class="carousel-caption">
         <h3>Igrexa de Santa Mariña</h3>
       </div>
@@ -76,7 +76,7 @@
       <div class="carousel-caption">
         <h3>Panorámica</h3>
       </div>
-            <img src="https://contosdorio.files.wordpress.com/2012/05/p1050933.jpg" alt="Panorámica" title="https://contosdorio.wordpress.com/las-rutas-del-limia" id="img3" onclick="grande(this.id)">
+            <img src="" alt="Panorámica" title="https://contosdorio.wordpress.com/las-rutas-del-limia" id="img3" onclick="grande(this.id)">
     </div>
 
   </div>
@@ -140,9 +140,12 @@
 <div id="hist" >
 
 </div>
+
 </div>
 <!-- The Modal -->
 </div>
+<hr>
+<?php include ("creativecommons.html"); ?>
 </div>
 <hr>
 </div>
@@ -152,6 +155,7 @@
   <img class="moda1l-content" id="img01">
   <div id="caption1"></div>
 </div>
+<?php include ("contacto.html"); ?>
 </body>
 <script>
 var modalImg=document.getElementById("img01");
@@ -178,6 +182,9 @@ modalImg.onclick=function() {
 $("#tabimaxe").removeClass("colori");
 $("#tabimaxe").css({background:'#D8214E',BorderTopRightRadius: 10,marginTop:2,BorderTopLeftRadius: 10,marginBottom:-10,border:'3px white groove'});
 $("#tabimaxe").css("border-bottom","4px #D8214E solid");
+
+for (i=0;i<4;i++) {$(".carousel-inner > div > img:eq("+i+")").attr("src",$(".carousel-indicators > li > img:eq("+i+")").attr("src"));}
+
 
 function verimaxes(cv){
 $("#"+cv).slideToggle();

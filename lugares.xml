@@ -21,6 +21,7 @@
 <LUGAR>
 <NOME>SERVIZOS SOCIAIS</NOME>
 <DIRECCION>Avenida de Ourense Nº 19 (Estación de autobuses)</DIRECCION>
+<HORARIO>8:30-15:00 Luns a Venres</HORARIO>
 <TELEFONO>988 550258</TELEFONO>
 <FAX>988 550258</FAX>
 <EMAIL>serviciossociais@xinzodelimia.es</EMAIL>
@@ -273,11 +274,24 @@ poderjudicial.es
 
 <LUGAR>
 <NOME>ITV</NOME>
-<DIRECCION>Parque empresarial parc. 47</DIRECCION>
-<TELEFONO>900 504389</TELEFONO>
+<DIRECCION>Parque empresarial parcela Nº 47</DIRECCION>
+<HORARIO>9:00-13:30 15:15-18:00 Luns a Venres</HORARIO>
+<TELEFONO>902 309000</TELEFONO>
+<TELEFONO>981 903000</TELEFONO>
 <WEB URL="http://www.sycitv.com/gl/estacions-syc/xinzo/">sycitv.com</WEB>
 <EMAIL>correoweb@sycitv.com</EMAIL>
-<COORDENADAS>42.077505, -7.723212</COORDENADAS>
+<COORDENADAS>42.077505,-7.723212</COORDENADAS>
+</LUGAR>
+
+<LUGAR>
+<NOME>PUNTO LIMPO</NOME>
+<DIRECCION>Parque empresarial parcela Nº 3</DIRECCION>
+<HORARIO>9:00-14:00 17:00-20:00 Martes/Mercores/Venres/Sábado</HORARIO>
+<HORARIO>17:00-20:00 Xoves</HORARIO>
+<TELEFONO> 988 317680</TELEFONO>
+<TELEFONO>988 550110</TELEFONO>
+<WEB URL="http://limpourense.depourense.es/medios/instalacions/puntos-limpos/7">depourense.es</WEB>
+<COORDENADAS>42.079056,-7.723416</COORDENADAS>
 </LUGAR>
 
 <LUBAR>

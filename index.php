@@ -14,6 +14,8 @@
 <script src="scripts/bootstrap-datepicker-1.5.1-dist/js/bootstrap-datepicker.min.js"></script>
 <script src="scripts/bootstrap-datepicker-1.5.1-dist/locales/bootstrap-datepicker.gl.min.js"></script>
 <script src="scripts/scripts.js"></script>
+<noscript><p><img src="//xinzodelimia.esy.es/visitas/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 </head>
 <body>
 <div class="container-fluid">
@@ -74,7 +76,7 @@ onclick="enlaces(this.id,'San Vitoiro',42.043487,-7.794176,'San Bartolomé','23-
 <li><a href="#" data-toggle="popover" data-trigger="focus" id="xinzo"
 onclick="enlaces(this.id,'Xinzo de Limia',42.062985,-7.726132,'Santa Mariña','18-6','32630',
 [['San Sebastián','20-1','Festa'],['Fareleiro','5-2-2017','Entroido'],['Corredoiro','12-2-2017','Entroido'],
-['Oleiro','19-2-2017','Entroido'],['Domingo de Entroido','26-2-2017','Entroido'],['Esquecemento','20-8-2017','Festa'],['San Xoán','24-6','Festa (Poligono)'],
+['Oleiro','19-2-2017','Entroido'],['Domingo de Entroido','26-2-2017','Entroido'],['Martes de Entroido','28-2-2017','Entroido'],['Esquecemento','20-8-2017','Festa'],['San Xoán','24-6','Festa (Poligono)'],
 ['Magostos','11-11','Festa (Praza de Oriente)'],['1ª Feira do mes','14-'+new Date().getMonth()+1,'Feira'],['2ª Feira do mes','27-'+new Date().getMonth()+1,'Feira']]),colapsa('pbaronzas')">Xinzo de Limia</a></li>
 <ul id="pbaronzas" class="collapse"><li class="nolista"><a href="#" id="baronzas" 
 onclick="enlaces(this.id,'Baronzás',42.070085,-7.712692,'San Andrés','20-6','32636',[])">Baronzás</a></li></ul>
@@ -144,12 +146,13 @@ include "simple_html_dom.php";
 
 $html=file_get_html("http://www.xinzodelimia.es/seccion/anuncios");
 
-$datos=$html->find('div[class="data"]');
+$datos=$html->find('div[class="widget"]');
+//$datos1=$datos->find('div[class="widget-content"]');
 ?>
 <div id="contidodereita" >
 <hr>
 <ul class="nav nav-tabs" id="listwigtempo" style="margin-top:5px">
-    <li><a data-toggle="tab" class="tabxeral" href="#concello" >ANUNCIOS CONCELLO<span class="contador" style="border-color:white;"><?php echo count($datos)-1;?></span></a></li>
+    <li><a data-toggle="tab" class="tabxeral" href="#concello" >ANUNCIOS CONCELLO</span></a></li>
     <li><a data-toggle="tab" class="tabxeral" href="#noticias">NOVAS</a></li>
    
 </ul>
@@ -157,11 +160,12 @@ $datos=$html->find('div[class="data"]');
 <div id="concello" class="tab-pane fade in active over" style="height:400px">
 
 <?php
-echo "<hr>";
-for($i=0;$i<count($datos);$i++)
+//echo "<hr>";
+for($i=0;$i<count($datos)-2;$i++)
 {
 echo $datos[$i]."<hr>";
 }
+//echo "<hr>".count($datos)."</hr>";
 ?>
 
 </div>
@@ -182,92 +186,9 @@ echo $datos[$i]."<hr>";
 
 </div>
 <hr>
-<div id="enlacesinfo" >
-<table  class="enlacesinfo">
-<tr>
-<td><img src="imaxes/info.png" data-toggle="modal" data-target="#informacion" alt="información" title="información"></td>
-<td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl">
-<img alt="Licenza de Creative Commons"  src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"></a>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl"></a></td>
-<td><img src="imaxes/email.png" data-toggle="modal" data-target="#contacto" alt="contacto" title="contacto"></td>
-</tr>
-</table>
-</div>
+<?php include ("creativecommons.html"); ?>
 </article>
-<div class="modal fade" id="informacion" role="dialog" >
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal">&times;</button>
-<h4 class="modal-title">Esta web conten información do concello de Xinzo de Limia.</h4>
-</div>
-<div class="modal-body">
-<p >As fontes consultadas son as seguintes:</p>
-<p>
-<ol><li><a href="http://www.ige.eu">Instituto Galego Estadística</a></li>
-<li><a href="http://www.ine.es/">Instituto Nacional Estadística</a></li>
-<li><a href="http://www.minhap.gob.es">Ministerio de Hacienda</a></li>
-<li><a href="http://www.meteogalicia.es">Meteogalicia</a></li>
-<li><a href="http://es.wikipedia.org/wiki/Ginzo_de_Limia">Wikipedia</a></li>
-<li><a href="http://www.eltiempo.es">eltiempo.es</a></li>
-<li><a href="http://www.tutiempo.net">tutiempo.net</a></li>
-</ol>
-</p>
-<p >Esta web utiliza compoñentes con licencia GPL ou ofrecidos por outros sitios para uso non comercial:
-<ol><li><a href="http://www.dhtmlx.com/docs/products/licenses.shtml" >dhtmlXCalendar</a></li>
-<li><a href="http://www.eltiempo.es/widget/" >eltiempo.es</a></li>
-<li><a href="http://www.tutiempo.net" >tutiempo.net</a></li>
-<li><a href="http://www.google.com/intl/gl_es/help/terms_maps.html" >googlemaps</a></li>
-<li><a href="http://www.openstreetmap.org/copyright" >openstreetmap</a></li>
-<li><a href="http://info.yahoo.com/legal/e1/yahoo/maps/globalmaps/atos.html" >yahoomapas</a></li>
-<li><a href="http://signa.ign.es/ign/layoutIn/avisolegal.do" class="pequeno">signa</a></li>
-</ol>
-</p>
-<p>Os datos que se presentan nesta web proceden de sitios oficiais de administracións públicas, colexios profesionais, etc.</p>
-<table>
-<tr><td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl" target="_blank">
-<img alt="Licenza de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl" target="_blank"></a></td></tr>
-</table>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Cerrar</button>
-</div>
-</div>
-</div>
-</div>
-<div class="modal fade" id="contacto" role="dialog" >
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal">&times;</button>
-<h4 class="modal-title">Formulario de contacto.</h4>
-</div>
-<div class="modal-body">
-<div class="form-group">
-<form action="mail.php" method="post">
-<label for="usr">Correo:</label>
-<input type="text" class="form-control" id="correo" name="correo" placeholder="o teu correo" 
-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" data-error="erroneo" required>
-<label for="usr">Asunto:</label>
-<input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto">
-<label for="comment">Mensaxe:</label>
-<div style="overflow:auto">
-<textarea class="form-control" rows="5" id="mensaje" name="mensaje" placeholder="Mensaxe" required></textarea>
-</div>
-<hr>
-<div class="alindereita">
-<button type="reset" class="btn btn-danger " >Borrar</button>
-<button type="submit" class="btn btn-success " >Enviar</button>
-</form>
-</div>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Cerrar</button>
-</div>
-</div>
-</div>
-</div>
-</div>
+<?php include ("contacto.html"); ?>
 </body>
 <script>
 var xin="http://www.xinzodelimia.es";

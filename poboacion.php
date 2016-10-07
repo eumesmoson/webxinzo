@@ -13,6 +13,8 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="scripts/c3.js"></script>
 <script src="scripts/scripts.js"></script>
+<noscript><p><img src="//xinzodelimia.esy.es/visitas/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 </head>
 <body>
 <div class="container-fluid">
@@ -193,10 +195,14 @@ echo ("</select><button type='submit' class='btn btn-primary btn-sm' style='marg
 <a style="text-decoration: none; border: 0;" target="_blank" href="http://www.ige.eu"><img border="0" src="http://www.ige.eu/web/imgs/operacion.gif"/></a>
 <a href="http://www.ige.eu">Instituto Galego de Estatística</a>
 </p>
+<hr>
+<?php include ("creativecommons.html"); ?>
 </div>
 </div>
 </article>  
 </div>
+<?php include ("contacto.html"); ?>
+</body>
 <script type="text/javascript">
 //alert($(window).height()-40);
 $("#tabpoboa").removeClass("colorp");
@@ -345,5 +351,4 @@ adapan();
 grafica();
 
 </script>
-</body>
 </html>

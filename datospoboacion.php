@@ -151,8 +151,20 @@ echo ("<hr><div id='grafica_poboacion' class='contgraf' >
 <div id='dos0' onmouseover=colora(this.id,1),colora('m0',1),colora('pm0',1)    onmouseout=colora(this.id,2),colora('m0',3),colora('pm0',3)    class='dereita' style='width:".(round($datos[287],0)/3)."px'  title='".(round($datos[287],0))."'></div>
 </div></div></div>
 <iframe class='conwipoboa' frameborder='1' scrolling='no' src='".$urlwid."'></iframe>
+<p style='text-align:center'>
 <a style='text-decoration: none; border: 0;'
-target='_blank' href='http://www.ige.eu'><img border='0'src='http://www.ige.eu/web/imgs/operacion.gif'/></a><a href='http://www.ige.eu'>Instituto Galego de Estatística</a></div>");
+target='_blank' href='http://www.ige.eu'><img border='0'src='http://www.ige.eu/web/imgs/operacion.gif'/></a><a href='http://www.ige.eu'>Instituto Galego de Estatística</a></p></div>
+<hr><div id='enlacesinfo' >
+<table  class='enlacesinfo'>
+<tr>
+<td><img src='imaxes/info.png' data-toggle='modal' data-target='#informacion' alt='información' title='información'></td>
+<td><a rel='license' href='http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl'>
+<img alt='Licenza de Creative Commons'  src='http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png'></a>
+<a rel='license' href='http://creativecommons.org/licenses/by-nc-sa/3.0/deed.gl'></a></td>
+<td><img src='imaxes/email.png' data-toggle='modal' data-target='#contacto' alt='contacto' title='contacto'></td>
+</tr>
+</table>
+</div>");
 //echo "hola ".$tipo.$datos[247];
 }
 else

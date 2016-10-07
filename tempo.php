@@ -16,6 +16,8 @@
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="scripts/c3.js"></script>
 <script src="scripts/scripts.js"></script>
+<noscript><p><img src="//xinzodelimia.esy.es/visitas/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 </head>
 <body>
 <div class="container-fluid">
@@ -48,8 +50,14 @@
 $ano=intval(date("Y"));
 $mes=intval(date("n"));
 $dia=intval(date("d"));
-$valor=($dia-1)."/".$mes."/".$ano."&data2=".$dia."/".$mes."/".$ano;
+$idia=$dia;
+if($dia==1){
+$valor=($dia)."/".$mes."/".$ano."&data2=".($dia+1)."/".$mes."/".$ano;
+}
+else{
+$valor=($dia-1)."/".$mes."/".$ano."&data2=".$dia."/".$mes."/".$ano;$idia=$dia-1;
 //header('Content-type: text/html; charset=UTF-8');
+}
 $url=htmlentities("http://www2.meteogalicia.es/galego/observacion/estacions/contidos/
   DatosHistoricosXML_diario.asp?est=19027&param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,%2010124,10001,10117,10129,9990&data1=".$valor."&idprov=2&red=".$redMetereo);
 $ul=utf8_encode("http://www2.meteogalicia.es/galego/observacion/estacions/contidos/DatosHistoricosXML_diario.asp?est=".$estMetereo."&");
@@ -62,7 +70,7 @@ $dias = array( 'Domingo', 'Luns', 'Martes','Mercores', 'Xoves', 'Vernes', 'Sába
 
 $urld="http://www2.meteogalicia.gal/galego/observacion/estacions/contidos/DatosHistoricosXML_diario.asp?est=".$estMetereo."&param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,10124,10001,10117,10129,9990&data1=6/9/2016&data2=7/9/2016&idprov=2&red=".$redMetereo;
 
-echo ("<div id='titulop'><h5 class='texto centro efectotexto'>Medición en ".$nomeMunicipio." o ".($dia-1)." de ".$meses[$mes-1]." do ".$ano."  </h5><hr></div>");?>
+echo ("<div id='titulop'><h5 class='texto centro efectotexto'>Medición en ".$nomeMunicipio." o ".$idia." de ".$meses[$mes-1]." do ".$ano."  </h5><hr></div>");?>
 <div id="contidotaboas" class="tab-content" >
 <div class="table-responsive">
 <div id="taboa">
@@ -164,7 +172,7 @@ echo("<tr class='textott' >
     <li><a data-toggle="tab" class="textotatt" href="#mapt" onclick="">Mapas</a></li>
     <li><a data-toggle="tab" class="textotatt" href="#lua" onclick="">Lua</a></li>
 </ul>
-<div class="tab-content" >
+<div class="tab-content" style="height:720px">
 <div id="esta" class="tab-pane fade in active">
 <?php echo "<iframe class='wigtempo' id='framesta' style='height:620px' 
 src='http://servizos.meteogalicia.gal/widget/html/widget_estacions.html?codigo=".$estMetereo."&language=gl&formato=normal&temperatura=true&viento=true&choiva=true&sol=true&refacho=true&tempmin=true&tempmax=true&tendencia=true&fondo=FFFFFF'>
@@ -172,34 +180,30 @@ src='http://servizos.meteogalicia.gal/widget/html/widget_estacions.html?codigo="
 
 </div>
 <div id="pred" class="tab-pane">
-<?php echo "<iframe class='wigtempo' id='framepre' style='height:808px' 
+<?php echo "<iframe class='wigtempo' id='framepre' style='height:690px' 
  src='http://servizos.meteogalicia.gal/widget/html/widget_concellos.html?codigo=".$codIGE."&language=gl&formato=normal&dia=0&temperatura=true&viento=true&choiva=true&fondo=FFFFF'></iframe>";?>
 
 </div>
 
 <div id="mapt" class="tab-pane">
-<div id="mapa" >
-<hr>
-<div id="mapa_temp"></div>
+<div id="mapa"   >
+<div id="mapa_temp" style="padding-top:10px"></div>
 <hr>
 <marquee  onmouseout="this.start()" onmouseover="this.stop()" id="martempo" class='texto centro efectotexto' scrollamount="3"></marquee>
 <hr>
-
-
 </div>
 
 </div>
-<div id="lua" class="tab-pane">
-<hr>
-<div style="margin:auto;width:180px;">
+<div id="lua" class="tab-pane over">
+<div style="margin:10px auto;width:160px;">
 <a target="blank" style="text-decoration:none;" href="http://www.calendrier-lunaire.net/">
 <img  src="http://www.calendrier-lunaire.net/module/LYmFzaWMtMjUxLXYxLTE0NzMzNjcyMDUuMTc5Mi0jMDAwMDAwLTE4MC0jMDAwMDAwLTE0NzMzNjcyMDUtMS04.png" alt="La Lune" title="La Lune" />
 </a>
 </div>
-<hr>
+
 <?php 
 echo "<p class='text-center'><span class='textop   efectotexto '>".$dias[date('w')].", ".date('j')." de ".$meses[date('m')-1]." de ".date('Y')."</span></p>" ?>
-<hr>
+
 <div id="CalendarioLunarTutiempo" class="wigtempo" ></div>
 <script type="text/javascript">
 /* Ancho: 412; Alto: 482 */
@@ -208,12 +212,15 @@ var DatosCalendarioTutiempo = '0;0;1;1;1;10;N;000000;FFFFFF;FFFFFF';
 <script type="text/javascript" src="http://www.tutiempo.net/TTapi/cal/fases_0_0"></script>
 </div>
 </div>
-
 </div>
+<hr>
+<?php include ("creativecommons.html"); ?>
 </div>
 </div>
 </article>  
 </div>
+<?php include ("contacto.html"); ?>
+</body>
 <script type="text/javascript">
 $("#tabtempo").removeClass("colort");
 $("#tabtempo").css({background:'#9537CF',BorderTopRightRadius: 10,BorderTopLeftRadius: 10,marginBottom:-10,border:'3px white groove'});
@@ -279,12 +286,11 @@ $.datepicker.regional['gl'] = {
  };
 function actfecha(){
 $.datepicker.setDefaults($.datepicker.regional['gl']);
-$( "#datepicker" ).datepicker({maxDate: "+0d"}).datepicker("setDate", new Date());
+$("#datepicker").datepicker({maxDate: "+0d"}).datepicker("setDate", new Date());
 }
 function recfecha(){
-
 $.datepicker.setDefaults($.datepicker.regional['gl']);
-$( "#datepicker" ).datepicker({maxDate: "+0d"});
+$("#datepicker").datepicker({maxDate: "+0d"});
 }
 <?php
 try {
@@ -449,8 +455,6 @@ $.ajax({
 function colocaTaboas(){if($("#t1").hasClass("metade")==false){$("#t1").addClass("metade");$("#t2").addClass("metade");}}
 function descolocaTaboas(){if($("#t1").hasClass("metade")==true){$("#t1").removeClass("metade");$("#t2").removeClass("metade");}}
 //function altframes(){ $("#framesta").height(500);$("#frameprea").height(600);}
-
-
 function adapan(){
 if($(window).width()<760){
   $("#menu").removeClass("navbar-default");
@@ -475,7 +479,6 @@ if($(window).width()>1250){colocaTaboas()}
 $(window).resize(function() {
 adapan();
 });
-
 adapan();
 grafica();
 actfecha();
@@ -483,9 +486,6 @@ actboton();
 //altframes();
 tempomapa();
 //alert("fecha:   "+(diase+1));
-
-
 </script>
-</body>
 </html>
 

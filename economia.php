@@ -8,12 +8,14 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="estilos/estilo.css">
 <link rel="stylesheet" href="estilos/c3.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="scripts/Donut3D.js"></script>
 <script src="scripts/c3.js"></script>
 <script src="scripts/scripts.js"></script>
+<noscript><p><img src="//xinzodelimia.esy.es/visitas/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 </head>
 <body>
 <div class="container-fluid">
@@ -48,7 +50,7 @@
 <li><a data-toggle="tab" class="colore" href="#des" onclick="cambiaDiv(1),grafiparo(),grafLineasparo()">Desemprego</a></li>
 <li><a data-toggle="tab" class="colore" href="#afil" onclick="grafafil()">Afiliación S.S.</a></li>
 <li><a data-toggle="tab" class="colore" href="#deb" onclick="cambiaDiv(2),grafLineas(c)">P.I.B. Débeda</a></li>
-<li><a data-toggle="tab" class="colore" href="#pres" onclick="grafpres()">Presupostos</a></li>
+<li><a data-toggle="tab" class="colore" href="#pres" >Presupostos</a></li>
 <li><a data-toggle="tab" class="colore" href="#emp" >Empresas</a></li>
 </ul>
 <div id="contidotaboas" class="tab-content" >
@@ -64,20 +66,21 @@ $iano=$ano;
 $auxmes;
 
 if($dia<6 && $mes>1){$imes=$mes-1;} 
-if(intval($dia)<6){$auxmes="0".(intval($mes)-2);} else{$auxmes="0".(intval($mes)-1);}
+
+if(intval($dia)<5){$auxmes="0".(intval($mes)-2);} else{$auxmes="0".(intval($mes)-1);}
 
 
 //if($mes==1) {$iano=$ano-1;$imes=12;}
 if     ($mes>0  && $mes<3) {if($dia<30){$iano=$ano-1;$imes="09";}else{$imes="12";$iano=$ano-1;}}
 else if($mes>=3 && $mes<6) {if($dia<25){$iano=$ano-1;$imes="12";}else{$imes="03";}}
-else if($mes>=6 && $mes<9) {if($dia<30){$imes="06";}else{$imes="09";}}
-else if($mes>=9 && $mes<12){if($dia<30){$imes="06";}else{$imes="09";}}
+else if($mes>=6 && $mes<=10) {if($mes==9 or $mes==10 ){$imes="06";}else{$imes="09";}}
+else if($mes>10 && $mes<12){$imes="09";}
 
 
 
 
 
-
+try{
 
 $urlp="http://www.ige.eu/igebdt/igeapi/datos/742/0:".$ano.$auxmes.",9915:".$codIGE;
 $urlp1="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:".$ano.$auxmes.",9915".$codIGE;//paro mes datos afil
@@ -114,7 +117,14 @@ echo $i."  ".$datose31[$i]."<br>";
 //echo $ano."  ".$mes."  ".$dia."<hr>";
 $meses=array("Xaneiro","Febreiro","Marzo","Abril","Maio","Xuño","Xullo",
 "Agosto","Septembro","Outubro","Novembro","Decembro");
+
 $xml=simplexml_load_file("debedaviva.xml");
+$xml1=simplexml_load_file("PMPP.xml");
+}
+catch (Exception $e) {
+    echo 'Produciuse un erro :('.$e->getMessage();
+}
+
 echo("<br><div class='table-responsive'  > 
   <table class='table'>
     <thead>
@@ -368,7 +378,7 @@ echo $i."  ".$datose1[$i]."<br>";
     <tr class='textote' id='axs' onmouseover=colora(this.id,salesData[0].color,2),resaltar(0,2) onmouseout=sincolor(this.id),normal(0)>
         <td id='nxs'   class='textoe iz'>".utf8_encode($datose31[14])."</td>
         <td id='numxs'   class='textote'>".$datose31[17]."</td>
-        <td id='porxs'  class='textote'>".round(($datose3[17]/$datose3[11])*100,2)."</td>
+        <td id='porxs'  class='textote'>".round(($datose31[17]/$datose3[11])*100,2)."</td>
     </tr>
     <tr class='textote' id='aas' onmouseover=colora(this.id,salesData[1].color,2),resaltar(1,2) onmouseout=sincolor(this.id),normal(1)>
         <td id='nas'   class='textoe iz'>".utf8_encode($datose3[20])."</td>
@@ -469,10 +479,41 @@ echo ("</select><label>para ver os datos.</label>
    <td class='textote iz'>DEBEDA PER CAPITA(".$xml->datos[count($xml)-1]->ano.")</td>
    <td id='piico1' class='textote der'><a href='#' class='mariz'><img src='imaxes/kchart.png' alt='gráfica' title='gráfica' onclick=grafLineas(ch)></a></td>
    <td id='pibpc' class='textote der'>".number_format(floatval($xml->datos[count($xml)-1]->deb)/floatval($xml->datos[count($xml)-1]->pob), 0, ',', '.')." €</td>
+ </tr>
+   </tbody></table></div>
+   <div class='table-responsive'>
+   <table class='table'>
+   <thead>
 
-
+   <tr class='textotate'>
+   <th class='texto centro oscuro'  colspan='3' id='lenda6'> Periodo Medio Pago a Proveedores ".$nomeMunicipio.": ".$xml1->datos[count($xml1)-1]->mes[1]['nome']." do ".$xml1->datos[count($xml1)-1]['ano']."</th>
+   </tr>
+   <tr><th colspan='3'>
+   <tr class='textotate'>
+   <th class='textote centro'> <a href='http://farfantesoreriamunicipal.blogspot.com.es/2013/06/como-se-calcula-el-periodo-medio-de.html' target='-blank'>
+   <img src='imaxes/infop.png' alt='información' title='Información' class='imgaxuda'></a>CONCEPTO</th>
+   <th class='textote centro'>DIAS</th>
+   <th class='textote centro'>MESES</th>
+   </tr>
+   </thead>
+   <tbody id='corz'>
+   <tr class='textote'>
+   <td class='textote iz'>PERIODO MEDIO DE PAGO</td>
+   <td id='piico' class='textote der'>".$xml1->datos[count($xml1)-1]->mes[1]['dias']."</td>
+   <td id='pibpc' class='textote der'>".floor($xml1->datos[count($xml1)-1]->mes[1]['dias']/30)."</td>
+   </tr>
+   <tr class='textote'>
+   <td class='textote iz'>RATIO DE OPERACIÓNS PENDENTES DE PAGO</td>
+   <td id='piico1' class='textote der'>".$xml1->datos[count($xml1)-1]->mes[1]['ROPP']."</td>
+   <td id='pibpc' class='textote der'>".floor($xml1->datos[count($xml1)-1]->mes[1]['ROPP']/30)."</td>
+   </tr>
+   <tr class='textote'>
+   <td class='textote iz'>RATIO DE OPERACIÓNS PAGADAS</td>
+   <td id='piico1' class='textote der'>".$xml1->datos[count($xml1)-1]->mes[1]['ROP']."</td>
+   <td id='pibpc' class='textote der'>".floor($xml1->datos[count($xml1)-1]->mes[1]['ROP']/30)."</td>
    </tr>
    </tbody></table></div>"); 
+
    ?>
    <div  id="chart1" class="grafilineas"></div>
     </div>
@@ -487,13 +528,13 @@ echo ("</select><label>para ver os datos.</label>
     <table class='table'>
     <thead>
     <tr class='textotate'>
-    <th class='texto centro oscuro' colspan='6' id='lenda7'>".utf8_encode($datose4[2])." de ".$datose4[10]." ano: ".$datose4[7]."
-    <a href='#' ><img src='imaxes/pie_chart.png' alt='gráfica' title='gráfica' onclick=grafpres()></a></th>
+    <th class='texto centro oscuro' colspan='5' id='lenda7'>".utf8_encode($datose4[2])." ".$datose4[10]." ano: ".$datose4[7]."
+    </th><th><a href='#' ><img src='imaxes/pie_chart.png' alt='gráfica' title='gráfica' onclick=grafpres()></a></th>
     </tr><tr><th colspan='6'></th></tr>
     <tr class='textotate'><th class='texto centro oscuro' colspan='3'>Ingresos</th>
     <th class='texto centro oscuro' colspan='3' >Gastos</th></tr>
     <tr><th colspan='6'></th></tr>
-    </thead> <tbody id='cpres'>");
+    </thead> <tbody >");
     $di=20;
     $ti=17;
     $dg=74;
@@ -507,27 +548,27 @@ echo ("</select><label>para ver os datos.</label>
         <td id='pi".$i."'  class='textote'>".round(($datose4[$ti]/$datose4[11])*100,2)."%</td>
         <td id='dg".$i."'  class='textote iz' onmouseover=colora(this.id,salesData[".($i+8)."].color,0),resaltar(".($i+8).",0) onmouseout=sincolor(this.id),normal(".($i+8).")>".$datose4[$dg]."</td>
         <td id='tg".$i."'  class='textote der' onmouseover=colora(this.id,salesData[".($i+8)."].color,0),resaltar(".($i+8).",0) onmouseout=sincolor(this.id),normal(".($i+8).")>".number_format($datose4[$tg], 0, ',', '.')."€</td>
-        <td id='pg".$i."'  class='textote'>".round(($datose4[$tg]/$datose4[11])*100,2)."%</td></tr>");
+        <td id='pg".$i."'  class='textote'>".round(($datose4[$tg]/$datose4[71])*100,2)."%</td></tr>");
         
         $di=$di+6;$ti=$ti+6;$dg=$dg+6;$tg=$tg+6;
       }
     echo("</tbody>
-        <tfoot>
+        <tfoot >
         <tr class='textotate'>
-        <th class='textote iz'>".$datose4[8]."</th>
-        <th class='textote der'>".number_format($datose4[11], 0, ',', '.')."€</th>
+        <th class='textote iz' >".$datose4[8]."</th>
+        <th class='textote der' id='lingresos' onmouseover=colora(this.id,salesData[0].color,0),resaltar(0,0) onmouseout=sincolor(this.id),normal(0)>".number_format($datose4[11], 0, ',', '.')."€</th>
         <th></th>
         <th class='textote iz'>".utf8_encode($datose4[68])."</th>
-        <th class='textote der'>".number_format($datose4[71], 0, ',', '.')."€</th>
+        <th class='textote der' id='lgastos' onmouseover=colora(this.id,salesData[1].color,0),resaltar(1,0) onmouseout=sincolor(this.id),normal(1)>".number_format($datose4[71], 0, ',', '.')."€</th>
         <th></th></tr><tr><th colspan='6'></th></tr>");
      if($datose4[11]>$datose4[71])
-     {echo("<tr class='textotate'><th class='textote iz'>SUPERAVIT</th>
-            <th class='textote der'>".number_format(($datose4[11]-$datose4[71]), 0, ',', '.')."€</th>
-            <th class='textote der'>".round((($datose4[11]-$datose4[71])/$datose4[11])*100,2)."%</th>
+     {echo("<tr class='textotate'><th class='textote iz' id='resul'>SUPERAVIT</th>
+            <th class='textote der' id='lresul' onmouseover=colora(this.id,salesData[2].color,0),resaltar(2,0) onmouseout=sincolor(this.id),normal(2)>".number_format(($datose4[11]-$datose4[71]), 0, ',', '.')."€</th>
+            <th class='textote der' >".round((($datose4[11]-$datose4[71])/$datose4[11])*100,2)."%</th>
             <th colspan='3'></th></tr>");}
      elseif($datose4[11]<$datose4[71])
-     {echo("<tr class='textotate'><th colspan='3'></th><th class='textote iz'>DÉFICIT</th>
-            <th class='textote der'>".number_format(($datose4[71]-$datose4[11]), 0, ',', '.')."€</th>
+     {echo("<tr class='textotate'><th colspan='3'></th><th class='textote iz' id='resul'>DÉFICIT</th>
+            <th class='textote der' id='lresul' onmouseover=colora(this.id,salesData[2].color,0),resaltar(2,0) onmouseout=sincolor(this.id),normal(2)>".number_format(($datose4[71]-$datose4[11]), 0, ',', '.')."€</th>
             <th class='textote der'>".round((($datose4[71]-$datose4[11])/$datose4[71])*100,2)."%</th></tr>");}
      else
      {echo("<tr class='textotate'>
@@ -535,11 +576,11 @@ echo ("</select><label>para ver os datos.</label>
             </tr>");}
     echo("</tfoot></table></div>");
     $xml2=simplexml_load_file("presupostos.xml");
-    $ex=1;
+    $ex=3;
     echo("<div class='table-responsive'>     
     <table class='table'><thead>
     <tr class='textotate'>
-    <th class='texto centro oscuro' colspan='5' id='lenda8'>Presupostos ".$nomeMunicipio." ano 2014</th>
+    <th class='texto centro oscuro' colspan='5' id='lenda8'>Presupostos ".$nomeMunicipio." ano:".$xml2->INGRESOS[0]->importe[$i]->exercicio[$ex]['ano']." </th>
     <th><a href='#' class='mariz'><img src='imaxes/pie_chart.png' alt='gráfica' title='gráfica' onclick=grafafideb()></a></th>
     </tr><tr><th colspan='6'></th></tr>
     <tr class='textotate'><th class='texto centro oscuro' colspan='3'>Ingresos</th>
@@ -568,6 +609,9 @@ echo ("</select><label>para ver os datos.</label>
     echo("</tfoot></table></div>");
 
     ?>
+    <center><img src="imaxes/construccion.png" alt="en contstruccion" title="En construccion">
+    <p>Aínda en construcción...</p>
+    </center>
     </div>
     <div id="emp" class="tab-pane fade">
   <?php 
@@ -666,6 +710,9 @@ echo("<div class='table-responsive'>
       </tr>
     </tfoot></tbody></table></div>");
 ?>
+<center><img src="imaxes/construccion.png" alt="en contstruccion" title="En construccion">
+    <p>Aínda en construcción...</p>
+    </center>
 </div>
 </div>
 </div>
@@ -683,9 +730,13 @@ echo("<div class='table-responsive'>
 <a style="text-decoration: none; border: 0" target="_blank" href="http://www.ige.eu"><img border="0" src="http://www.ige.eu/web/imgs/operacion.gif"/></a>
 <a href="http://www.ige.eu" >Instituto Galego de Estatística</a>
 </p>
+<hr>
+<?php include ("creativecommons.html"); ?>
 </div>
 </article>	
 </div>
+<?php include ("contacto.html"); ?>
+</body>
 <script type="text/javascript">
 $("#tabecono").removeClass("colorx");
 $("#tabecono").css({background:'#D4C380',BorderTopRightRadius: 10,BorderTopLeftRadius: 10,marginBottom:-10,border:'3px white groove'});
@@ -793,32 +844,44 @@ dibujaGrafica();
 grafica('Porcentaxe debeda sobre P.I.B. ano 2012'); 
 //actGrafica();   
 }
+
 function grafpres()
 {
     //alert($("#ti0").html().replace(/[€.]/gi, '')/2);
 //datos=[$("#at").html(),$("#it").html(),$("#ct").html(),$("#st").html(),$("#et").html()];
+//alert($("#tg0").html().replace(/[€.]/gi, ''));
+var col;
+var r=$("#resul").html();
+if(r==="SUPERAVIT"){col="#109618";}
+if(r==="DEFICIT"){col="#953C52";}
+
 salesData=[];
 salesData=[
-    {label:"Impostos indirectos", color:"#109618",count:$("#ti0").html().replace(/[€.]/gi, '')/2},
-    {label:"Taxas e outros ingresos", color:"#66FF00",count:$("#ti1").html().replace(/[€.]/gi, '')/2},
-    {label:"Transferencias correntes", color:"#71CC51",count:$("#ti2").html().replace(/[€.]/gi, '')/2},
-    {label:"Ingresos patrimoniais", color:"#138808",count:$("#ti3").html().replace(/[€.]/gi, '')/2},
-    {label:"Alleamento de investimentos reais", color:"#006400",count:$("#ti4").html().replace(/[€.]/gi, '')/2},
-    {label:"Transferencias de capital", color:"#98FF98",count:$("#ti5").html().replace(/[€.]/gi, '')/2},
-    {label:"Activos financeiros", color:"#39FF14",count:$("#ti6").html().replace(/[€.]/gi, '')/2},
-    {label:"Pasivos financeiros", color:"#66DDAA",count:$("#ti7").html().replace(/[€.]/gi, '')/2},
-    {label:"Gastos de persoal", color:"#DC3912",count:$("#tg0").html().replace(/[€.]/gi, '')/2},
-    {label:"Gastos en bens correntes e servizos",  color:"#FF005A",count:$("#tg1").html().replace(/[€.]/gi, '')/2},
-    {label:"Gastos financeiros",  color:"#F08080",count:$("#tg2").html().replace(/[€.]/gi, '')/2},
-    {label:"Transferencias correntes",  color:"#D4442F",count:$("#tg3").html().replace(/[€.]/gi, '')/2},
-    {label:"Investimentos reais",  color:"#FF0000",count:$("#tg4").html().replace(/[€.]/gi, '')/2},
-    {label:"Transferencias de capital",  color:"#820000",count:$("#tg5").html().replace(/[€.]/gi, '')/2},
-    {label:"Activos financeiros",  color:"#DC2339",count:$("#tg6").html().replace(/[€.]/gi, '')/2},
-    {label:"Pasivos financeiros",  color:"#CC0000",count:$("#tg7").html().replace(/[€.]/gi, '')/2}];
+    /*{label:"Impostos indirectos", color:"#109618",count:$("#ti0").html().replace(/[€.]/gi, '')},
+    {label:"Taxas e outros ingresos", color:"#66FF00",count:0},
+    {label:"Transferencias correntes", color:"#71CC51",count:$("#ti2").html().replace(/[€.]/gi, '')},
+    {label:"Ingresos patrimoniais", color:"#138808",count:$("#ti3").html().replace(/[€.]/gi, '')},
+    {label:"Alleamento de investimentos reais", color:"#006400",count:$("#ti4").html().replace(/[€.]/gi, '')},
+    {label:"Transferencias de capital", color:"#98FF98",count:$("#ti5").html().replace(/[€.]/gi, '')},
+    {label:"Activos financeiros", color:"#39FF14",count:$("#ti6").html().replace(/[€.]/gi, '')},
+    {label:"Pasivos financeiros", color:"#66DDAA",count:$("#ti7").html().replace(/[€.]/gi, '')},
+    {label:"Gastos de persoal", color:"#DC3912",count:$("#tg0").html().replace(/[€.]/gi, '')},
+    {label:"Gastos en bens correntes e servizos",  color:"#FF005A",count:$("#tg1").html().replace(/[€.]/gi, '')},
+    {label:"Gastos financeiros",  color:"#F08080",count:$("#tg2").html().replace(/[€.]/gi, '')},
+    {label:"Transferencias correntes",  color:"#D4442F",count:$("#tg3").html().replace(/[€.]/gi, '')},
+    {label:"Investimentos reais",  color:"#FF0000",count:$("#tg4").html().replace(/[€.]/gi, '')},
+    {label:"Transferencias de capital",  color:"#820000",count:$("#tg5").html().replace(/[€.]/gi, '')},
+    {label:"Activos financeiros",  color:"#DC2339",count:$("#tg6").html().replace(/[€.]/gi, '')},
+    {label:"Pasivos financeiros",  color:"#CC0000",count:$("#tg7").html().replace(/[€.]/gi, '')}];*/
+    {label:"Dereitos liquidados ", color:"#39FF14",count:$("#lingresos").html().replace(/[€.]/gi, '')},
+    {label:"Obrigas recoñecidas netas", color:"#FF0000",count:$("#lgastos").html().replace(/[€.]/gi, '')},
+    {label:$("#resul").html(), color: col,count:$("#lresul").html().replace(/[€.]/gi, '')}
+    ];
 //alert($("#lenda1").html());
+indice=0;  
 borraGrafica();
 dibujaGrafica();
-grafica($("#lenda5").html()); 
+grafica($("#lenda7").html()); 
 //actGrafica();   
 }
 function grafiparo()
@@ -841,7 +904,7 @@ var svg = d3.select("#quesito").append("svg").attr("width",ancho).attr("height",
 //svg.append("g").attr("id","salesDonut");
 svg.append("g").attr("id","quotesDonut");
 //Donut3D.draw("salesDonut", randomData(), 150, 150, 130, 100, 30, 0.4);
-Donut3D.draw("quotesDonut", randomData(), ancho/2, ancho/3, ancho/2.5, 100, 30, 0);
+Donut3D.draw("quotesDonut", randomData(), ancho/2,130, ancho/2.5, 100, 30, 0);
 
 
 $("#tituloquesito").html($("#lenda").html());
@@ -905,8 +968,6 @@ $(".percent").css({"visibility": "visible"});
 }
 
 function actGrafica(t){
-
-
 $(".label").each(function(i){
     //alert(t+" "+indice);
     $(".percent").eq(i).mouseover(function () {
@@ -920,13 +981,27 @@ $(".label").each(function(i){
 });
 });
 }
+/*function actGraficas(t,t1,t2){
+$(".label").each(function(i){
+    //alert(t+" "+indice);
+    $(".percent").eq(0).mouseover(function () {
+    colora($("#"+t).attr('id'),salesData[0].color,indice);
+    resaltar(0,indice);
+
+    });
+    $(".percent").eq(i).mouseout(function () {
+    sincolor($("#"+t+" > tr:eq("+i+")").attr('id'));
+    normal(i);
+});
+});
+}*/
 var c=[
         ['x', '2008-12-31', '2009-12-31', '2010-12-31', '2011-12-31', '2012-12-31', '2013-12-31', '2014-12-31', '2015-12-31'],
         ['IMPORTE TOTAL DEBEDA CONCELLO', 2299000, 4162000, 4141000,3964000, 7354000, 7855000,6343000,5851000 ], 
       ];
 var ch=[
         ['x', '2008-12-31', '2009-12-31', '2010-12-31', '2011-12-31', '2012-12-31', '2013-12-31', '2014-12-31', '2015-12-31'],
-        ['IMPORTE DEBEDA POR HABITANTE', Math.round(2299000/10033), Math.round(4162000/10161), Math.round(4141000/10245),Math.round(3964000/1032329),
+        ['IMPORTE DEBEDA POR HABITANTE', Math.round(2299000/10033), Math.round(4162000/10161), Math.round(4141000/10245),Math.round(3964000/10329),
         Math.round(7354000/10358), Math.round(7855000/10307),Math.round(6343000/10200),Math.round(5851000/10043)]
        ];
 //alert(c[0][1]);
@@ -989,7 +1064,7 @@ function grafLineas(x){
         
 }});
 <?php
-$url="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:200505:200506:200507:200508:200509:200510:200511:200512:200601:200602:200603:200604:200605:200606:200607:200608:200609:200610:200611:200612:200701:200702:200703:200704:200705:200706:200707:200708:200709:200710:200711:200712:200801:200802:200803:200804:200805:200806:200807:200808:200809:200810:200811:200812:200901:200902:200903:200904:200905:200906:200907:200908:200909:200910:200911:200912:201001:201002:201003:201004:201005:201006:201007:201008:201009:201010:201011:201012:201101:201102:201103:201104:201105:201106:201107:201108:201109:201110:201111:201112:201201:201202:201203:201204:201205:201206:201207:201208:201209:201210:201211:201212:201301:201302:201303:201304:201305:201306:201307:201308:201309:201310:201311:201312:201401:201402:201403:201404:201405:201406:201407:201408:201409:201410:201411:201412:201501:201502:201503:201504:201505:201506:201507:201508:201509:201510:201511:201512:201601:201602:201603:201604:201605:201606:201607:201608,9915:".$codIGE;
+$url="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:200505:200506:200507:200508:200509:200510:200511:200512:200601:200602:200603:200604:200605:200606:200607:200608:200609:200610:200611:200612:200701:200702:200703:200704:200705:200706:200707:200708:200709:200710:200711:200712:200801:200802:200803:200804:200805:200806:200807:200808:200809:200810:200811:200812:200901:200902:200903:200904:200905:200906:200907:200908:200909:200910:200911:200912:201001:201002:201003:201004:201005:201006:201007:201008:201009:201010:201011:201012:201101:201102:201103:201104:201105:201106:201107:201108:201109:201110:201111:201112:201201:201202:201203:201204:201205:201206:201207:201208:201209:201210:201211:201212:201301:201302:201303:201304:201305:201306:201307:201308:201309:201310:201311:201312:201401:201402:201403:201404:201405:201406:201407:201408:201409:201410:201411:201412:201501:201502:201503:201504:201505:201506:201507:201508:201509:201510:201511:201512:201601:201602:201603:201604:201605:201606:201607:201608:201609,9915:".$codIGE;
 $datos=explode(',',preg_replace('/"|[a-zA-Z]/',' ',file_get_contents($url)));
 
 
@@ -1094,59 +1169,66 @@ $(document).ajaxComplete(function(){
 
 }
 
-actualizaDatos();
-dibujaGrafica($("#lenda").html());
-actGrafica('cdesex');
+
 function colocaTaboas(){$(".table-responsive").addClass("metade");$("#tdesemp").addClass("marteden");}
 function descolocaTaboas(){$(".table-responsive").removeClass("metade");}
 function adapan(){
+var a=$(window).width();
 
 
-if($(window).width()<=450){
+if(a<=450){
     $("#menu").removeClass("navbar-default");
     $("#menu").addClass("navbar-fixed-top");
     $("#mostrar").addClass("altura");
     $("#contdatos").addClass("margen");
-    $("#listaecon li:eq(0) > a").html("Des");
-    $("#listaecon li:eq(1) > a").html("S.S.");
-    $("#listaecon li:eq(2) > a").html("PIB");
-    $("#listaecon li:eq(3) > a").html("Pre");
-    $("#listaecon li:eq(4) > a").html("Emp");
     descolocaTaboas();
     normal();
     }
-if($(window).width()>450 && $(window).width()<760){
+if(a>450 && a<760){
     $("#menu").removeClass("navbar-default");
     $("#menu").addClass("navbar-fixed-top");
     $("#mostrar").addClass("altura");
     $("#contdatos").addClass("margen");
-    $("#listaecon li:eq(0) > a").html("Desemprego");
-    $("#listaecon li:eq(1) > a").html("Afiliación S.S.");
-    $("#listaecon li:eq(2) > a").html("P.I.B. Débeda");
-    $("#listaecon li:eq(3) > a").html("Presupostos");
-    $("#listaecon li:eq(4) > a").html("Empresas");
     descolocaTaboas();
     normal();
-
 }
-if($(window).width()>760){
+if(a>760 && a<1100){
+    $("#menu").removeClass("navbar-fixed-top");
+    $("#menu").addClass("navbar-default");
+    $("#mostrar").removeClass("altura");
+    $("#mostrar").css("height","auto");
+    $("#contidotaboas").height($(window).height()*0.80);
+    $("#contdatos").removeClass("margen");
+    descolocaTaboas();
+    acortar();
+   }
+if(a>=1100 && a<1600) {
     $("#menu").removeClass("navbar-fixed-top");
     $("#menu").addClass("navbar-default");
     $("#mostrar").removeClass("altura");
     $("#mostrar").height($(window).height()*0.93);
     $("#contidotaboas").height($(window).height()*0.80);
-    $("#listaecon li:eq(0) > a").html("Desemprego");
-    $("#listaecon li:eq(1) > a").html("Afiliación S.S.");
-    $("#listaecon li:eq(2) > a").html("P.I.B. Débeda");
-    $("#listaecon li:eq(3) > a").html("Presupostos");
-    $("#listaecon li:eq(4) > a").html("Empresas");
-    $("#contdatos").removeClass("margen");
     descolocaTaboas();
     normal();
-   }
-if($(window).width() < 950 && $(window).width() >760) {acortar();}
-if($(window).width() > 950) {normal();}
-if($(window).width()>1600){colocaTaboas()}
+    }
+
+if(a>=1600){
+    $("#menu").removeClass("navbar-fixed-top");
+    $("#menu").addClass("navbar-default");
+    $("#mostrar").removeClass("altura");
+    $("#mostrar").height($(window).height()*0.93);
+    $("#contidotaboas").height($(window).height()*0.80);
+    colocaTaboas();
+    normal();
+    $("#tabindex > a > span").text("Xeral");
+    $("#tabpoboa > a > span").text("Poboación");
+    $("#tabecono > a > span").text("Economía");
+    $("#tabtempo > a > span").text("Tempo");
+    $("#tabmapas > a > span").text("Mapas");
+    $("#tabimaxe > a > span").text("Imaxes");
+    $("#tabnatur > a > span").text("Medio");
+    //alert(a);
+    }
 //$("#mostrar").height($(window).height()*0.95);   
 }
 $(window).resize(function() {
@@ -1156,12 +1238,10 @@ dibujaGrafica();
 recargarGraficas();
 });
 adapan();
+actualizaDatos();
+dibujaGrafica($("#lenda").html());
+actGrafica('cdesex');
 //cambiaDiv();
 grafLineasparo();
-
-
 </script>
-
-</body>
-
 </html>

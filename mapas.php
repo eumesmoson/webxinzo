@@ -90,6 +90,9 @@ echo "<tr class='colorm'><th class='centro' colspan='2' id='nom".$i."'>".$d."</t
 else if($d->getName()=="DIRECCION"){
 echo "<tr><td><img src='imaxes/homep.png' alt='dirección'></td><td id='dir".$i."'>".$d."</td></tr>";  
 }
+else if($d->getName()=="HORARIO"){
+echo "<tr><td><img src='imaxes/reloxo.png' alt='horario'></td><td id='hor".$i."'>".$d."</td></tr>";
+}
 else if($d->getName()=="TELEFONO"){
 echo "<tr><td><img src='imaxes/phonep.png' alt='teléfono'></td><td>".$d."</td></tr>";  
 }
@@ -123,17 +126,17 @@ echo "</div>"
       <div class="form-group" style="margin-left:-15px"  >
         <input type="text" class="form-control"  placeholder="Buscar" style="width:226px;margin-bottom:3px;">
       </div>
-      <button type="submit" class="btn btn-default" id="botbus" onclick="" style="width:226px;margin-left:-15px" ><span class="glyphicon glyphicon-search"></span></button>
+      <button type="submit" class="colorm colormbot" id="botbus" onclick="" style="width:226px;margin-left:-15px" ><span class="glyphicon glyphicon-search"></span></button>
     </form>
 </div>
 <hr>
 <div class="enlacesinfo" >
 <input type='text' id='datepicker' size='10' placeholder='Elixa data para consulta' class="form-control centro" style="width:226px;margin-bottom:3px" readonly>
 
-<button class="btn btn-default" style="width:226px" 
+<button class="colorm colormbot" style="width:226px" 
 onclick="enviamos(document.getElementById('datepicker').value,322,'datbus')"><img src="imaxes/add.gif" style="margin-top:-5px" alt="icono farmacia" ><span class="verben" style="margin-left:4px">FARMACIA DE GARDA</span>
 <img src="imaxes/add.gif" style="margin-top:-5px;" alt="icono farmacia"></button>
-<button class="btn btn-default" style="width:226px" 
+<button class="colorm colormbot" style="width:226px" 
 onclick="enviamos2('datbus')"><img src="imaxes/gasn.png" style="margin-top:-5px;margin-left:-13px" alt="icono gasolineira" ><span class="verben">PREZOS DA GASOLINA</span>
 </button></div>
 <hr>
@@ -141,9 +144,13 @@ onclick="enviamos2('datbus')"><img src="imaxes/gasn.png" style="margin-top:-5px;
 </div>
 </div>
 </div>
+<hr>
+<?php include ("creativecommons.html");?>
 </div>
 </article>  
 </div>
+<?php include ("contacto.html");?>
+</body>
 <?php 
 $latitude="";
 $lonxitud="";
@@ -328,8 +335,6 @@ borrar();
 $(document).ajaxComplete(function(){prezos();}); 
 }
 
-
-
 function adapan(){
 if($(window).width()<360){
   $("#menu").removeClass("navbar-default");
@@ -362,8 +367,10 @@ $("#mostrar").removeClass("altura");
 $("#mostrar").height($(window).height()*0.93);
 $("#map").height($("#mostrar").height()-15);
 $("#map").css("margin-top","5px");
-$("#datoslugar").height(650);
+$("#datoslugar").height(758);
 $("#datoslugar").addClass("over");
+$("#datbus").height(450);
+$("#datbus").addClass("over");
 }
 if($(window).width() < 1100 && $(window).width() >760) {acortar();}
 if($(window).width() > 1100) {normal();}
@@ -421,7 +428,5 @@ pgAn=[];
 //alert($("#pga0 > b").text());
 //alert(pgA[1]);
 }
-
 </script>
-</body>
 </html>
