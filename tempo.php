@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
+<meta name="description" content="xinzo de limia tempo" />
+<meta name="keywords" content="xinzo de limia tempo, xinzo de limia metereoloxía, xinzo de limia estación metereoloxíca, xinzo de limia meteoroloxía, xinzo de limia choiva, xinzo de limia temperatura, xinzo de limia temperaturas" />
+<title>Tempo <?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -70,7 +72,7 @@ $dias = array( 'Domingo', 'Luns', 'Martes','Mercores', 'Xoves', 'Vernes', 'Sába
 
 $urld="http://www2.meteogalicia.gal/galego/observacion/estacions/contidos/DatosHistoricosXML_diario.asp?est=".$estMetereo."&param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,10124,10001,10117,10129,9990&data1=6/9/2016&data2=7/9/2016&idprov=2&red=".$redMetereo;
 
-echo ("<div id='titulop'><h5 class='texto centro efectotexto'>Medición en ".$nomeMunicipio." o ".$idia." de ".$meses[$mes-1]." do ".$ano."  </h5><hr></div>");?>
+echo ("<div id='titulop'><h1 class='texto centro efectotexto'>Tempo en ".$nomeMunicipio." o ".$idia." de ".$meses[$mes-1]." do ".$ano."  </h1><hr></div>");?>
 <div id="contidotaboas" class="tab-content" >
 <div class="table-responsive">
 <div id="taboa">
@@ -157,9 +159,9 @@ echo("<tr class='textott' >
 
 
 </div>
-
 </div>
 <div  id="chart" class="grafilineas"></div>
+&nbsp;
 </div>
 
 </div>
@@ -168,7 +170,7 @@ echo("<tr class='textott' >
 <div id="contidodereita" style="overflow:auto;">
 <ul class="nav nav-tabs" id="listwigtempo">
     <li><a data-toggle="tab" class="textotatt" href="#esta" onclick="">Medición</a></li>
-    <li><a data-toggle="tab" class="textotatt" href="#pred" onclick="">Predicción</a></li>
+    <li><a data-toggle="tab" class="textotatt" href="#pred" onclick="">Previsión</a></li>
     <li><a data-toggle="tab" class="textotatt" href="#mapt" onclick="">Mapas</a></li>
     <li><a data-toggle="tab" class="textotatt" href="#lua" onclick="">Lua</a></li>
 </ul>
@@ -296,9 +298,7 @@ $("#datepicker").datepicker({maxDate: "+0d"});
 try {
 $medicions=simplexml_load_file("dahimeteo.xml");
 }
-catch (Exception $e) {
-   
-}
+catch (Exception $e) {}
 $datas="";
 $tmedias="";
 $tmaximas="";
@@ -439,7 +439,7 @@ $("#enviarfecha").click(function(){
 });
 }
 function enviamos(a,capa,opc){
-//alert(a+capa+tipo);
+//alert("hola:  "+a+capa+opc);
 $.ajax({
         type:  'POST',
         url:   'datostempo.php',
@@ -467,8 +467,8 @@ if($(window).width()>=760)
 {$("#menu").removeClass("navbar-fixed-top");
 $("#menu").addClass("navbar-default");
 $("#mostrar").removeClass("altura");
-$("#mostrar").height($(window).height()*0.93);
-$("#contidotaboas").height($(window).height()*0.80);
+//$("#mostrar").height($(window).height()*0.93);
+//$("#contidotaboas").height($(window).height()*0.80);
 descolocaTaboas();
 normal();
 }

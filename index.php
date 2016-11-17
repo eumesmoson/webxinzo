@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="xinzo de limia informacion" />
+<meta name="keywords" content="xinzo de limia pobos, limia, xinzo de limia parroquias, xinzo de limia noticias, xinzo de limia feira, xinzo de limia festas, xinzo de limia fiestas, ginzo , ginzo de limia " />
 <title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -17,7 +19,7 @@
 <noscript><p><img src="//xinzodelimia.esy.es/visitas/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
 </head>
-<body>
+<body onload="alert(new Date().getMonth()+1)">
 <div class="container-fluid">
 <header>
 <nav class="navbar navbar-default fondoheader" id="menu"  >
@@ -44,7 +46,7 @@
 <div class="row colorxf margenarriba" id="mostrar">
 <div class="col-md-8 col-lg-9 col-sm-8" id="xeraltexto">
 <hr>
-<h1 class="efectotexto"><?php echo $nomeMunicipio;?></h1>
+<h1 class="efectotexto" style="font-size:25px;"><?php echo $nomeMunicipio;?></h1>
 <hr>
 <p class="parrafos">
 O concello de Xinzo de Limia esta situado no sur da provincia de Ourense ten 
@@ -133,6 +135,7 @@ onclick="enlaces(this.id,'Pidre',42.075569,-7.669782,'Santa Bárbara','30-5','32
 </ol>
 </p>
 <hr>
+<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
 </div>
 <div class="col-md-4 col-lg-3 col-sm-4"> 
 <div id="calendario" ><hr></div>
@@ -170,7 +173,7 @@ echo $datos[$i]."<hr>";
 
 </div>
 <div id="noticias" class="tab-pane">
-<div style="margin:10px auto;width:280px;border:1px white solid;border-radius:10px;">
+<div style="margin:10px auto 146px auto;width:280px;border:1px white solid;border-radius:10px;">
 <div class="bloque"><a href="http://www.dendealimia.com/" target="_blank"><button class="tabxeral bclx" type="button">DENDE A LIMIA</button></a></div>
 <div class="bloque"><a href="http://www.laregion.es/blog/section/a-limia" target="_blank"><button class="tabxeral bclx" type="button">LA REGION</button></a></div>
 <div class="bloque"><a href="http://www.ourensedixital.com/_limia/" target="_blank"><button class="tabxeral bclx" type="button">LIMIA DIXITAL</button></a></div>
@@ -178,12 +181,8 @@ echo $datos[$i]."<hr>";
 <div class="bloque"><a href="http://www.farodevigo.es/galicia/ourense/xinzo/" target="_blank"><button class="tabxeral bclx" type="button">FARO DE VIGO</button></a></div>
 </div>
 </div>
-
-
 </div>
-
 </div>
-
 </div>
 <hr>
 <?php include ("creativecommons.html"); ?>
@@ -214,6 +213,14 @@ function enlaces(capa,nome,lat,lon,p,f,cp,fes){
 festas="";
 var ano="";
 var msgf="";
+if(nome=='Xinzo de Limia' && new Date().getMonth()==10){
+  fes[9]=['1ª Feira do mes','14-11','Feira'];
+  fes[10]=['2ª Feira do mes','27-11','Feira'];
+}
+if(nome=='Xinzo de Limia' && new Date().getMonth()==11){
+   fes[9]=['1ª Feira do mes','14-12','Feira'];
+   fes[10]=['2ª Feira do mes','27-12','Feira'];
+}
 for(i=0;i<fes.length;i++){
 //if(fes[i][1].length<6){fes[i][1]+="-"+new Date().getFullYear();}
 //if(new Date(fes[i][1].replace(/-/gi,'/')).getDay()==0){alert("Son un domingo :)");}
@@ -264,7 +271,7 @@ if($(window).width()<760){
   normal();
   
 }
-else if($(window).width()>760){$("#menu").removeClass("navbar-fixed-top");$("#menu").addClass("navbar-default");$("#mostrar").removeClass("altura");$("#mostrar").height($(window).height()*0.93);}
+else if($(window).width()>760){$("#menu").removeClass("navbar-fixed-top");$("#menu").addClass("navbar-default");$("#mostrar").removeClass("altura");}
 if($(window).width()>1100){normal();} 
 }
 $(window).resize(function() {

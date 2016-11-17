@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
+<meta name="description" content="xinzo de limia poboación" />
+<meta name="keywords" content="xinzo de limia poboación,xinzo de limia población, xinzo de limia habitantes, ginzo de limia población, ginzo de limia habitantes" />
+<title>Poboación <?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="estilos/estilo.css">
@@ -62,7 +64,7 @@ array_splice($datos, $i,1);
 echo $i."  ".$datos[$i]."<br>";
 }*/
 
-echo ("<h5 class='texto centro efectotexto'>".$nomeMunicipio." ".$datos[7]."</h5><hr>");
+echo ("<h1 class='texto centro efectotexto'> Poboación de".$nomeMunicipio." ".$datos[7]."</h1><hr>");
 echo("<div class='table-responsive'>          
   <table class='table'>
     <thead >
@@ -113,8 +115,10 @@ echo ("</select><button type='submit' class='btn btn-primary btn-sm' style='marg
 </div>
  <button type="submit" class="btn btn-primary btn-sm" id="botongraf" style="margin:-30px auto auto 45%;" onclick="" >Ver Gráfica</button>
 <div  id="chart" class="grafilineas oculto"></div>
+<br>
+&nbsp;
+<br>
 </div>
-
 </div>
 <div id="piramide_poboacion" class="col-md-4 col-lg-3 col-sm-4" >  
 <hr>
@@ -144,7 +148,7 @@ echo ("</select><button type='submit' class='btn btn-primary btn-sm' style='marg
 <div id="uno0" onmouseover="colora(this.id,1),colora('h0',1),colora('ph0',1)"   onmouseout="colora(this.id,2),colora('h0',3),colora('ph0',3)"  class="esquerda" style="width:<?php echo round($datos[153],0)/3?>px" title="<?php echo round($datos[153],0)?>" ></div>
 </div>
 <div id="centro" class="centrograf">
-<div id="titulocentro" class="titulos2">IDADE</div>
+<div id="titulocentro" class="titulos2">--IDADE--</div>
 <div id="cero2" class="titulos1 verben" >>=85</div>
 <div id="cero3" class="titulos1 verben" >80-84</div>
 <div id="cero4" class="titulos1 verben" >75-79</div>
@@ -189,7 +193,7 @@ echo ("</select><button type='submit' class='btn btn-primary btn-sm' style='marg
 </div>
 <div>
 <?php $urlwid="http://www.ige.eu/web/servlet/widgdat?i=29;12;13;14;15;16;17;21;20;18;19;22;23&l=gl&e=".$codIGE;?>
-<iframe class="conwipoboa"  frameborder="1" scrolling="no" src=<?php echo "'".$urlwid."'"; ?>>
+<iframe class="conwipoboa" frameborder="1" scrolling="no" src=<?php echo "'".$urlwid."'"; ?>>
 </iframe>
 <p style="text-align:center">
 <a style="text-decoration: none; border: 0;" target="_blank" href="http://www.ige.eu"><img border="0" src="http://www.ige.eu/web/imgs/operacion.gif"/></a>
@@ -198,8 +202,11 @@ echo ("</select><button type='submit' class='btn btn-primary btn-sm' style='marg
 <hr>
 <?php include ("creativecommons.html"); ?>
 </div>
+
 </div>
+
 </article>  
+
 </div>
 <?php include ("contacto.html"); ?>
 </body>
@@ -335,8 +342,8 @@ if($(window).width()>760)
   $("#menu").removeClass("navbar-fixed-top");
   $("#menu").addClass("navbar-default");
   $("#mostrar").removeClass("altura");
-  $("#mostrar").height($(window).height()*0.93);
-  $("#taboa").height($(window).height()*0.87); 
+  //$("#mostrar").height($(window).height()*0.93);
+  $("#taboa").height($(window).height()*0.88); 
   $("#chart").addClass("oculto");
   //$("#chart").css("display","none");
   $("#botongraf").css("visibility","visible");

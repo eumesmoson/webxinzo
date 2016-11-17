@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
+<meta name="description" content="xinzo de limia economía" />
+<meta name="keywords" content="xinzo de limia economía, xinzo de limia paro, xinzo de limia afiliación, xinzo de limia deveda, xinzo de limia presupostos, xinzo de limia empresas, xinzo de limia impostos" />
+<title>Economía <?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="estilos/estilo.css">
 <link rel="stylesheet" href="estilos/c3.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="scripts/Donut3D.js"></script>
 <script src="scripts/c3.js"></script>
@@ -51,7 +53,8 @@
 <li><a data-toggle="tab" class="colore" href="#afil" onclick="grafafil()">Afiliación S.S.</a></li>
 <li><a data-toggle="tab" class="colore" href="#deb" onclick="cambiaDiv(2),grafLineas(c)">P.I.B. Débeda</a></li>
 <li><a data-toggle="tab" class="colore" href="#pres" >Presupostos</a></li>
-<li><a data-toggle="tab" class="colore" href="#emp" >Empresas</a></li>
+<li><a data-toggle="tab" class="colore" href="#emp" onclick="grafEmpresasEmp()" >Empresas</a></li>
+<li><a data-toggle="tab" class="colore" href="#timpo">Tipos Impositivos</a></li>
 </ul>
 <div id="contidotaboas" class="tab-content" >
 <div id="des" class="tab-pane fade in active">
@@ -67,7 +70,20 @@ $auxmes;
 
 if($dia<6 && $mes>1){$imes=$mes-1;} 
 
-if(intval($dia)<5){$auxmes="0".(intval($mes)-2);} else{$auxmes="0".(intval($mes)-1);}
+if(intval($dia)<5){
+    if($mes<10){
+
+        $auxmes="0".(intval($mes)-2);
+    }
+    else{$auxmes=intval($mes)-2;}
+}
+    else{
+    if($mes<10){
+
+        $auxmes="0".(intval($mes)-1);
+    }
+    else{$auxmes=intval($mes)-1;}
+    }
 
 
 //if($mes==1) {$iano=$ano-1;$imes=12;}
@@ -128,9 +144,9 @@ catch (Exception $e) {
 echo("<br><div class='table-responsive'  > 
   <table class='table'>
     <thead>
-      <tr class='textotate'><th colspan='5' class='texto centro oscuro' id='lenda'>Desemprego por réxime mes de "
+      <tr class='textotate'><th colspan='5' class='texto centro oscuro' id='lenda'><h1 class='oscuro'>Desemprego por réxime mes de "
       .utf8_encode(substr($datosp[8],strpos($datosp[8],"/")+1,strlen($datosp[8])))." do "
-      .substr($datosp[8],0,strpos($datosp[8],"/"))."</th><th>
+      .substr($datosp[8],0,strpos($datosp[8],"/"))."</h1></th><th>
       <a href='#'><img src='imaxes/pie_chart.png' alt='gráfica' title='gráfica' onclick='grafiparo(),grafLineasparo()'></a></th></tr><tr><th colspan='6'></th></tr>
       <tr class='textotate'>
         <th class='textote centro'>REXIME</th>
@@ -193,17 +209,17 @@ echo("<br><div class='table-responsive'  >
 <div class='table-responsive'>      
   <table class='table'>
     <thead>
-     <tr class='textotate'><th colspan='4' class='texto centro oscuro'>Taxa de desemprego "
+     <tr class='textotate'><th colspan='4' class='texto centro oscuro'><h1 class='oscuro'>Taxa de desemprego ".$nomeMunicipio." en "
       .utf8_encode(substr($datose5[10],strpos($datose5[10],"/")+1,strlen($datose5[10])))." do "
-      .substr($datose5[10],0,strpos($datose5[10],"/"))."</th>
-      <th colspan='2' class='texto centro oscuro'>".round(($datose5[13]/($datose5[13]+$datose3[11])*100),2)." %</th><thead></table></div>
+      .substr($datose5[10],0,strpos($datose5[10],"/"))."</h1></th>
+      <th colspan='2' class='texto centro oscuro'><div style='margin-top:-35px;padding:0px;'>".round(($datose5[13]/($datose5[13]+$datose3[11])*100),2)." %</div></th><thead></table></div>
 
 <div class='table-responsive' id='tdesemp'>      
   <table class='table'>
     <thead>
-     <tr class='textotate'><th colspan='5' class='texto centro oscuro' id='lenda1'>Desemprego por idades mes de "
+     <tr class='textotate'><th colspan='5' class='texto centro oscuro' id='lenda1'><h1 class='oscuro'>Desemprego por idades mes de "
       .substr($datose[10],strpos($datose[10],"/")+1,strlen($datose[10]))." do "
-      .substr($datose[10],0,strpos($datose[10],"/"))."</th>
+      .substr($datose[10],0,strpos($datose[10],"/"))."</h1></th>
       <th><a href='#'><img src='imaxes/pie_chart.png' onclick='grafidades(),grafLineasparo()' alt='gráfica' title='gráfica'></a></th></tr><tr><th colspan='6'></th></tr>
       <tr class='textotate'>
         <th class='textote centro'>IDADES</th>
@@ -273,9 +289,9 @@ echo $i."  ".$datose1[$i]."<br>";
     echo("
     <div class='table-responsive'><table class='table'>
     <thead>
-    <tr class='textotate'><th colspan='5' class='texto centro oscuro' id='lenda2'>Afiliación por Idades mes de "
+    <tr class='textotate'><th colspan='5' class='texto centro oscuro' id='lenda2'><h1 class='oscuro'>Afiliación por Idades mes de "
     .utf8_encode(substr($datose1[8],strpos($datose1[8],"/")+1,strlen($datose1[8])))." do "
-    .substr($datose1[8],0,strpos($datose1[8],"/"))."</th>
+    .substr($datose1[8],0,strpos($datose1[8],"/"))."</h1></th>
     <th><a href='#'><img src='imaxes/pie_chart.png' onclick='grafafil()' alt='gráfica' title='gráfica'></a></th></tr><tr><th colspan='6'></th></tr>
     <tr class='textotate'>
     <th class='textote centro'>IDADES</th>
@@ -316,9 +332,9 @@ echo $i."  ".$datose1[$i]."<br>";
     <div class='table-responsive'>
     <table class='table'>
     <thead>
-    <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda3'>Afiliación por Réximes mes de "
+    <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda3'><h1 class='oscuro'>Afiliación por Réximes mes de "
     .utf8_encode(substr($datose3[7],strpos($datose3[7],"/")+1,strlen($datose3[7])))." do "
-    .substr($datose3[7],0,strpos($datose3[7],"/"))."</th>
+    .substr($datose3[7],0,strpos($datose3[7],"/"))."</h1></th>
     <th><a href='#'><img src='imaxes/pie_chart.png' onclick='grafafilsec()' alt='gráfica' title='gráfica'></a></th></tr>
     <tr><th colspan='3'></th></tr>
     <tr class='textotate'>
@@ -364,9 +380,9 @@ echo $i."  ".$datose1[$i]."<br>";
 <div class='table-responsive'>
  <table class='table'>
     <thead>
-    <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda4'>Afiliación por Sectores mes de "
+    <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda4'><h1 class='oscuro'>Afiliación por Sectores mes de "
     .utf8_encode(substr($datose31[7],strpos($datose31[7],"/")+1,strlen($datose31[7])))." do "
-    .substr($datose31[7],0,strpos($datose31[7],"/"))."</th>
+    .substr($datose31[7],0,strpos($datose31[7],"/"))."</h1></th>
     <th><a href='#'><img src='imaxes/pie_chart.png' onclick='grafafilsecto()' alt='gráfica' title='gráfica'></a></th></tr>
     <tr><th colspan='3'></th></tr>
     <tr class='textotate'>
@@ -435,7 +451,7 @@ echo ("</select><label>para ver os datos.</label>
    <table class='table'>
     <thead>
     <tr class='textotate'>
-    <th class='texto centro oscuro' colspan='2' id='lenda5'>".$datose2[10]."de ".$datose2[12]." ano: ".$datose2[8]."</th>
+    <th class='texto centro oscuro' colspan='2' id='lenda5'><h1 class='oscuro'>".$datose2[10]."de ".$datose2[12]." ano: ".$datose2[8]."</h1></th>
     </tr>
     <tr><th colspan='2'></th></tr>
    </thead>
@@ -465,7 +481,7 @@ echo ("</select><label>para ver os datos.</label>
    <table class='table'>
    <thead>
    <tr class='textotate'>
-   <th class='texto centro oscuro'  colspan='3' id='lenda6'> Débeda viva ".$nomeMunicipio." ano: ".$xml->datos[count($xml)-1]->ano."</th>
+   <th class='texto centro oscuro'  colspan='3' id='lenda6'><h1 class='oscuro'> Débeda viva ".$nomeMunicipio." ano: ".$xml->datos[count($xml)-1]->ano."</h1></th>
    </tr>
    <tr><th colspan='3'></th></tr>
    </thead>
@@ -486,7 +502,7 @@ echo ("</select><label>para ver os datos.</label>
    <thead>
 
    <tr class='textotate'>
-   <th class='texto centro oscuro'  colspan='3' id='lenda6'> Periodo Medio Pago a Proveedores ".$nomeMunicipio.": ".$xml1->datos[count($xml1)-1]->mes[1]['nome']." do ".$xml1->datos[count($xml1)-1]['ano']."</th>
+   <th class='texto centro oscuro'  colspan='3' id='lenda6'><h1 class='oscuro'>Periodo Medio Pago a Proveedores ".$nomeMunicipio.": ".$xml1->datos[count($xml1)-1]->mes[1]['nome']." do ".$xml1->datos[count($xml1)-1]['ano']."</h1></th>
    </tr>
    <tr><th colspan='3'>
    <tr class='textotate'>
@@ -528,7 +544,7 @@ echo ("</select><label>para ver os datos.</label>
     <table class='table'>
     <thead>
     <tr class='textotate'>
-    <th class='texto centro oscuro' colspan='5' id='lenda7'>".utf8_encode($datose4[2])." ".$datose4[10]." ano: ".$datose4[7]."
+    <th class='texto centro oscuro' colspan='5' id='lenda7'><h1 class='oscuro'>".utf8_encode($datose4[2])." ".$datose4[10]." ano: ".$datose4[7]."</h1>
     </th><th><a href='#' ><img src='imaxes/pie_chart.png' alt='gráfica' title='gráfica' onclick=grafpres()></a></th>
     </tr><tr><th colspan='6'></th></tr>
     <tr class='textotate'><th class='texto centro oscuro' colspan='3'>Ingresos</th>
@@ -580,7 +596,7 @@ echo ("</select><label>para ver os datos.</label>
     echo("<div class='table-responsive'>     
     <table class='table'><thead>
     <tr class='textotate'>
-    <th class='texto centro oscuro' colspan='5' id='lenda8'>Presupostos ".$nomeMunicipio." ano:".$xml2->INGRESOS[0]->importe[$i]->exercicio[$ex]['ano']." </th>
+    <th class='texto centro oscuro' colspan='5' id='lenda8'><h1 class='oscuro'>Presupostos ".$nomeMunicipio." ano:".$xml2->INGRESOS[0]->importe[$i]->exercicio[$ex]['ano']." </h1></th>
     <th><a href='#' class='mariz'><img src='imaxes/pie_chart.png' alt='gráfica' title='gráfica' onclick=grafafideb()></a></th>
     </tr><tr><th colspan='6'></th></tr>
     <tr class='textotate'><th class='texto centro oscuro' colspan='3'>Ingresos</th>
@@ -613,14 +629,15 @@ echo ("</select><label>para ver os datos.</label>
     <p>Aínda en construcción...</p>
     </center>
     </div>
-    <div id="emp" class="tab-pane fade">
+<div id="emp" class="tab-pane fade">
+<div id="taboasempresa">
   <?php 
   
 echo("<div class='table-responsive'>          
   <table class='table '>
   <thead >
-  <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda9'>Empresas por Nº de empregad@s  2014</th>
-  <th><a href='#''><img src='imaxes/pie_chart.png' onclick='grafafil()' alt='gráfica' title='gráfica'></a></th></tr>
+  <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda9'><h1 class='oscuro'>Empresas por Nº de empregad@s  2014</h1></th>
+  <th><a href='#''><img src='imaxes/pie_chart.png' onclick='grafEmpresasEmp()' alt='gráfica' title='gráfica'></a></th></tr>
   <tr><th colspan='3'></th></tr>
   <tr class='textotate'>
   <th class='textote centro''>Nª EMPREGADOS</th>
@@ -628,30 +645,30 @@ echo("<div class='table-responsive'>
   <th class='textote centro'>TOTAL</th>
   </tr>
   </thead>
-  <tbody>");
+  <tbody id='cdempre'>");
 
     $ti=18;
     $ni=17;
     for ($i=0;$i<8;$i++){
       echo("<tr class='textote'>
-        <td id='iten".$i."'class='textote iz'>".substr($datose6[$ti],strpos($datose6[$ti],"e")+1)."</td>
+        <td id='iten".$i."'class='textote iz' onmouseover=colora(this.id,salesData[".$i."].color,0),resaltar(".$i.",0) onmouseout=sincolor(this.id),normal(".$i.")>".substr($datose6[$ti],strpos($datose6[$ti],"e")+1)." </td>
         <td class='textote'>".round(($datose6[$ni]/$datose6[11])*100,2)."</td>
         <td id='itet".$i."' class='textote'>".$datose6[$ni]."</td></tr>");
       $ti=$ti+6;$ni=$ni+6;
     }
-    echo("<tfoot>
+    echo("</tbody><tfoot>
         <tr class='textotate'>
         <th class='textote centro'>TOTAIS:</th>
         <th class='textote centro'></th>
         <th class='textote centro'>".$datose6[11]."</th>
       </tr>
-    </tfoot></tbody></table></div>");
+    </tfoot></table></div>");
 
 echo("<div class='table-responsive'>          
   <table class='table'>
   <thead >
-  <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda10'>Empresas por forma Xurídica: 2014</th>
-  <th><a href='#''><img src='imaxes/pie_chart.png' onclick='grafafil()' alt='gráfica' title='gráfica'></a></th></tr>
+  <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda10'><h1 class='oscuro'>Empresas por forma Xurídica: 2014</h1></th>
+  <th><a href='#''><img src='imaxes/pie_chart.png' onclick='grafEmpresasXuri()' alt='gráfica' title='gráfica'></a></th></tr>
   <tr><th colspan='3'></th></tr>
   <tr class='textotate'>
   <th class='textote centro''>FORMA XURIDICA</th>
@@ -659,15 +676,15 @@ echo("<div class='table-responsive'>
   <th class='textote centro'>TOTAL</th>
   </tr>
   </thead>
-  <tbody>");
+  <tbody id='cdemprex'>");
 
     $ti=15;
     $ni=20;
     for ($i=0;$i<5;$i++){
       echo("<tr class='textote'>
-        <td id='iten".$i."'class='textote iz'>".utf8_encode($datose7[$ti])."</td>
+        <td id='itex".$i."'class='textote iz' onmouseover=colora(this.id,salesData[".$i."].color,1),resaltar(".$i.",1) onmouseout=sincolor(this.id),normal(".$i.")>".utf8_encode($datose7[$ti])." </td>
         <td class='textote'>".round(($datose7[$ni]/$datose7[13])*100,2)."</td>
-        <td id='itet".$i."' class='textote'>".$datose7[$ni]."</td></tr>");
+        <td id='itext".$i."' class='textote'>".$datose7[$ni]."</td></tr>");
       $ti=$ti+7;$ni=$ni+7;
     }
     echo("<tfoot>
@@ -681,8 +698,8 @@ echo("<div class='table-responsive'>
   echo("<div class='table-responsive'>          
   <table class='table'>
   <thead >
-  <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda11'>".utf8_encode($datose8[2])." de ".$datose8[10]." ano: ".$datose8[7]." </th>
-  <th><a href='#''><img src='imaxes/pie_chart.png' onclick='grafafil()' alt='gráfica' title='gráfica'></a></th></tr>
+  <tr class='textotate'><th colspan='2' class='texto centro oscuro' id='lenda11'><h1 class='oscuro'>".utf8_encode($datose8[2])." de ".$datose8[10]." ano: ".$datose8[7]."</h1> </th>
+  <th><a href='#''><img src='imaxes/pie_chart.png' onclick='grafEmpresasDemo()' alt='gráfica' title='gráfica'></a></th></tr>
   <tr><th colspan='3'></th></tr>
   <tr class='textotate'>
   <th class='textote centro''>SITUACION</th>
@@ -697,9 +714,9 @@ echo("<div class='table-responsive'>
     $tot=$datose8[11]+$datose8[17];
     for ($i=0;$i<3;$i++){
       echo("<tr class='textote'>
-        <td id='iten".$i."'class='textote iz'>".utf8_encode($datose8[$ti])."</td>
+        <td id='ited".$i."'class='textote iz' onmouseover=colora(this.id,salesData[".$i."].color,2),resaltar(".$i.",2) onmouseout=sincolor(this.id),normal(".$i.")>".utf8_encode($datose8[$ti])."</td>
         <td class='textote'>".round(($datose8[$ni]/$tot)*100,2)."</td>
-        <td id='itet".$i."' class='textote'>".$datose8[$ni]."</td></tr>");
+        <td id='itetd".$i."' class='textote'>".$datose8[$ni]."</td></tr>");
       $ti=$ti+6;$ni=$ni+6;
     }
     echo("<tfoot>
@@ -708,14 +725,129 @@ echo("<div class='table-responsive'>
         <th class='textote centro'></th>
         <th class='textote centro'>".$tot."</th>
       </tr>
-    </tfoot></tbody></table></div>");
+    </tfoot></tbody></table></div></div>");
+
+echo("<div class='form-group text-right'>
+<label for='seleas'>Seleccione ano:</label><select id='seleas1' name='seleas1' class='selectpicker' >");
+
+for($i=2008;$i<=2014;$i++)
+{
+echo("<option>".$i."</option>");
+}
+echo ("</select><label>para ver os datos.</label>
+    <button type='submit' class='btn btn-primary btn-sm' style='margin-top:-5px' 
+    onclick=cargar(12,seleas1.value,'taboasempresa','datosempresas.php')>Ver</button></div>");
 ?>
-<center><img src="imaxes/construccion.png" alt="en contstruccion" title="En construccion">
-    <p>Aínda en construcción...</p>
-    </center>
+
+</div>
+<div id="timpo" class="tab-pane fade">
+<?php
+$xml3=simplexml_load_file("tiposimpostos.xml");
+echo("<div class='table-responsive'>
+   <table class='table'>
+   <thead>
+   <tr class='textotate'>
+   <th class='texto centro oscuro'  colspan='3' id='lenda12'> <h1 class='oscuro'>".$xml3->imposto[0]['nome'].": ".$xml3->imposto[0]->gravame[0]->exercicio[1]['ano']."</h1></th>
+   </tr>
+   <tr><th colspan='2'>
+   <tr class='textotate'>
+   <th class='textote centro'>TIPO DE GRAVAME</th>
+   <th class='textote centro'>%</th>
+   </tr>
+   </thead>
+   <tbody id='btibi'>");
+   for($i=0;$i<count($xml3->imposto[0]->gravame);$i++){
+      echo("<tr class='textote'> 
+      <td class='textote iz'>".$xml3->imposto[0]->gravame[$i]['nome']."</td><td id='ibi".$i."' class='textote der'>".$xml3->imposto[0]->gravame[$i]->exercicio[$i]."</td></tr>");
+   }
+  echo("</tbody></table>
+   <table class='table'>
+   <thead>
+   <tr class='textotate'>
+   <th class='texto centro oscuro'  colspan='3' id='lenda12'><h1 class='oscuro'> ".$xml3->imposto[1]['nome'].": ".$xml3->imposto[1]->gravame[0]->exercicio[1]['ano']."</h1></th>
+   </tr>
+   <tr><th colspan='2'>
+   <tr class='textotate'>
+   <th class='textote centro'>TIPO DE GRAVAME</th>
+   <th class='textote centro'>%</th>
+   </tr>
+   </thead>
+   <tbody id='btae'>");
+   for($i=0;$i<count($xml3->imposto[1]->gravame);$i++){
+      echo("<tr class='textote'> 
+      <td class='textote iz'>".$xml3->imposto[1]->gravame[$i]['nome']."</td><td id='iae".$i."' class='textote der'>".$xml3->imposto[1]->gravame[$i]->exercicio[1]."</td></tr>");
+   }
+   echo("</tbody></table>
+   <table class='table'>
+   <thead>
+   <tr class='textotate'>
+   <th class='texto centro oscuro'  colspan='4' id='lenda12'><h1 class='oscuro'> ".$xml3->imposto[2]['nome'].": ".$xml3->imposto[2]->gravame[0]->exercicio[1]['ano']."</h1></th>
+   </tr>
+   <tr><th colspan='4'>
+   <tr class='textotate'>
+   <th class='textote centro' >TIPO DE GRAVAME</th>
+   <th class='textote centro' >%</th>
+   <th class='textote centro' >TIPO DE GRAVAME (REDUCCIÓN)</th>
+   <th class='textote centro' >%</th>
+   </tr>
+   </thead>
+   <tbody id='bivt'>");
+   for($i=0;$i<4;$i++){
+      echo("<tr class='textote'><td class='textote iz'>".$xml3->imposto[2]->gravame[$i]['nome']."</td><td id='iiv".$i."' class='textote der'>".$xml3->imposto[2]->gravame[$i]->exercicio[1]."</td>
+            <td class='textote iz'>".$xml3->imposto[2]->gravame[($i+4)]['nome']."</td><td id='iiv".($i+4)."' class='textote der'>".$xml3->imposto[2]->gravame[($i+4)]->exercicio[1]."</td></tr>");
+   }
+   echo("</tbody></table></div>
+  <div class='table-responsive'>
+   <table class='table'>
+   <thead>
+   <tr class='textotate'>
+   <th class='texto centro oscuro'  colspan='2' id='lenda12'><h1 class='oscuro'> ".$xml3->imposto[3]['nome'].": ".$xml3->imposto[3]->gravame[0]->exercicio[1]['ano']."</h1></th>
+   </tr>
+   <tr><th colspan='2'>
+   <tr class='textotate'>
+   <th class='textote centro' >TIPO DE GRAVAME</th>
+   <th class='textote centro' >%</th>
+   </tr>
+   </thead>
+   <tbody id='bicio'><tr class='textote'> 
+   <td class='textote iz'>".$xml3->imposto[3]->gravame[0]['nome']."</td><td id='icio' class='textote der'>".$xml3->imposto[3]->gravame[0]->exercicio[1]."</td></tr></tbody></table>");
+   echo("</tbody></table>
+   <table class='table'>
+   <thead>
+   <tr class='textotate'>
+   <th class='texto centro oscuro'  colspan='4' id='lenda12'> <h1 class='oscuro'>".$xml3->imposto[4]['nome'].": ".$xml3->imposto[4]->vehiculo[0]->gravame[0]->exercicio[1]['ano']."</h1></th>
+   </tr>
+   <tr><th colspan='4'>
+   <tr class='textotate'>
+   <th class='textote centro' >TIPO DE GRAVAME</th>
+   <th class='textote centro' >€</th>
+   <th class='textote centro' >TIPO DE GRAVAME</th>
+   <th class='textote centro' >€</th>
+   </tr>
+   </thead>
+   <tbody id='bivtm'>");
+   for($i=0;$i<3;$i++){
+      echo("<tr class='textote'>
+            <td class='textote iz' colspan='2'>".$xml3->imposto[4]->vehiculo[$i]['tipoVehiculo']."</td>
+            <td class='textote iz' colspan='2'>".$xml3->imposto[4]->vehiculo[($i+3)]['tipoVehiculo']."</td>
+            </tr>");
+      for($j=0;$j<count($xml3->imposto[4]->vehiculo[$i]->gravame);$j++){
+        echo("<tr class='textote'><td class='textote iz'>".$xml3->imposto[4]->vehiculo[$i]->gravame[$j]['nome']."</td>
+              <td id='ivtm".$j."' class='textote der'>".$xml3->imposto[4]->vehiculo[$i]->gravame[$j]->exercicio[1]."</td>
+              <td class='textote iz'>".$xml3->imposto[4]->vehiculo[($i+3)]->gravame[$j]['nome']."</td>
+              <td id='ivtm".$j."' class='textote der'>".$xml3->imposto[4]->vehiculo[($i+3)]->gravame[$j]->exercicio[1]."</td></tr>");
+      }
+   }
+ 
+  echo("</tbody></table></div>"); 
+
+?>
+
 </div>
 </div>
+
 </div>
+
 <div id="quesito" class="col-md-4 col-lg-3 col-sm-4">
 <hr>
 <div id="tituloquesito" class="titulografica">
@@ -770,7 +902,7 @@ salesData=[
 //alert($("#lenda1").html());
 borraGrafica();
 dibujaGrafica();
-grafica($("#lenda1").html());  
+grafica($("#lenda1").text());  
 actGrafica('cdesi');
 indice=1;
 }
@@ -792,7 +924,7 @@ salesData=[
 //alert($("#lenda1").html());
 borraGrafica();
 dibujaGrafica();
-grafica($("#lenda2").html());  
+grafica($("#lenda2").text());  
 actGrafica('cassi');  
 indice=0;
 }
@@ -809,7 +941,7 @@ salesData=[
 //alert($("#lenda1").html());
 borraGrafica();
 dibujaGrafica();
-grafica($("#lenda3").html()); 
+grafica($("#lenda3").text()); 
 actGrafica('cassr'); 
 indice=1;  
 }
@@ -826,7 +958,7 @@ salesData=[
 //alert($("#lenda1").html());
 borraGrafica();
 dibujaGrafica();
-grafica($("#lenda4").html()); 
+grafica($("#lenda4").text()); 
 indice=2;  
 actGrafica('cassrs'); 
 }
@@ -881,8 +1013,59 @@ salesData=[
 indice=0;  
 borraGrafica();
 dibujaGrafica();
-grafica($("#lenda7").html()); 
+grafica($("#lenda7").text()); 
 //actGrafica();   
+}
+
+function grafEmpresasEmp()
+{
+salesData=[];
+salesData=[
+    {label:"1 a 2 asalariados", color:"#3366CC",count:$("#itet0").html()},
+    {label:"3 a 5 asalariados", color:"#DC3912",count:$("#itet1").html()},
+    {label:"6 a 9 asalariados", color:"#FF9900",count:$("#itet2").html()},
+    {label:"10 a 19 asalariados", color:"#109618",count:$("#itet3").html()},
+    {label:"20 a 49 asalariados", color:"#EFE836",count:$("#itet4").html()},
+    {label:"50 a 99 asalariados", color:"#9F1CE4",count:$("#itet5").html()},
+    {label:"100 a 249 asalariados", color:"#1CE2E4",count:$("#itet6").html()},
+    {label:"250 ou máis asalariados", color:"#57E41C",count:$("#itet7").html()},
+    ];
+borraGrafica();
+dibujaGrafica();
+grafica($("#lenda9").text());    
+actGrafica('cdempre');
+indice=0; 
+}
+function grafEmpresasXuri()
+{
+salesData=[];
+salesData=[
+    {label:"Persoas físicas", color:"#3366CC",count:$("#itext0").html()},
+    {label:"Sociedades anónimas", color:"#DC3912",count:$("#itext1").html()},
+    {label:"Sociedades de responsabilidade limitada", color:"#FF9900",count:$("#itext2").html()},
+    {label:"Sociedades cooperativas", color:"#109618",count:$("#itext3").html()},
+    {label:"Outros", color:"#EFE836",count:$("#itext4").html()},
+    ];
+borraGrafica();
+dibujaGrafica();
+grafica($("#lenda10").text());    
+actGrafica('cdemprex');
+indice=1; 
+}
+function grafEmpresasDemo()
+{
+salesData=[];
+salesData=[
+    {label:"Alta", color:"#47BD29",count:$("#itetd0").html()},
+    {label:"Permanencia", color:"#474BF2",count:$("#itetd1").html()},
+    {label:"Baixa", color:"#EF1414",count:$("#itetd2").html()},
+   
+    ];
+borraGrafica();
+dibujaGrafica();
+grafica($("#lenda11").text());    
+actGrafica('cdemprex');
+indice=2; 
 }
 function grafiparo()
 {
@@ -891,7 +1074,7 @@ salesData=[];
 actualizaDatos();
 borraGrafica();
 dibujaGrafica();
-grafica($("#lenda").html());  
+grafica($("#lenda").text());  
 actGrafica('cdesex');
 indice=0;
 }        
@@ -907,7 +1090,7 @@ svg.append("g").attr("id","quotesDonut");
 Donut3D.draw("quotesDonut", randomData(), ancho/2,130, ancho/2.5, 100, 30, 0);
 
 
-$("#tituloquesito").html($("#lenda").html());
+$("#tituloquesito").html($("#lenda").text());
 
 }
 function randomData(){
@@ -923,6 +1106,7 @@ $("svg").remove();
 function grafica(titulo){
     
     $("#tituloquesito").html(titulo);  
+    
 }
 
 function colora(a,b,index)
@@ -1064,7 +1248,7 @@ function grafLineas(x){
         
 }});
 <?php
-$url="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:200505:200506:200507:200508:200509:200510:200511:200512:200601:200602:200603:200604:200605:200606:200607:200608:200609:200610:200611:200612:200701:200702:200703:200704:200705:200706:200707:200708:200709:200710:200711:200712:200801:200802:200803:200804:200805:200806:200807:200808:200809:200810:200811:200812:200901:200902:200903:200904:200905:200906:200907:200908:200909:200910:200911:200912:201001:201002:201003:201004:201005:201006:201007:201008:201009:201010:201011:201012:201101:201102:201103:201104:201105:201106:201107:201108:201109:201110:201111:201112:201201:201202:201203:201204:201205:201206:201207:201208:201209:201210:201211:201212:201301:201302:201303:201304:201305:201306:201307:201308:201309:201310:201311:201312:201401:201402:201403:201404:201405:201406:201407:201408:201409:201410:201411:201412:201501:201502:201503:201504:201505:201506:201507:201508:201509:201510:201511:201512:201601:201602:201603:201604:201605:201606:201607:201608:201609,9915:".$codIGE;
+$url="http://www.ige.eu/igebdt/igeapi/datos/744/1:0,2:0,4:200505:200506:200507:200508:200509:200510:200511:200512:200601:200602:200603:200604:200605:200606:200607:200608:200609:200610:200611:200612:200701:200702:200703:200704:200705:200706:200707:200708:200709:200710:200711:200712:200801:200802:200803:200804:200805:200806:200807:200808:200809:200810:200811:200812:200901:200902:200903:200904:200905:200906:200907:200908:200909:200910:200911:200912:201001:201002:201003:201004:201005:201006:201007:201008:201009:201010:201011:201012:201101:201102:201103:201104:201105:201106:201107:201108:201109:201110:201111:201112:201201:201202:201203:201204:201205:201206:201207:201208:201209:201210:201211:201212:201301:201302:201303:201304:201305:201306:201307:201308:201309:201310:201311:201312:201401:201402:201403:201404:201405:201406:201407:201408:201409:201410:201411:201412:201501:201502:201503:201504:201505:201506:201507:201508:201509:201510:201511:201512:201601:201602:201603:201604:201605:201606:201607:201608:201609:201610,9915:".$codIGE;
 $datos=explode(',',preg_replace('/"|[a-zA-Z]/',' ',file_get_contents($url)));
 
 
@@ -1206,7 +1390,7 @@ if(a>=1100 && a<1600) {
     $("#menu").removeClass("navbar-fixed-top");
     $("#menu").addClass("navbar-default");
     $("#mostrar").removeClass("altura");
-    $("#mostrar").height($(window).height()*0.93);
+    //$("#mostrar").height($(window).height()*0.93);
     $("#contidotaboas").height($(window).height()*0.80);
     descolocaTaboas();
     normal();
@@ -1239,7 +1423,7 @@ recargarGraficas();
 });
 adapan();
 actualizaDatos();
-dibujaGrafica($("#lenda").html());
+dibujaGrafica($("#lenda").text());
 actGrafica('cdesex');
 //cambiaDiv();
 grafLineasparo();

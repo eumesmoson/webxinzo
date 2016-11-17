@@ -785,4 +785,12 @@
 		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="0" Codigo_validacion="1"/>
 		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
 	</Valores>
+	<Valores Data="01/10/2016">
+		<Medida ID="83" Variable="Temperatura media" Unidades="ºC" Valor="12,9" Codigo_validacion="1"/>
+		<Medida ID="84" Variable="Temperatura máxima" Unidades="ºC" Valor="26,7" Codigo_validacion="1"/>
+		<Medida ID="85" Variable="Temperatura mínima" Unidades="ºC" Valor="0,6" Codigo_validacion="1"/>
+		<Medida ID="10001" Variable="Chuvia" Unidades="L/m2" Valor="27,5" Codigo_validacion="1"/>
+		<Medida ID="10063" Variable="Horas de Frío (Base 7 ºC)" Unidades="h" Valor="83,8" Codigo_validacion="1"/>
+		<Medida ID="10119" Variable="Días de xeada" Unidades="Días" Valor="0" Codigo_validacion="1"/>
+	</Valores>
 </Estacion>

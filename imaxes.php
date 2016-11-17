@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
+<meta name="description" content="xinzo de limia imaxes" />
+<meta name="keywords" content="xinzo de limia imaxes,xinzo de limia imagenes" />
+<title>Poboación <?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
+<title>Imaxes<?php require_once('configuracion.php'); echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
@@ -53,28 +56,28 @@
     <div class="item active">
       <img src="" alt="Casa do concello" title="By Elisardojm (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" id="img0" onclick="grande(this.id)"  >
       <div class="carousel-caption">
-        <h3>Casa do concello</h3>
+        <h1>Casa do concello</h1>
       </div>
     </div>
 
     <div class="item">
       <img src="" alt="Casa da cultura e xuventude" title="By Elisardojm (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons" id="img1" onclick="grande(this.id)">
       <div class="carousel-caption">
-        <h3>Casa da cultura e xuventude</h3>
+        <h1>Casa da cultura e xuventude</h1>
       </div>
     </div>
 
     <div class="item">
       <img src="" alt="Igrexa de Santa Mariña" title="By José Antonio Gil Martínez [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons" id="img2" onclick="grande(this.id)">
       <div class="carousel-caption">
-        <h3>Igrexa de Santa Mariña</h3>
+        <h1>Igrexa de Santa Mariña</h1>
       </div>
     </div>
 
     <div class="item">
 
       <div class="carousel-caption">
-        <h3>Panorámica</h3>
+        <h1>Panorámica</h1>
       </div>
             <img src="" alt="Panorámica" title="https://contosdorio.wordpress.com/las-rutas-del-limia" id="img3" onclick="grande(this.id)">
     </div>
@@ -91,8 +94,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
 <hr>
+<br>
+<br>
 </div>
 <div class="col-md-4 col-lg-3 col-sm-4"> 
 <hr>
@@ -146,6 +150,7 @@
 </div>
 <hr>
 <?php include ("creativecommons.html"); ?>
+
 </div>
 <hr>
 </div>
@@ -166,7 +171,7 @@ function grande(id){
 var img=document.getElementById(id);
 modal.style.display="block";
 modalImg.src=img.src;
-captionText.innerHTML="<hr><h3>"+img.alt+"</h3>"+img.title+"<hr>";
+captionText.innerHTML="<hr><h1>"+img.alt+"</h1>"+img.title+"<hr>";
 // Get the <span> element that closes the modal
 var span=document.getElementsByClassName("closeg")[0];
 // When the user clicks on <span> (x), close the modal
@@ -205,7 +210,7 @@ cad+="</ol><div class='carousel-inner' role='listbox'>";
 
 for(j=0;j<num;j++){
 if(j===ind){activo="active";}else if(j!==ind){activo="";}
-cad+="<div class='item "+activo+"'><img src='"+$('#'+capa+" img:eq("+j+")").attr("src")+"' alt='"+$('#'+capa+" img:eq("+j+")").attr("alt")+"' title='"+$('#'+capa+" img:eq("+j+")").attr("title")+"' id='img"+j+"' onclick='grande(this.id)'><div class='carousel-caption'><h3>"+$('#'+capa+" img:eq("+j+")").attr("alt")+"</h3></div></div>";
+cad+="<div class='item "+activo+"'><img src='"+$('#'+capa+" img:eq("+j+")").attr("src")+"' alt='"+$('#'+capa+" img:eq("+j+")").attr("alt")+"' title='"+$('#'+capa+" img:eq("+j+")").attr("title")+"' id='img"+j+"' onclick='grande(this.id)'><div class='carousel-caption'><h1>"+$('#'+capa+" img:eq("+j+")").attr("alt")+"</h1></div></div>";
 //alert($('#'+capa+" img:eq("+j+")").attr("title"));
 }
 cad+="</div><a class='left carousel-control' href='#myCarousel' role='button' data-slide='prev'><span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span><span class='sr-only'>Previous</span></a>";
@@ -240,7 +245,7 @@ if($(window).width()<760){
   $("#mostrar").addClass("altura");
   normal();  
 }
-if($(window).width()>760){$("#menu").removeClass("navbar-fixed-top");$("#menu").addClass("navbar-default");$("#mostrar").removeClass("altura");$("#mostrar").height($(window).height()*0.93);}
+if($(window).width()>760){$("#menu").removeClass("navbar-fixed-top");$("#menu").addClass("navbar-default");$("#mostrar").removeClass("altura");}
 if($(window).width()>1100){normal();}
 if($(window).width()>1430){$(".carousel-indicators > li > img").css("display","block");$(".carousel-indicators > li").css({width:'100px',marginLeft:'50px'});}
 

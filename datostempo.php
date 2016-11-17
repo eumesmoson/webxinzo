@@ -1,4 +1,5 @@
-<?php
+<?php 
+require_once('configuracion.php');
 $data=$_POST["data"];
 $op=$_POST["opc"];
 
@@ -17,17 +18,46 @@ $idia;
 $imes;
 $iano;
 
+if($mes==1 || $mes==3 || $mes==5 || $mes==7 || $mes==8 || $mes==10){
+   if($dia==31 ){$idia=1;$imes=$mes+1;}
+   else{$idia=$dia+1;$imes=$mes;}
+   $iano=$ano;
+}
+elseif($mes==12){
+   if($dia==31 ){$idia=1;$imes=1;$iano=$ano+1;}
+   else{$idia=$dia+1;$imes=$mes;$iano=$ano;}
+}
+
+elseif($mes==2){
+
+   if(($ano%4 == 0 && $ano%100 != 0) || $ano%400 == 0 ){
+    if($dia==29){$idia=1;$imes=$mes+1;}
+    else{$idia=$dia+1;$imes=$mes;}
+    
+   }
+   else{
+    if($dia==28){$idia=1;$imes=$mes+1;}
+    else{$idia=$dia+1;$imes=$mes;}
+   }
+   $iano=$ano;
+}
+elseif ($mes==4 || $mes==6 || $mes==9 || $mes==11){
+   if($dia==30 ){$idia=1;$imes=$mes+1;}
+   else{$idia=$dia+1;$imes=$mes;}
+   $iano=$ano;
+}
+
 
 if($op==1){
-echo ("<h5 class='texto centro efectotexto'>Medición en Xinzo de Limia o ".intval($d[0])." de ".$meses[intval($d[1]-1)]." do ".intval($d[2])."  </h5><hr>");
+echo ("<h5 class='texto centro efectotexto'>Medición en Xinzo de Limia o ".$dia." de ".$meses[$mes-1]." do ".$ano."</h5><hr>");
 }
 if($op==2){
-$valor=intval($d[0])."/".intval($d[1])."/".intval($d[2])."&data2=".intval($d[0]+1)."/".intval($d[1])."/".intval($d[2]);
+$valor=$dia."/".$mes."/".$ano."&data2=".$idia."/".$imes."/".$iano;
 //header('Content-type: text/html; charset=UTF-8');
 
 $ul=utf8_encode("http://www2.meteogalicia.es/galego/observacion/estacions/contidos/DatosHistoricosXML_diario.asp?est=19027&");
 $up=utf8_encode("param=83,84,85,86,9991,10004,10005,10018,10021,10022,10056,10063,10006,10013,10106,81,10003,10015,%2010124,10001,10117,10129,9990&");
-$uf=utf8_encode("data1=".$valor."&idprov=2&red=102109");
+$uf=utf8_encode("data1=".$valor."&idprov=2&red=".$redMetereo);
 $ut=$ul.$up.$uf;
 
 try {

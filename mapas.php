@@ -9,7 +9,10 @@ $nom=$_GET["nom"];
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php  echo $nomeMunicipio;?></title>
+<meta name="description" content="xinzo de limia mapa" />
+<meta name="keywords" content="xinzo de limia mapa, xinzo de limia farmacias, xinzo de limia estación farmacia de garda, xinzo de limia concello, xinzo de limia parada autobuses, xinzo de limia gasolina, xinzo de limia prezos gasolina,
+xinzo de limia precios gasolina, xinzo de limia piscinas, xinzo de limia administracións, xinzo de limia administraciones" />
+<title>Mapa <?php  echo $nomeMunicipio;?></title>
 <link rel="icon" href="imaxes/escudob.png"/>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -52,7 +55,7 @@ $nom=$_GET["nom"];
 
 <div class="row colormf margenarriba" id="mostrar">
 <div class="col-md-8 col-lg-9 col-sm-8" id="mapas">
-<div id="map" style="border:1px yellow inset;width:102%;height:740px;z-index:1;margin:5px;margin-left:-10px;padding:0px;border-radius:10px;"></div>
+<div id="map" style="border:1px yellow inset;width:102%;height:900px;z-index:1;margin:5px;margin-left:-10px;padding:0px;border-radius:10px;"></div>
 </div>
 <?php
 
@@ -67,8 +70,8 @@ catch (Exception $e) {
 <div id="dereita" class="col-md-4 col-lg-3 col-sm-4"  >  
 <div id="contidodereita" >
 <ul class="nav nav-tabs" id="listwigtempo" style="margin-top:5px">
-    <li><a data-toggle="tab" class="colorm" href="#interese" onclick="">LUGARES INTERESE<span class="contador"><?php echo count($lugares)-1;?></span></a></li>
-    <li><a data-toggle="tab" class="colorm" href="#buscar" onclick="">BUSCAR</a></li>
+    <li><a data-toggle="tab" class="colorm" href="#interese">LUGARES INTERESE<span class="contador"><?php echo count($lugares)-1;?></span></a></li>
+    <li><a data-toggle="tab" class="colorm" href="#buscar" >BUSCAR</a></li>
    
 </ul>
 
@@ -85,7 +88,7 @@ echo("<table class='table' id='tab".$i."'><thead >");
 foreach($lugares->LUGAR[$i]->children() as $d)
 {
 if($d->getName()=="NOME"){
-echo "<tr class='colorm'><th class='centro' colspan='2' id='nom".$i."'>".$d."</th></tr></thead>"; 
+echo "<tr class='colorm'><th class='centro' colspan='2' id='nom".$i."'><h2 style='color:#2E496C;'>".$d."</h2></th></tr></thead>"; 
 }
 else if($d->getName()=="DIRECCION"){
 echo "<tr><td><img src='imaxes/homep.png' alt='dirección'></td><td id='dir".$i."'>".$d."</td></tr>";  
@@ -122,12 +125,12 @@ echo "</div>"
 
 <hr>
 <div class="enlacesinfo">
-<form class="navbar-form margent"  role="search" >
+<div class="navbar-form margent"  role="search" >
       <div class="form-group" style="margin-left:-15px"  >
-        <input type="text" class="form-control"  placeholder="Buscar" style="width:226px;margin-bottom:3px;">
+        <input type="text" class="form-control"  id="buscador"   placeholder="Buscar" style="width:226px;margin-bottom:3px;">
       </div>
-      <button type="submit" class="colorm colormbot" id="botbus" onclick="" style="width:226px;margin-left:-15px" ><span class="glyphicon glyphicon-search"></span></button>
-    </form>
+      <button type="button" class="colorm colormbot" id="botbus" style="width:226px;margin-left:-15px" onclick="buscar()"><span class="glyphicon glyphicon-search"></span></button>
+    </div>
 </div>
 <hr>
 <div class="enlacesinfo" >
@@ -278,7 +281,23 @@ function actfecha(){
  $.datepicker.setDefaults($.datepicker.regional['gl']);
  $("#datepicker").datepicker().datepicker("setDate", new Date());
 }
-function buscar(){}
+
+$("#buscador").keypress(function(e){    
+  if(e.which == 13){buscar();}   
+}); 
+
+function buscar(){
+
+$("#datbus").empty();
+var b=$("#buscador").val().toUpperCase().trim();
+var e="";
+$('#dato table').each(function (i) {
+
+if($(this).find("#nom"+i).text().includes(b)){e=$(this).find("#nom"+i);$(this).clone().appendTo("#datbus");}
+
+});
+
+}
 function borrar(){
   $("#indice0").empty();
   $("#indice1").empty();
@@ -360,12 +379,12 @@ if($(window).width()<=760){
   $("#datbus").css("overflow", "auto");
   normal();
 }
-if($(window).width()>760)
-{$("#menu").removeClass("navbar-fixed-top");
+if($(window).width()>760){
+$("#menu").removeClass("navbar-fixed-top");
 $("#menu").addClass("navbar-default");
 $("#mostrar").removeClass("altura");
-$("#mostrar").height($(window).height()*0.93);
-$("#map").height($("#mostrar").height()-15);
+//$("#mostrar").height($(window).height()*0.93);
+$("#map").height(900);
 $("#map").css("margin-top","5px");
 $("#datoslugar").height(758);
 $("#datoslugar").addClass("over");

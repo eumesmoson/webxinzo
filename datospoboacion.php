@@ -26,7 +26,7 @@ array_splice($datos, $i,1);
 
 if($tipo=="datosmostrar"){
 header('Content-type: text/html; charset=UTF-8');
-echo ("<h5 class='texto centro efectotexto'>".$nomeMunicipio." ".$datos[7]." </h5><hr>");
+echo ("<h1 class='texto centro efectotexto'>Poboación de ".$nomeMunicipio." ".$datos[7]." </h1><hr>");
 echo("<div class='table-responsive'>          
   <table class='table'>
     <thead >
